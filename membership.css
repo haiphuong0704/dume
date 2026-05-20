@@ -1,0 +1,678 @@
+﻿/* ===================================================
+   MEMBERSHIP JOIN FLOW — membership.css
+   ms-* prefix. Relies on global.css for tokens.
+=================================================== */
+
+.ms-body {
+  background: var(--bg);
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+/* ── HEADER ──────────────────────────────────────── */
+.ms-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 64px;
+  background: rgba(253, 251, 252, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-soft);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 clamp(20px, 4vw, 48px);
+  gap: 16px;
+}
+
+.ms-logo {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.ms-logo span { color: var(--pink); }
+
+.ms-exit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  justify-self: end;
+  transition: color 0.15s ease;
+}
+
+.ms-exit:hover { color: var(--text); }
+
+/* ── STEPPER ─────────────────────────────────────── */
+.ms-stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.ms-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ms-step__num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.ms-step__label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.25s ease;
+  white-space: nowrap;
+}
+
+.ms-step.active .ms-step__num {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: #fff;
+}
+
+.ms-step.active .ms-step__label { color: var(--text); font-weight: 600; }
+
+.ms-step.done .ms-step__num {
+  background: var(--pink-pale);
+  border-color: var(--pink-border);
+  color: var(--pink);
+}
+
+.ms-step.done .ms-step__label { color: var(--text-body); }
+
+.ms-step-line {
+  width: 28px;
+  height: 1.5px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* ── MAIN ────────────────────────────────────────── */
+.ms-main {
+  padding-top: clamp(40px, 6vw, 72px);
+  padding-bottom: 40px;
+}
+
+/* ── PANELS ──────────────────────────────────────── */
+.ms-panel { display: none; }
+
+.ms-panel.active {
+  display: block;
+  animation: msFadeUp 0.35s var(--ease) forwards;
+}
+
+@keyframes msFadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ms-panel__inner {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 40px);
+}
+
+.ms-panel__inner--wide { max-width: 1060px; }
+
+.ms-panel__inner--split {
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: clamp(32px, 5vw, 60px);
+  align-items: start;
+}
+
+.ms-panel__hd { margin-bottom: 36px; }
+
+.ms-panel__hd h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.ms-panel__hd p {
+  font-size: 0.9375rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+/* ── PLAN CARDS ──────────────────────────────────── */
+.ms-plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ms-plan-card {
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 28px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.ms-plan-card:hover {
+  border-color: var(--pink-border);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.ms-plan-card.selected {
+  border-color: var(--pink);
+  box-shadow: 0 0 0 3px rgba(196, 45, 127, 0.1), var(--shadow-md);
+}
+
+.ms-plan-card--featured { border-color: var(--pink-border); }
+
+.ms-plan-card__badge {
+  position: absolute;
+  top: -1px;
+  left: 24px;
+  background: var(--mint);
+  color: var(--text);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 0 0 var(--r-sm) var(--r-sm);
+}
+
+.ms-plan-card__header { margin-bottom: 20px; }
+
+.ms-plan-card__tier {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.ms-plan-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.ms-plan-card__price strong {
+  font-family: var(--font-display);
+  font-size: 2.125rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.03em;
+}
+
+.ms-plan-card__price span {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.ms-plan-card__tagline {
+  font-size: 0.84rem;
+  color: var(--text-body);
+  line-height: 1.5;
+}
+
+.ms-plan-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ms-plan-card__features li {
+  font-size: 0.8375rem;
+  color: var(--text-body);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.ms-plan-card__features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pink-light);
+}
+
+.ms-plan-card.selected .ms-plan-card__features li::before {
+  background: var(--pink);
+}
+
+.ms-plan-card__footer {
+  border-top: 1px solid var(--border-soft);
+  padding-top: 16px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--pink);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.ms-plan-card__selected-label { display: none; }
+.ms-plan-card.selected .ms-plan-card__select-label { display: none; }
+.ms-plan-card.selected .ms-plan-card__selected-label { display: flex; align-items: center; gap: 5px; }
+
+.ms-plans-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 24px;
+}
+
+/* ── FORM ────────────────────────────────────────── */
+.ms-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ms-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ms-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ms-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-body);
+}
+
+.ms-label-opt {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.ms-input {
+  width: 100%;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  box-sizing: border-box;
+}
+
+.ms-input::placeholder { color: var(--text-muted); }
+
+.ms-input:focus {
+  border-color: var(--pink);
+  box-shadow: 0 0 0 3px rgba(196, 45, 127, 0.1);
+}
+
+.ms-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ms-select-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-pill);
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-body);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.ms-select-btn:hover {
+  border-color: var(--pink-border);
+  color: var(--pink);
+}
+
+.ms-select-btn.active {
+  border-color: var(--pink);
+  background: var(--pink-pale);
+  color: var(--pink);
+}
+
+.ms-privacy-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+}
+
+.ms-privacy-note svg { flex-shrink: 0; }
+.ms-privacy-note a { color: var(--pink); }
+
+/* ── SUMMARY SIDEBAR ─────────────────────────────── */
+.ms-summary {
+  position: sticky;
+  top: 88px;
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+}
+
+.ms-summary__inner { padding: 24px; }
+
+.ms-summary__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.ms-summary__plan {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+}
+
+.ms-summary__price {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--pink);
+  margin-bottom: 0;
+}
+
+.ms-summary__divider {
+  height: 1px;
+  background: var(--border-soft);
+  margin: 16px 0;
+}
+
+.ms-summary__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.84rem;
+}
+
+.ms-summary__row span { color: var(--text-muted); }
+.ms-summary__row strong { color: var(--text); }
+
+.ms-summary__perks-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.ms-summary__perks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ms-summary__perks li {
+  font-size: 0.8rem;
+  color: var(--text-body);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.ms-summary__perks li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--pink-light);
+}
+
+.ms-summary__footer {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-soft);
+}
+
+/* ── SUCCESS ─────────────────────────────────────── */
+.ms-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 clamp(20px, 5vw, 60px);
+}
+
+.ms-success__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--pink-pale);
+  border: 2px solid var(--pink-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.ms-success__icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--mint);
+}
+
+.ms-success__eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mint-dark);
+  margin-bottom: 12px;
+}
+
+.ms-success__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.ms-success__sub {
+  font-size: 1rem;
+  color: var(--text-body);
+  margin-bottom: 24px;
+  max-width: 380px;
+}
+
+.ms-success__member-id {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-pill);
+  padding: 8px 24px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 48px;
+}
+
+.ms-success__next {
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-xl);
+  padding: clamp(24px, 4vw, 36px);
+  margin-bottom: 40px;
+}
+
+.ms-success__next-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.ms-success__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ms-success__step {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.ms-success__step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--pink-pale);
+  border: 1.5px solid var(--pink-border);
+  color: var(--pink);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ms-success__step strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.ms-success__step p {
+  font-size: 0.835rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ms-success__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ── FOOTER NAV ──────────────────────────────────── */
+.ms-footer-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 76px;
+  background: rgba(253, 251, 252, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(20px, 5vw, 48px);
+  z-index: 90;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────── */
+@media (max-width: 960px) {
+  .ms-plans-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .ms-plan-card--featured { order: -1; }
+}
+
+@media (max-width: 840px) {
+  .ms-panel__inner--split {
+    grid-template-columns: 1fr;
+  }
+  .ms-summary { position: static; }
+}
+
+@media (max-width: 600px) {
+  .ms-stepper .ms-step__label { display: none; }
+  .ms-form-row { grid-template-columns: 1fr; }
+  .ms-header { grid-template-columns: 1fr auto auto; }
+}

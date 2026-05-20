@@ -1,0 +1,284 @@
+/* ================================================
+   SERVICES PAGE — svc-* prefix
+   Relies on global.css for tokens, reset, navbar, footer, buttons
+================================================ */
+
+/* ── HERO ── */
+.svc-hero {
+  padding-top: clamp(80px, 10vw, 120px);
+  padding-bottom: 0;
+  background: var(--bg);
+}
+
+.svc-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(56px, 7vw, 96px);
+  align-items: center;
+}
+
+.svc-hero__content h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--text);
+  margin: 18px 0 24px;
+}
+
+.svc-hero__content h1 em {
+  font-style: italic;
+  color: var(--pink);
+}
+
+.svc-hero__content > p {
+  font-size: 1.0625rem;
+  color: var(--text-body);
+  line-height: 1.85;
+  max-width: 480px;
+}
+
+.svc-hero__actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.svc-hero__image img {
+  border-radius: var(--r-2xl);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* Stats row */
+.svc-hero__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: clamp(48px, 7vw, 80px);
+  padding-block: 36px;
+  border-top: 1px solid var(--border);
+}
+
+.svc-stat {
+  padding-inline: 28px;
+  border-right: 1px solid var(--border);
+}
+.svc-stat:first-child { padding-left: 0; }
+.svc-stat:last-child  { border-right: none; }
+
+.svc-stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.svc-stat span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+/* ── SERVICES GRID ── */
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.svc-card {
+  background: var(--white);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.32s var(--ease), box-shadow 0.32s var(--ease), border-color 0.32s var(--ease);
+}
+
+.svc-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--pink-border);
+}
+
+.svc-card__img { overflow: hidden; }
+
+.svc-card__img img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.55s var(--ease);
+}
+
+.svc-card:hover .svc-card__img img { transform: scale(1.05); }
+
+.svc-card__body { padding: clamp(24px, 2.8vw, 34px); }
+
+.svc-card__tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink);
+}
+
+.svc-card__body h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 1.8vw, 1.375rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--text);
+  margin: 8px 0 10px;
+}
+
+.svc-card__body p {
+  font-size: 0.875rem;
+  color: var(--text-body);
+  line-height: 1.75;
+}
+
+.svc-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.svc-card__price {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.svc-card__cta {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--pink);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.15s ease, gap 0.2s ease;
+}
+
+.svc-card__cta::after {
+  content: '→';
+  display: inline-block;
+  transition: transform 0.2s var(--ease);
+}
+
+.svc-card:hover .svc-card__cta { color: var(--pink-dark); }
+.svc-card:hover .svc-card__cta::after { transform: translateX(4px); }
+
+/* ── WHY CHOOSE US ── */
+.svc-why { background: var(--white); }
+
+.svc-why__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.svc-why__card {
+  padding: clamp(32px, 3.5vw, 48px);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border-soft);
+  background: var(--white);
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.28s ease, box-shadow 0.28s ease, transform 0.28s var(--ease);
+}
+
+.svc-why__card:hover {
+  border-color: var(--pink-border);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.svc-why__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-sm);
+  background: var(--pink-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--pink);
+}
+
+.svc-why__icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.svc-why__card h3 {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.svc-why__card p {
+  font-size: 0.875rem;
+  color: var(--text-body);
+  line-height: 1.8;
+}
+
+/* CTA italic */
+.cta-box h2 em {
+  font-style: italic;
+  color: var(--pink-light);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .svc-why__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .svc-hero__grid { grid-template-columns: 1fr; }
+  .svc-hero__image { order: -1; }
+  .svc-hero__image img { aspect-ratio: 3 / 2; }
+  .svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .svc-hero__stats {
+    grid-template-columns: repeat(2, 1fr);
+    border-top: none;
+  }
+  .svc-stat {
+    padding: 20px 16px;
+    border-right: none;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .svc-stat:nth-child(odd)  { border-right: 1px solid var(--border); }
+  .svc-stat:nth-child(n+3)  { border-top: none; }
+}
+
+@media (max-width: 560px) {
+  .svc-grid      { grid-template-columns: 1fr; }
+  .svc-why__grid { grid-template-columns: 1fr; }
+}
+
+/* ── RESPONSIVE ADDITIONS — Phase C ── */
+@media (max-width: 480px) {
+  /* Stats go single column on small phones — remove complex nth-child borders */
+  .svc-hero__stats {
+    grid-template-columns: 1fr;
+    border: none;
+  }
+  .svc-stat {
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    padding: 18px 16px;
+  }
+  .svc-stat:last-child { border-bottom: none !important; }
+}
