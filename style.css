@@ -2910,7 +2910,30 @@ aspect-ratio: 4 / 3;
   font-style: italic;
 }
 
-.sf-cta__actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.sf-cta__actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+
+.sf-cta .btn {
+  padding: 0.8rem 1.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+}
+
+.sf-cta .btn-white {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.8rem 1.75rem;
+}
+
+.sf-cta .btn-white:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
 
 /* ── Trust chips ── */
 .sf-trust {
