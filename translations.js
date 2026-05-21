@@ -20,28 +20,24 @@
       'nav.book':     'Book appointment',
 
       /* ── FOOTER */
-      'footer.tagline':      'Premium veterinary and wellness services for modern pet families.',
+      'footer.tagline':      'Organic wellness, grooming, and handcrafted nutrition for modern pet families.',
       'footer.newsletter':   'Newsletter',
       'footer.email_ph':     'your@email.com',
       'footer.subscribe':    'Subscribe',
-      'footer.col.services': 'Services',
-      'footer.col.company':  'Company',
-      'footer.col.shop':     'Shop',
-      'footer.col.support':     'Support',
-      'footer.link.food':       'Food',
-      'footer.link.grooming':   'Grooming',
-      'footer.link.wellness':   'Wellness',
-      'footer.link.accessories':'Accessories',
-      'footer.link.about':       'About',
-      'footer.link.services':    'Services',
-      'footer.link.membership':  'Membership',
-      'footer.link.blog':        'Blog',
-      'footer.link.contact':     'Contact',
-      'footer.link.faq':         'FAQ',
-      'footer.link.policy':      'Policy',
-      'footer.link.terms':       'Terms',
-      'footer.link.shipping':    'Shipping',
-      'footer.link.returns':     'Returns',
+      'footer.col.contact':     'Contact',
+      'footer.col.membership':  'Membership',
+      'footer.col.navigate':    'Navigate',
+      'footer.benefit.loyalty':   'Loyalty rewards',
+      'footer.benefit.meals':     'Free meal upgrades',
+      'footer.benefit.booking':   'Priority booking',
+      'footer.benefit.wellness':  'Member-only wellness perks',
+      'footer.cta.headline':  'Give your pet a healthier routine.',
+      'footer.cta.btn1':      'Book Appointment',
+      'footer.cta.btn2':      'Explore Pure Meals',
+      'footer.trust.vet':          'Vet-approved',
+      'footer.trust.organic':      'Organic ingredients',
+      'footer.trust.delivery':     'Refrigerated delivery',
+      'footer.trust.handcrafted':  'Handcrafted meals',
       'footer.copyright':    '© 2026 Petcare Spa. All rights reserved.',
 
       /* ── HOME — HERO */
@@ -497,28 +493,24 @@
       'nav.book':     'Đặt lịch hẹn',
 
       /* ── FOOTER */
-      'footer.tagline':      'Dịch vụ thú y và chăm sóc sức khỏe cao cấp cho các gia đình thú cưng hiện đại.',
+      'footer.tagline':      'Sức khỏe hữu cơ, chăm sóc thẩm mỹ và dinh dưỡng thủ công cho gia đình thú cưng hiện đại.',
       'footer.newsletter':   'Bản tin',
       'footer.email_ph':     'email@cuaban.com',
       'footer.subscribe':    'Đăng ký',
-      'footer.col.services': 'Dịch vụ',
-      'footer.col.company':  'Công ty',
-      'footer.col.shop':     'Cửa hàng',
-      'footer.col.support':  'Hỗ trợ',
-      'footer.link.food':       'Thức ăn',
-      'footer.link.grooming':   'Chăm sóc lông',
-      'footer.link.wellness':   'Sức khỏe',
-      'footer.link.accessories':'Phụ kiện',
-      'footer.link.about':       'Về chúng tôi',
-      'footer.link.services':    'Dịch vụ',
-      'footer.link.membership':  'Thành viên',
-      'footer.link.blog':        'Blog',
-      'footer.link.contact':     'Liên hệ',
-      'footer.link.faq':         'FAQ',
-      'footer.link.policy':      'Chính sách',
-      'footer.link.terms':       'Điều khoản',
-      'footer.link.shipping':    'Vận chuyển',
-      'footer.link.returns':     'Đổi trả',
+      'footer.col.contact':     'Liên hệ',
+      'footer.col.membership':  'Thành viên',
+      'footer.col.navigate':    'Điều hướng',
+      'footer.benefit.loyalty':   'Điểm thưởng thành viên',
+      'footer.benefit.meals':     'Nâng cấp bữa ăn miễn phí',
+      'footer.benefit.booking':   'Đặt lịch ưu tiên',
+      'footer.benefit.wellness':  'Ưu đãi sức khỏe độc quyền',
+      'footer.cta.headline':  'Mang đến cho thú cưng lối sống lành mạnh hơn.',
+      'footer.cta.btn1':      'Đặt lịch hẹn',
+      'footer.cta.btn2':      'Khám phá Pure Meals',
+      'footer.trust.vet':          'Được bác sĩ phê duyệt',
+      'footer.trust.organic':      'Nguyên liệu hữu cơ',
+      'footer.trust.delivery':     'Giao hàng có bảo lạnh',
+      'footer.trust.handcrafted':  'Bữa ăn thủ công',
       'footer.copyright':    '© 2026 Petcare Spa. Bản quyền đã được bảo hộ.',
 
       /* ── HOME — HERO */
@@ -1011,21 +1003,32 @@
     const sfNlBtn = document.querySelector('.sf-nl-btn');
     if (sfNlBtn) sfNlBtn.textContent = t['footer.subscribe'];
 
-    const colKeys = ['footer.col.shop', 'footer.col.company', 'footer.col.support'];
+    const colKeys = ['footer.col.contact', 'footer.col.membership', 'footer.col.navigate'];
     document.querySelectorAll('.sf-col-title').forEach((el, i) => {
       if (colKeys[i] && t[colKeys[i]]) el.textContent = t[colKeys[i]];
     });
 
     const footerLinkKeys = [
-      ['footer.link.food', 'footer.link.grooming', 'footer.link.wellness', 'footer.link.accessories'],
-      ['footer.link.about', 'footer.link.services', 'footer.link.membership', 'footer.link.blog'],
-      ['footer.link.contact', 'footer.link.faq', 'footer.link.policy', 'footer.link.terms'],
+      ['footer.benefit.loyalty', 'footer.benefit.meals', 'footer.benefit.booking', 'footer.benefit.wellness'],
+      ['nav.home', 'nav.services', 'nav.about', 'nav.shop', 'nav.meals', 'nav.membership', 'nav.blog', 'nav.contact'],
     ];
     document.querySelectorAll('.sf-links').forEach((group, gi) => {
       group.querySelectorAll('a').forEach((a, ai) => {
         const key = footerLinkKeys[gi]?.[ai];
         if (key && t[key]) a.textContent = t[key];
       });
+    });
+
+    const sfCtaHeadline = document.querySelector('.sf-cta__headline');
+    if (sfCtaHeadline && t['footer.cta.headline']) sfCtaHeadline.textContent = t['footer.cta.headline'];
+
+    const sfCtaBtns = document.querySelectorAll('.sf-cta__actions a');
+    if (sfCtaBtns[0] && t['footer.cta.btn1']) sfCtaBtns[0].textContent = t['footer.cta.btn1'];
+    if (sfCtaBtns[1] && t['footer.cta.btn2']) sfCtaBtns[1].textContent = t['footer.cta.btn2'];
+
+    const trustChipKeys = ['footer.trust.vet', 'footer.trust.organic', 'footer.trust.delivery', 'footer.trust.handcrafted'];
+    document.querySelectorAll('.sf-trust-chip span').forEach((span, i) => {
+      if (trustChipKeys[i] && t[trustChipKeys[i]]) span.textContent = t[trustChipKeys[i]];
     });
 
     document.querySelectorAll('.sf-copy').forEach(el => {
