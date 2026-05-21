@@ -6,7 +6,7 @@
 /* ── HERO ── */
 .blg-hero {
   padding-top: clamp(80px, 10vw, 120px);
-  padding-bottom: clamp(56px, 7vw, 80px);
+  padding-bottom: clamp(48px, 6vw, 72px);
   background: var(--bg);
 }
 
@@ -17,7 +17,7 @@
 
 .blg-hero__header h1 {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 500;
   line-height: 1.02;
   letter-spacing: -0.035em;

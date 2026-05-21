@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="global.css?v=20">
-  <link rel="stylesheet" href="blog.css?v=10">
+  <link rel="stylesheet" href="global.css?v=21">
+  <link rel="stylesheet" href="blog.css?v=11">
   <meta name="description" content="Expert insights on pet nutrition, grooming, preventive care, and wellness. Written by veterinary professionals.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Journal | Petcare Spa">
@@ -75,7 +75,12 @@
 
     <div class="blg-featured fade-up d1">
       <a href="blog-post.html" class="blg-featured__image-wrap">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1800&auto=format&fit=crop" alt="Happy golden retriever in a sunny field">
+        <img loading="eager"
+             src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=85&w=1800&auto=format&fit=crop"
+             srcset="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=85&w=900&auto=format&fit=crop 900w,
+                     https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=85&w=1800&auto=format&fit=crop 1800w"
+             sizes="(max-width: 900px) 100vw, 50vw"
+             alt="Happy golden retriever in a sunny field">
         <div class="blg-featured__overlay"></div>
       </a>
       <div class="blg-featured__body">
@@ -537,6 +542,7 @@
 <script src="blog.js?v=9"></script>
 </body>
 </html>
+
 
 
 

@@ -9,12 +9,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="style.css?v=23" />
+  <link rel="stylesheet" href="style.css?v=28" />
   <meta name="description" content="Petcare Spa offers personalized veterinary care, grooming, wellness plans, and premium pet products. Boutique-quality care for dogs and cats.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Petcare Spa &mdash; Premium Pet Wellness & Care">
   <meta property="og:description" content="Petcare Spa offers personalized veterinary care, grooming, wellness plans, and premium pet products. Boutique-quality care for dogs and cats.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1200&auto=format&fit=crop">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1601758174114-e711e89e1991?q=80&w=1200&auto=format&fit=crop">
   <meta property="og:url" content="https://petcarespa.com/index.html">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Petcare Spa &mdash; Premium Pet Wellness & Care">
@@ -96,74 +96,82 @@
   <main>
 
     <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• 2. HERO -->
-    <section id="main-content" class="hero container" id="home" aria-labelledby="hero-heading">
+    <section id="main-content" class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero__inner">
 
-      <div class="hero__content">
+          <!-- LEFT — text 38% -->
+          <div class="hero__content">
 
-        <div class="hero__eyebrow fade-up">
-          <span class="hero__dot"></span>
-          <span data-i18n="home.hero.eyebrow">Premium pet wellness</span>
+            <div class="hero__eyebrow fade-up">
+              <span class="hero__dot"></span>
+              <span data-i18n="home.hero.eyebrow">Premium pet wellness</span>
+            </div>
+
+            <h1 class="hero__headline fade-up delay-1" id="hero-heading" data-i18n-html="home.hero.headline">
+              Care that <em>truly</em><br>
+              puts your pet first
+            </h1>
+
+            <p class="hero__sub fade-up delay-2" data-i18n="home.hero.sub">
+              Personalized veterinary care, professional grooming, and curated wellness &mdash; all under one roof. Because modern pets deserve modern care.
+            </p>
+
+            <div class="hero__actions fade-up delay-3">
+              <a href="booking.html" class="btn btn-dark btn-lg" data-i18n="home.hero.btn1">Book consultation</a>
+              <a href="services.html" class="btn btn-outline btn-lg" data-i18n="home.hero.btn2">Explore services</a>
+            </div>
+
+            <div class="hero__trust fade-up delay-4">
+              <div>
+                <div class="hero__trust-num">50+</div>
+                <div class="hero__trust-label" data-i18n="home.hero.stat1_label">Licensed vets</div>
+              </div>
+              <div>
+                <div class="hero__trust-num">12K</div>
+                <div class="hero__trust-label" data-i18n="home.hero.stat2_label">Happy pets</div>
+              </div>
+              <div>
+                <div class="hero__trust-num">4.9&#9733;</div>
+                <div class="hero__trust-label" data-i18n="home.hero.stat3_label">Average rating</div>
+              </div>
+              <div>
+                <div class="hero__trust-num">1-hr</div>
+                <div class="hero__trust-label" data-i18n="home.hero.stat4_label">Response time</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT — image 62% -->
+          <div class="hero__image-wrap fade-up delay-1">
+            <div class="hero__photo">
+              <img loading="eager"
+                   src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=90&w=1920&auto=format&fit=crop"
+                   srcset="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=90&w=1280&auto=format&fit=crop 1280w,
+                           https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=90&w=1920&auto=format&fit=crop 1920w,
+                           https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=90&w=2560&auto=format&fit=crop 2560w"
+                   sizes="(max-width: 900px) 100vw, 50vw"
+                   alt="Happy golden retriever — Premium Pet Wellness">
+            </div>
+
+            <div class="hero__badge fade-up delay-3">
+              <div class="hero__badge-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="hero__badge-text" data-i18n="home.hero.badge_title">Vet-certified care</div>
+                <div class="hero__badge-sub" data-i18n="home.hero.badge_sub">All services reviewed by specialists</div>
+              </div>
+            </div>
+
+            <span class="hero__image-tag fade-up delay-2" data-i18n="home.hero.same_day">Same-day available</span>
+          </div>
+
         </div>
-
-        <h1 class="hero__headline fade-up delay-1" id="hero-heading" data-i18n-html="home.hero.headline">
-          Care that <em>truly</em><br>
-          puts your pet first
-        </h1>
-
-        <p class="hero__sub fade-up delay-2" data-i18n="home.hero.sub">
-          Personalized veterinary care, professional grooming, and curated wellness &mdash; all under one roof. Because modern pets deserve modern care.
-        </p>
-
-        <div class="hero__actions fade-up delay-3">
-          <a href="booking.html" class="btn btn-dark btn-lg" data-i18n="home.hero.btn1">Book consultation</a>
-          <a href="services.html" class="btn btn-outline btn-lg" data-i18n="home.hero.btn2">Explore services</a>
-        </div>
-
-        <div class="hero__trust fade-up delay-4">
-          <div>
-            <div class="hero__trust-num">50+</div>
-            <div class="hero__trust-label" data-i18n="home.hero.stat1_label">Licensed vets</div>
-          </div>
-          <div>
-            <div class="hero__trust-num">12K</div>
-            <div class="hero__trust-label" data-i18n="home.hero.stat2_label">Happy pets</div>
-          </div>
-          <div>
-            <div class="hero__trust-num">4.9&#9733;</div>
-            <div class="hero__trust-label" data-i18n="home.hero.stat3_label">Average rating</div>
-          </div>
-          <div>
-            <div class="hero__trust-num">1-hr</div>
-            <div class="hero__trust-label" data-i18n="home.hero.stat4_label">Response time</div>
-          </div>
-        </div>
-
       </div>
-
-      <div class="hero__image-wrap fade-up delay-2">
-        <!-- Replace with real lifestyle pet photography -->
-        <div class="hero__photo">
-        <img loading="lazy"
-        src="assets/images/hero/hero-main-dog.jpg"
-        alt="Premium Pet Care"
-        />
-        </div>
-
-        <div class="hero__badge">
-          <div class="hero__badge-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="hero__badge-text" data-i18n="home.hero.badge_title">Vet-certified care</div>
-            <div class="hero__badge-sub" data-i18n="home.hero.badge_sub">All services reviewed by specialists</div>
-          </div>
-        </div>
-
-        <span class="hero__image-tag" data-i18n="home.hero.same_day">Same-day available</span>
-      </div>
-
     </section>
 
     <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• 3. TRUST BAR -->
@@ -1090,6 +1098,7 @@
 </body>
 </html>
 <!-- update deploy -->
+
 
 
 

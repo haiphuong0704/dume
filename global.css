@@ -53,6 +53,19 @@
 
   --font-body:    'Manrope', system-ui, -apple-system, sans-serif;
   --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+  /* ── HERO DESIGN SYSTEM (lock — do not change without design review) ── */
+  --hero-pad-top:    clamp(80px, 10vw, 120px);
+  --hero-pad-bottom: clamp(48px, 5vw, 72px);
+  --hero-gap:        clamp(40px, 6vw, 96px);
+  --hero-img-ratio:  4 / 5;
+  --hero-mobile-bp:  900px;
+
+  /* ── TYPOGRAPHY SCALE ── */
+  --h1-hero:         clamp(2.5rem, 5vw, 4rem);
+  --h1-hero-home:    clamp(2.75rem, 5vw, 4.5rem);
+  --h1-section:      clamp(2.25rem, 4vw, 3.25rem);
+  --body-max-width:  480px;
 }
 
 /* ── RESET ── */
