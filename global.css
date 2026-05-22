@@ -1569,7 +1569,7 @@ a.img-zoom-wrap:hover img {
 
 .product-image img {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   transition: transform 0.62s var(--ease);
   will-change: transform;
@@ -1661,8 +1661,29 @@ a.img-zoom-wrap:hover img {
   border: 1px solid var(--pink-border);
 }
 
+/* ── CART BUTTON — base styles (loaded globally so product.html related cards are styled) ── */
+.cart-btn {
+  background: var(--pink);
+  color: var(--white);
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  transition: background var(--t-base);
+}
+.cart-btn:hover { background: var(--pink-dark); }
+
 /* ── CART BTN PRESS FEEDBACK ── */
 .cart-btn.adding { transform: scale(0.93); }
+
+/* ── Add-to-cart success state ── */
+.cart-btn.btn-added {
+  background: #1D7A6A;
+  border-color: #1D7A6A;
+}
 
 /* ── READING PROGRESS BAR ── */
 .reading-progress {
