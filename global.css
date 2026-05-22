@@ -459,6 +459,14 @@ button { font-family: inherit; cursor: pointer; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* ── Brand trust line ── */
+.sf-brand-trust {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.36);
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
 /* ── Brand column ── */
 .sf-brand-name {
   font-family: var(--font-display);
@@ -801,9 +809,6 @@ button { font-family: inherit; cursor: pointer; }
   }
   .sf-grid > .sf-brand { grid-column: 1 / -1; }
   .sf-nl { max-width: 400px; }
-  .sf-cta { flex-direction: column; align-items: center; gap: 20px; text-align: center; }
-  .sf-cta__inner { justify-content: center; }
-  .sf-trust { justify-content: center; }
 }
 
 /* Mobile nav */
@@ -819,10 +824,7 @@ button { font-family: inherit; cursor: pointer; }
     row-gap: 32px;
   }
   .sf-grid > .sf-brand { grid-column: 1 / 1; }
-  .sf-nl {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-  }
+  .sf-nl { grid-template-columns: 1fr; max-width: 100%; }
   .sf-base {
     grid-template-columns: 1fr;
     grid-template-areas: "copy" "legal" "social";
@@ -831,9 +833,6 @@ button { font-family: inherit; cursor: pointer; }
   }
   .sf-socials { justify-content: center; }
   .sf-legal { justify-content: center; }
-  .sf-cta__inner { flex-direction: column; align-items: center; gap: 14px; }
-  .sf-cta__actions { justify-content: center; }
-  .sf-trust { gap: 6px; justify-content: center; }
 }
 
 @media (max-width: 480px) {
