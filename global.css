@@ -2173,10 +2173,10 @@ img { height: auto; }
   border: 0;
 }
 
-/* Skip-to-content link for keyboard users */
+/* Skip-to-content link — visually hidden until focused via keyboard */
 .skip-link {
   position: absolute;
-  top: -100%;
+  top: -9999px;
   left: 16px;
   background: var(--pink);
   color: var(--white);
