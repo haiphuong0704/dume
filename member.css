@@ -1,4 +1,4 @@
-/* ================================================
+﻿/* ================================================
    PETCARE SPA — MEMBERSHIP LANDING PAGE
    Prefix: mb-
 ================================================ */
@@ -339,8 +339,8 @@
   margin-bottom: 14px;
 }
 
-.mb-reward-tile--pink .mb-reward-tile__icon { background: rgba(196, 45, 127, 0.10); }
-.mb-reward-tile--mint .mb-reward-tile__icon { background: rgba(104, 212, 191, 0.20); }
+.mb-reward-tile--pink .mb-reward-tile__icon { background: rgba(212, 49, 126, 0.10); }
+.mb-reward-tile--mint .mb-reward-tile__icon { background: rgba(45, 212, 191, 0.20); }
 
 .mb-reward-tile__icon svg {
   width: 18px;
@@ -830,18 +830,19 @@ details[open] .mb-faq-item__icon svg {
    8. FOOTER CTA BANNER
 ════════════════════════════════════════════════ */
 .mb-cta {
-  background: linear-gradient(135deg, #C42D7F 0%, #a02070 55%, #7a1850 100%);
+  background: linear-gradient(160deg, #FFFAFC 0%, #FDF0F8 50%, #FFFAFC 100%);
   padding-block: clamp(80px, 10vw, 120px);
   overflow: hidden;
   position: relative;
+  border-top: 1px solid rgba(212,49,126,0.1);
 }
 
 .mb-cta::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.06) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.04) 0%, transparent 40%);
+  background-image: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(212,49,126,0.07) 0%, transparent 65%),
+                    radial-gradient(ellipse 35% 30% at 85% 15%, rgba(45,212,191,0.05) 0%, transparent 55%);
   pointer-events: none;
 }
 
@@ -855,7 +856,7 @@ details[open] .mb-faq-item__icon svg {
 .mb-cta__hand {
   font-family: var(--font-hand);
   font-size: 1.25rem;
-  color: rgba(255,255,255,0.72);
+  color: var(--text-muted);
   display: block;
   margin-bottom: 12px;
 }
@@ -866,18 +867,18 @@ details[open] .mb-faq-item__icon svg {
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: var(--white);
+  color: var(--text);
   margin-bottom: 16px;
 }
 
 .mb-cta__headline em {
   font-style: italic;
-  color: rgba(255, 218, 236, 0.96);
+  color: var(--pink);
 }
 
 .mb-cta__sub {
   font-size: 1.0625rem;
-  color: rgba(255,255,255,0.76);
+  color: var(--text-body);
   line-height: 1.7;
   margin-bottom: clamp(28px, 4vw, 40px);
 }

@@ -235,8 +235,8 @@
 
 .blg-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(196, 45, 127, 0.12), var(--shadow-lg);
-  border-color: rgba(196, 45, 127, 0.28);
+  box-shadow: 0 12px 40px rgba(212, 49, 126, 0.12), var(--shadow-lg);
+  border-color: rgba(212, 49, 126, 0.28);
 }
 
 .blg-card__image-wrap {
@@ -504,7 +504,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
-  background: linear-gradient(145deg, #7A1062 0%, #861D69 50%, #C42D7F 100%);
+  background: linear-gradient(145deg, #7A1950 0%, #A8225F 50%, #D4317E 100%);
   border-radius: var(--r-2xl);
   overflow: hidden;
   min-height: 460px;

@@ -20,6 +20,13 @@ document.querySelectorAll('.navbar__nav a, .navbar__mobile-menu a').forEach(a =>
     a.classList.add('active');
   }
 });
+// Highlight dropdown parent when a child link is active
+document.querySelectorAll('.navbar__nav li.has-dropdown').forEach(li => {
+  if (li.querySelector('a.active')) {
+    const parentLink = li.querySelector(':scope > a');
+    if (parentLink) parentLink.classList.add('is-active');
+  }
+});
 
 // ── MOBILE MENU TOGGLE ───────────────────────────
 const navToggle  = document.getElementById('navToggle');
@@ -48,6 +55,28 @@ if (navToggle && mobileMenu) {
     }
   });
 }
+
+// ── MOBILE SUBMENU ACCORDION ─────────────────────
+document.querySelectorAll('.mobile-has-submenu').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const sub = btn.nextElementSibling;
+    if (!sub?.classList.contains('mobile-submenu')) return;
+    const isOpen = sub.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+  });
+});
+// Auto-expand and mark active when a child page is current
+document.querySelectorAll('.mobile-submenu').forEach(sub => {
+  if (sub.querySelector('a.active')) {
+    const trigger = sub.previousElementSibling;
+    if (trigger?.classList.contains('mobile-has-submenu')) {
+      trigger.classList.add('is-active', 'open');
+      sub.classList.add('open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+  }
+});
 
 // ── FADE-UP SCROLL ANIMATION ─────────────────────
 const fadeObserver = new IntersectionObserver((entries) => {
@@ -424,6 +453,40 @@ document.querySelectorAll('.p-card__add').forEach(btn => {
     }, 1800);
   });
 });
+
+// ── PAGE LOADER ───────────────────────────────
+(function () {
+  if (document.getElementById('pcs-loader')) return;
+
+  const loader = document.createElement('div');
+  loader.id = 'pcs-loader';
+  loader.innerHTML = '<div class="pcs-loader__bar"></div>';
+  document.body.appendChild(loader);
+
+  // Show loader on same-page navigation clicks
+  document.addEventListener('click', function (e) {
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (!href || href.charAt(0) === '#' || href.indexOf('://') !== -1 ||
+        href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0 ||
+        link.getAttribute('target') === '_blank' || link.hasAttribute('download')) return;
+    loader.classList.add('pcs-loader--active');
+  });
+
+  // Hide loader when page fully shows (handles back/forward cache too)
+  window.addEventListener('pageshow', function () {
+    loader.classList.remove('pcs-loader--active');
+    loader.classList.add('pcs-loader--done');
+    setTimeout(function () { loader.classList.remove('pcs-loader--done'); }, 600);
+  });
+
+  // Immediate hide if page already loaded
+  if (document.readyState === 'complete') {
+    loader.classList.add('pcs-loader--done');
+    setTimeout(function () { loader.classList.remove('pcs-loader--done'); }, 600);
+  }
+})();
 
 // ── BACK TO TOP ───────────────────────────────
 (function () {

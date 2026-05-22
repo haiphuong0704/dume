@@ -8,17 +8,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="global.css?v=24">
-  <link rel="stylesheet" href="product.css?v=11">
-  <meta name="description" content="Grain-free, vet-formulated organic dog food made from real whole ingredients. Free delivery on orders over $60.">
+  <link rel="stylesheet" href="global.css?v=31">
+  <link rel="stylesheet" href="product.css?v=12">
+  <meta name="description" content="Grain-free, vet-formulated organic dog food made from real whole ingredients. Free delivery on orders over 600.000&#8363;.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Organic Premium Dog Food | Petcare Spa Shop">
-  <meta property="og:description" content="Grain-free, vet-formulated organic dog food made from real whole ingredients. Free delivery on orders over $60.">
+  <meta property="og:description" content="Grain-free, vet-formulated organic dog food made from real whole ingredients. Free delivery on orders over 600.000&#8363;.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1200&auto=format&fit=crop">
   <meta property="og:url" content="https://petcarespa.com/product.html">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Organic Premium Dog Food | Petcare Spa Shop">
-  <meta name="twitter:description" content="Grain-free, vet-formulated organic dog food made from real whole ingredients. Free delivery on orders over $60.">
+  <meta name="twitter:description" content="Grain-free, vet-formulated organic dog food made from real whole ingredients. Free delivery on orders over 600.000&#8363;.">
   <link rel="canonical" href="https://petcarespa.com/product.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#C42D7F">
@@ -31,15 +31,18 @@
     <div class="navbar__inner">
       <a href="index.html" class="navbar__logo">Petcare <span>Spa</span></a>
             <nav class="navbar__desktop">
-        <ul class="navbar__nav">
+                <ul class="navbar__nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="meals.html">Pure Meals</a></li>
-          <li><a href="member.html">Membership</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services.html">Luxe Services</a></li>
+          <li><a href="spa-bites.html">Spa Bites</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li class="has-dropdown">
+            <a href="javascript:void(0)">About Us <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+            <div class="nav-dropdown">
+              <a href="contact-us.html">Contact Us</a>
+              <a href="blog.html">Blog</a>
+            </div>
+          </li>
         </ul>
       </nav>
       <div class="navbar__actions">
@@ -57,13 +60,14 @@
   </div>
     <div class="navbar__mobile-menu" id="mobileMenu">
     <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="shop.html">Shop</a>
-    <a href="meals.html">Pure Meals</a>
-    <a href="member.html">Membership</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
+    <a href="services.html">Luxe Services</a>
+    <a href="spa-bites.html">Spa Bites</a>
+    <a href="membership.html">Membership</a>
+    <button type="button" class="mobile-has-submenu" aria-expanded="false">About Us <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="mobile-submenu">
+      <a href="contact-us.html">Contact Us</a>
+      <a href="blog.html">Blog</a>
+    </div>
     <a href="booking.html" class="btn btn-primary">Book appointment</a>
   </div>
 </header>
@@ -72,9 +76,9 @@
 <div class="pd-breadcrumb">
   <div class="container">
     <nav class="pd-crumb">
-      <a href="shop.html">Shop</a>
+      <a href="services.html">Shop</a>
       <span>/</span>
-      <a href="shop.html">Nutrition</a>
+      <a href="services.html">Nutrition</a>
       <span>/</span>
       <span>Organic Premium Dog Food</span>
     </nav>
@@ -122,8 +126,8 @@
         <h1 class="pd-title">Organic Premium Dog Food</h1>
 
         <div class="pd-price-row">
-          <span class="pd-price">$48</span>
-          <span class="pd-price-original">$60</span>
+          <span class="pd-price">480.000&#8363;</span>
+          <span class="pd-price-original">600.000&#8363;</span>
           <span class="pd-discount-badge">Save 20%</span>
         </div>
 
@@ -135,9 +139,9 @@
             Size: <strong id="selected-size">2 lbs</strong>
           </div>
           <div class="pd-variant-group">
-            <button class="pd-variant active" data-size="2 lbs" data-price="48">2 lbs</button>
-            <button class="pd-variant" data-size="5 lbs" data-price="98">5 lbs</button>
-            <button class="pd-variant" data-size="10 lbs" data-price="179">10 lbs</button>
+            <button class="pd-variant active" data-size="2 lbs" data-price="480000">2 lbs</button>
+            <button class="pd-variant" data-size="5 lbs" data-price="980000">5 lbs</button>
+            <button class="pd-variant" data-size="10 lbs" data-price="1790000">10 lbs</button>
           </div>
         </div>
 
@@ -161,7 +165,7 @@
         <div class="pd-trust">
           <div class="pd-trust__item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-            <span>Free shipping over $75</span>
+            <span>Free delivery over 750.000&#8363;</span>
           </div>
           <div class="pd-trust__item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4"/></svg>
@@ -183,15 +187,15 @@
           <div class="pd-pairs__chips">
             <a href="product.html" class="pd-pair-chip">
               <img loading="lazy" class="pd-pair-chip__img" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=100&auto=format&fit=crop" alt="Sensitive Skin Shampoo">
-              <span><span class="pd-pair-chip__name">Sensitive Skin Shampoo</span><span class="pd-pair-chip__price">$24</span></span>
+              <span><span class="pd-pair-chip__name">Sensitive Skin Shampoo</span><span class="pd-pair-chip__price">240.000&#8363;</span></span>
             </a>
             <a href="product.html" class="pd-pair-chip">
               <img loading="lazy" class="pd-pair-chip__img" src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=100&auto=format&fit=crop" alt="Pet Wellness Vitamins">
-              <span><span class="pd-pair-chip__name">Pet Wellness Vitamins</span><span class="pd-pair-chip__price">$32</span></span>
+              <span><span class="pd-pair-chip__name">Pet Wellness Vitamins</span><span class="pd-pair-chip__price">320.000&#8363;</span></span>
             </a>
             <a href="product.html" class="pd-pair-chip">
               <img loading="lazy" class="pd-pair-chip__img" src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=100&auto=format&fit=crop" alt="Dental Hygiene Kit">
-              <span><span class="pd-pair-chip__name">Dental Hygiene Kit</span><span class="pd-pair-chip__price">$29</span></span>
+              <span><span class="pd-pair-chip__name">Dental Hygiene Kit</span><span class="pd-pair-chip__price">290.000&#8363;</span></span>
             </a>
           </div>
         </div>
@@ -339,8 +343,8 @@
           <h3>Sensitive Skin Shampoo</h3>
           <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>(89)</span></div>
           <div class="product-footer">
-            <div class="product-price">$24</div>
-            <button class="cart-btn related-add-btn" data-name="Sensitive Skin Shampoo" data-price="24">Add</button>
+            <div class="product-price">240.000&#8363;</div>
+            <button class="cart-btn related-add-btn" data-name="Sensitive Skin Shampoo" data-price="240000">Add</button>
           </div>
         </div>
       </article>
@@ -355,8 +359,8 @@
           <h3>Pet Wellness Vitamins</h3>
           <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>(214)</span></div>
           <div class="product-footer">
-            <div class="product-price">$32</div>
-            <button class="cart-btn related-add-btn" data-name="Pet Wellness Vitamins" data-price="32">Add</button>
+            <div class="product-price">320.000&#8363;</div>
+            <button class="cart-btn related-add-btn" data-name="Pet Wellness Vitamins" data-price="320000">Add</button>
           </div>
         </div>
       </article>
@@ -370,8 +374,8 @@
           <h3>Premium Leather Collar</h3>
           <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>(76)</span></div>
           <div class="product-footer">
-            <div class="product-price">$38</div>
-            <button class="cart-btn related-add-btn" data-name="Premium Leather Collar" data-price="38">Add</button>
+            <div class="product-price">380.000&#8363;</div>
+            <button class="cart-btn related-add-btn" data-name="Premium Leather Collar" data-price="380000">Add</button>
           </div>
         </div>
       </article>
@@ -408,17 +412,17 @@
       </div>
       <p class="cart-empty-title">Your cart is empty</p>
       <p class="cart-empty-sub">Add something your pet will love.</p>
-      <a href="shop.html" class="btn btn-primary btn-sm">Browse products</a>
+      <a href="services.html" class="btn btn-primary btn-sm">Browse products</a>
     </div>
     <div class="cart-items" id="cartItems"></div>
   </div>
   <div class="cart-drawer__footer" id="cartFooter" style="display:none">
     <div class="cart-drawer__subtotal">
       <span>Subtotal</span>
-      <strong id="cartTotal">$0</strong>
+      <strong id="cartTotal">0&#8363;</strong>
     </div>
     <button class="btn btn-primary" id="cartCheckout">Proceed to checkout</button>
-    <a href="shop.html" class="btn btn-outline">Continue shopping</a>
+    <a href="services.html" class="btn btn-outline">Continue shopping</a>
   </div>
 </aside>
 
@@ -443,7 +447,7 @@
         <ul class="sf-contact-list">
           <li class="sf-contact-item">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>35 Cat Lai, Thu Duc City, HCM City</span>
+            <span>18/2 35 Cat Lai, Thu Duc city, Ho Chi Minh city</span>
           </li>
           <li class="sf-contact-item">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -474,13 +478,12 @@
         <p class="sf-col-title">Navigate</p>
         <ul class="sf-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="meals.html">Pure Meals</a></li>
-          <li><a href="member.html">Membership</a></li>
+          <li><a href="services.html">Luxe Services</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="spa-bites.html">Spa Bites</a></li>
+          <li><a href="membership.html">Membership</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
         </ul>
       </div>
 
@@ -497,8 +500,8 @@
         <a href="https://www.facebook.com/petcarespa" target="_blank" rel="noopener" aria-label="Follow Petcare Spa on Facebook">
           <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
-        <a href="https://twitter.com/petcarespa" target="_blank" rel="noopener" aria-label="Follow Petcare Spa on Twitter">
-          <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+        <a href="https://www.tiktok.com/@petcarespa" target="_blank" rel="noopener" aria-label="Follow Petcare Spa on TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.78a8.18 8.18 0 0 0 4.78 1.52V6.85a4.85 4.85 0 0 1-1.01-.16z" stroke="none"/></svg>
         </a>
       </div>
     </div>
@@ -507,7 +510,7 @@
 </footer>
 
 <script src="translations.js?v=18"></script>
-<script src="global.js?v=21"></script>
+<script src="global.js?v=24"></script>
 <script src="cart.js?v=9"></script>
 <script src="product.js?v=9"></script>
 </body>

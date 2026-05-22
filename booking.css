@@ -217,7 +217,7 @@
 
 .bk-service-card.selected {
   border-color: var(--pink);
-  box-shadow: 0 0 0 3px rgba(196, 45, 127, 0.12), var(--shadow-md);
+  box-shadow: 0 0 0 3px rgba(212, 49, 126, 0.12), var(--shadow-md);
   transform: translateY(-3px);
 }
 
@@ -353,7 +353,7 @@
   background: var(--pink-pale);
   border-color: var(--pink);
   color: var(--pink);
-  box-shadow: 0 0 0 3px rgba(196, 45, 127, 0.1);
+  box-shadow: 0 0 0 3px rgba(212, 49, 126, 0.1);
 }
 
 .bk-type-btn.selected svg { color: var(--pink); }
@@ -450,7 +450,7 @@
 
 .bk-input:focus {
   border-color: var(--pink);
-  box-shadow: 0 0 0 3px rgba(196, 45, 127, 0.1);
+  box-shadow: 0 0 0 3px rgba(212, 49, 126, 0.1);
 }
 
 .bk-input.error,
@@ -883,7 +883,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px;
-  box-shadow: 0 8px 28px rgba(196, 45, 127, 0.3);
+  box-shadow: 0 8px 28px rgba(212, 49, 126, 0.3);
 }
 
 .bk-success__icon svg {
@@ -1097,8 +1097,8 @@
 
 /* ── NEXT BUTTON PULSE ── */
 @keyframes bkBtnPulse {
-  0%, 100% { box-shadow: 0 4px 18px rgba(196, 45, 127, 0.28); }
-  50%       { box-shadow: 0 4px 28px rgba(196, 45, 127, 0.48), 0 0 0 6px rgba(196, 45, 127, 0.12); }
+  0%, 100% { box-shadow: 0 4px 18px rgba(212, 49, 126, 0.28); }
+  50%       { box-shadow: 0 4px 28px rgba(212, 49, 126, 0.48), 0 0 0 6px rgba(212, 49, 126, 0.12); }
 }
 
 .bk-next-pulse {

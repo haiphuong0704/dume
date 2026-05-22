@@ -104,7 +104,7 @@
 
 .pd-thumb.active {
   border-color: var(--pink);
-  box-shadow: 0 0 0 2px rgba(196, 45, 127, 0.15);
+  box-shadow: 0 0 0 2px rgba(212, 49, 126, 0.15);
 }
 
 /* ── PRODUCT INFO ── */

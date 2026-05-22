@@ -31,7 +31,11 @@
     }
   ],
   "redirects": [
-    { "source": "/appointment-booking", "destination": "/booking", "permanent": true }
+    { "source": "/appointment-booking", "destination": "/booking", "permanent": true },
+    { "source": "/about",   "destination": "/about-us",   "permanent": true },
+    { "source": "/contact", "destination": "/contact-us", "permanent": true },
+    { "source": "/meals",   "destination": "/spa-bites",  "permanent": true },
+    { "source": "/shop",    "destination": "/services",   "permanent": true }
   ],
   "rewrites": [
     { "source": "/((?!api/).*)", "destination": "/$1" }

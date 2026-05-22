@@ -1,4 +1,4 @@
-/* ================================================
+﻿/* ================================================
    BLOG POST — bp-* prefix
    Single article detail page
    Relies on global.css for tokens, reset, navbar, footer
@@ -345,7 +345,7 @@
 
 /* ── CTA STRIP ── */
 .bp-cta {
-  background: linear-gradient(145deg, #7A1062 0%, #C42D7F 100%);
+  background: linear-gradient(145deg, #7A1950 0%, #D4317E 100%);
   padding-block: clamp(60px, 8vw, 96px);
   text-align: center;
 }
@@ -412,7 +412,7 @@
   background: var(--mint);
   border-color: var(--mint);
   color: var(--text);
-  box-shadow: 0 8px 24px rgba(104, 212, 191, 0.35);
+  box-shadow: 0 8px 24px rgba(45, 212, 191, 0.35);
 }
 
 /* ── RESPONSIVE ── */

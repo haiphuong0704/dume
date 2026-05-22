@@ -4,6 +4,10 @@
    Include on any page that has a cart drawer.
 =================================================== */
 
+function formatVND(amount) {
+  return Math.round(amount).toLocaleString('vi-VN') + '&#8363;';
+}
+
 // ── STATE ──────────────────────────────────────────
 const cart = (() => {
   let items = JSON.parse(localStorage.getItem('pcs_cart') || '[]');
@@ -131,7 +135,7 @@ function render() {
       : '';
   }
 
-  if (totalEl) totalEl.textContent = `$${total.toFixed(2)}`;
+  if (totalEl) totalEl.innerHTML = formatVND(total);
 
   if (checkoutBtn) {
     checkoutBtn.disabled = !hasItems;
@@ -171,7 +175,7 @@ function render() {
           aria-label="Remove ${item.name} from cart"
           data-id="${item.id}" data-size="${item.size || ''}">Remove</button>
       </div>
-      <p class="cart-item__price">$${(item.price * item.qty).toFixed(2)}</p>
+      <p class="cart-item__price">${formatVND(item.price * item.qty)}</p>
     `;
     itemsList.appendChild(el);
   });
