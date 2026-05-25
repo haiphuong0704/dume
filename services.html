@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -11,9 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
 
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="global.css?v=31">
+  <link rel="stylesheet" href="global.css?v=38">
   <link rel="stylesheet" href="services.css?v=21">
-  <link rel="stylesheet" href="shop.css?v=15">
   <meta name="description" content="From veterinary consultations and grooming to pet hotel stays and vaccinations &mdash; explore our full range of premium petcare services.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Our Services | Petcare Spa">
@@ -41,12 +40,13 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Luxe Services</a></li>
           <li><a href="spa-bites.html">Spa Bites</a></li>
-          <li><a href="membership.html">Membership</a></li>
+          <li><a href="shop.html">Shop</a></li>
           <li class="has-dropdown">
             <a href="javascript:void(0)">About Us <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
             <div class="nav-dropdown">
               <a href="contact-us.html">Contact Us</a>
               <a href="blog.html">Blog</a>
+              <a href="member.html">Membership</a>
             </div>
           </li>
         </ul>
@@ -67,11 +67,12 @@
     <a href="index.html">Home</a>
     <a href="services.html">Luxe Services</a>
     <a href="spa-bites.html">Spa Bites</a>
-    <a href="membership.html">Membership</a>
+    <a href="shop.html">Shop</a>
     <button type="button" class="mobile-has-submenu" aria-expanded="false">About Us <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
     <div class="mobile-submenu">
       <a href="contact-us.html">Contact Us</a>
       <a href="blog.html">Blog</a>
+      <a href="member.html">Membership</a>
     </div>
     <a href="booking.html" class="btn btn-primary">Book appointment</a>
   </div>
@@ -318,98 +319,7 @@
 </section>
 
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• CTA -->
-<!-- PRODUCTS / SHOP CATALOG -->
-<section class="products-section section" id="accessories">
-  <div class="container">
 
-    <div class="section-header fade-up">
-      <span class="eyebrow">Premium Products</span>
-      <h2>Handpicked essentials <em>for your pet.</em></h2>
-      <p>Every product reviewed by our veterinary team — grooming, nutrition, wellness, and accessories.</p>
-    </div>
-
-    <div class="filters-section" style="padding-top:0;margin-bottom:32px">
-      <div class="filters-bar">
-        <div class="filters-left">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="food">Nutrition</button>
-          <button class="filter-btn" data-filter="grooming">Grooming</button>
-          <button class="filter-btn" data-filter="wellness">Wellness</button>
-          <button class="filter-btn" data-filter="accessories">Accessories</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="products-grid" id="svc-products-grid">
-      <div class="product-card fade-up" data-category="food">
-        <a href="product.html" class="product-image">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?q=80&w=1200&auto=format&fit=crop" alt="Organic Premium Dog Food">
-          <span class="product-badge">Bestseller</span>
-        </a>
-        <button class="product-card__heart" data-product-id="dog-food" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <div class="product-body">
-          <span class="product-category">Nutrition</span>
-          <h3><a href="product.html" style="color:inherit;text-decoration:none">Organic Premium Dog Food</a></h3>
-          <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>(124)</span></div>
-          <div class="product-footer"><div class="product-price">480.000&#8363;</div><button class="cart-btn" data-name="Organic Premium Dog Food" data-price="480000" data-id="dog-food" data-img="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?q=80&w=200&auto=format&fit=crop">Add</button></div>
-        </div>
-      </div>
-      <div class="product-card fade-up d1" data-category="grooming">
-        <a href="product.html" class="product-image">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1200&auto=format&fit=crop" alt="Sensitive Skin Shampoo">
-          <span class="product-badge product-badge--vet">Vet Approved</span>
-        </a>
-        <button class="product-card__heart" data-product-id="shampoo" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <div class="product-body">
-          <span class="product-category">Grooming</span>
-          <h3><a href="product.html" style="color:inherit;text-decoration:none">Sensitive Skin Shampoo</a></h3>
-          <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>(89)</span></div>
-          <div class="product-footer"><div class="product-price">240.000&#8363;</div><button class="cart-btn" data-name="Sensitive Skin Shampoo" data-price="240000" data-id="shampoo" data-img="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=200&auto=format&fit=crop">Add</button></div>
-        </div>
-      </div>
-      <div class="product-card fade-up d2" data-category="wellness">
-        <a href="product.html" class="product-image">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1200&auto=format&fit=crop" alt="Pet Wellness Vitamins">
-          <span class="product-badge sale">-20%</span>
-        </a>
-        <button class="product-card__heart" data-product-id="wellness-vitamins" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <div class="product-body">
-          <span class="product-category">Wellness</span>
-          <h3><a href="product.html" style="color:inherit;text-decoration:none">Pet Wellness Vitamins</a></h3>
-          <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>(214)</span></div>
-          <div class="product-footer"><div class="product-price">320.000&#8363;</div><button class="cart-btn" data-name="Pet Wellness Vitamins" data-price="320000" data-id="wellness-vitamins" data-img="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=200&auto=format&fit=crop">Add</button></div>
-        </div>
-      </div>
-      <div class="product-card fade-up d3" data-category="accessories">
-        <a href="product.html" class="product-image">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?q=80&w=1200&auto=format&fit=crop" alt="Premium Leather Collar">
-          <span class="product-badge product-badge--popular">Popular</span>
-        </a>
-        <button class="product-card__heart" data-product-id="leather-collar" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <div class="product-body">
-          <span class="product-category">Accessories</span>
-          <h3><a href="product.html" style="color:inherit;text-decoration:none">Premium Leather Collar</a></h3>
-          <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>(76)</span></div>
-          <div class="product-footer"><div class="product-price">380.000&#8363;</div><button class="cart-btn" data-name="Premium Leather Collar" data-price="380000" data-id="leather-collar" data-img="https://images.unsplash.com/photo-1450778869180-41d0601e046e?q=80&w=200&auto=format&fit=crop">Add</button></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CART DRAWER -->
-<div class="cart-overlay" id="cartOverlay"></div>
-<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" role="dialog">
-  <div class="cart-drawer__header">
-    <h3 class="cart-drawer__title">Your Cart</h3>
-    <button class="cart-drawer__close" id="cartClose" aria-label="Close cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-  </div>
-  <div class="cart-drawer__body" id="cartItems"></div>
-  <div class="cart-drawer__footer">
-    <div class="cart-drawer__total"><span>Total</span><span id="cartTotal">0&#8363;</span></div>
-    <a href="checkout.html" class="btn btn-primary" id="checkoutBtn">Proceed to checkout</a>
-  </div>
-</aside>
 <section class="section bg-surface">
   <div class="container">
     <div class="cta-box fade-up">
@@ -474,8 +384,9 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Luxe Services</a></li>
           <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="spa-bites.html">Spa Bites</a></li>
-          <li><a href="membership.html">Membership</a></li>
+          <li><a href="spa-bites.html">Spa Bites</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="member.html">Membership</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact-us.html">Contact Us</a></li>
         </ul>
@@ -504,9 +415,7 @@
 </footer>
 
 <script src="translations.js?v=19"></script>
-<script src="global.js?v=24"></script>
-<script src="cart.js?v=11"></script>
-<script src="shop.js?v=6"></script>
+<script src="global.js?v=27"></script>
 <script src="services.js?v=10"></script>
 
 </body>

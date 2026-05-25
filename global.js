@@ -246,6 +246,7 @@ PCS.toast = (() => {
     const isOpen = widget.classList.toggle('fcw--open');
     trigger.setAttribute('aria-expanded', isOpen);
     trigger.setAttribute('aria-label', isOpen ? 'Close chat options' : 'Open chat options');
+    document.querySelector('.btt')?.classList.toggle('btt--fcw-open', isOpen);
   });
 
   document.addEventListener('click', e => {
@@ -253,6 +254,7 @@ PCS.toast = (() => {
       widget.classList.remove('fcw--open');
       trigger.setAttribute('aria-expanded', 'false');
       trigger.setAttribute('aria-label', 'Open chat options');
+      document.querySelector('.btt')?.classList.remove('btt--fcw-open');
     }
   });
 
@@ -262,6 +264,7 @@ PCS.toast = (() => {
       trigger.setAttribute('aria-expanded', 'false');
       trigger.setAttribute('aria-label', 'Open chat options');
       trigger.focus();
+      document.querySelector('.btt')?.classList.remove('btt--fcw-open');
     }
   });
 })();
@@ -617,4 +620,65 @@ document.querySelectorAll('.p-card__add').forEach(btn => {
       img.addEventListener('error', function () { img.classList.add('loaded'); }); // don't block on error
     }
   });
+})();
+
+// ── GLOBAL CART INJECTION ──────────────────────────
+(function () {
+  var page = window.location.pathname.split('/').pop() || 'index.html';
+  if (['booking.html', 'appointment-booking.html', 'membership.html'].includes(page)) return;
+  var actions = document.querySelector('.navbar__actions');
+  if (!actions) return;
+  if (document.getElementById('cartToggle')) return; // already present (e.g. shop.html)
+
+  // Inject cart button before the language selector (after Book Appointment)
+  var langSel  = actions.querySelector('#langSel');
+  var navToggle = actions.querySelector('.navbar__toggle');
+  var anchor   = langSel || navToggle;
+  var cartBtn = document.createElement('button');
+  cartBtn.className = 'navbar__cart';
+  cartBtn.id = 'cartToggle';
+  cartBtn.setAttribute('aria-label', 'Open cart');
+  cartBtn.innerHTML =
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>' +
+      '<line x1="3" y1="6" x2="21" y2="6"/>' +
+      '<path d="M16 10a4 4 0 0 1-8 0"/>' +
+    '</svg>' +
+    '<span class="navbar__cart-count" id="cartCount" style="display:none">0</span>';
+  actions.insertBefore(cartBtn, anchor);
+
+  // Inject cart overlay + drawer
+  var tpl = document.createElement('template');
+  tpl.innerHTML =
+    '<div class="cart-overlay" id="cartOverlay"></div>' +
+    '<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">' +
+      '<div class="cart-drawer__header">' +
+        '<h3>Your Cart <span class="cart-drawer__count" id="drawerCount"></span></h3>' +
+        '<button class="cart-drawer__close" id="cartClose" aria-label="Close cart">' +
+          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
+        '</button>' +
+      '</div>' +
+      '<div class="cart-drawer__body" id="cartBody">' +
+        '<div class="cart-drawer__empty" id="cartEmpty">' +
+          '<div class="cart-empty-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>' +
+          '<p class="cart-empty-title">Your cart is empty</p>' +
+          '<p class="cart-empty-sub">Add some products from our shop!</p>' +
+          '<a href="shop.html" class="btn btn-primary btn-sm">Browse Shop</a>' +
+        '</div>' +
+        '<ul class="cart-items" id="cartItems"></ul>' +
+      '</div>' +
+      '<div class="cart-drawer__footer" id="cartFooter" style="display:none">' +
+        '<div class="cart-drawer__subtotal">' +
+          '<span>Subtotal</span>' +
+          '<strong id="cartTotal">0 ₫</strong>' +
+        '</div>' +
+        '<button class="btn btn-primary" id="cartCheckout">Checkout</button>' +
+      '</div>' +
+    '</aside>';
+  document.body.appendChild(tpl.content);
+
+  // Dynamically load cart.js
+  var s = document.createElement('script');
+  s.src = 'cart.js?v=11';
+  document.body.appendChild(s);
 })();

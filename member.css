@@ -448,11 +448,11 @@
 }
 
 .mb-tier-card__price strong {
-  font-size: 2.75rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
   color: var(--text);
   line-height: 1;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
 }
 
 .mb-tier-card__price span {
@@ -830,19 +830,18 @@ details[open] .mb-faq-item__icon svg {
    8. FOOTER CTA BANNER
 ════════════════════════════════════════════════ */
 .mb-cta {
-  background: linear-gradient(160deg, #FFFAFC 0%, #FDF0F8 50%, #FFFAFC 100%);
+  background: linear-gradient(160deg, rgb(168, 24, 90) 0%, rgb(212, 49, 126) 55%, rgb(244, 114, 182) 100%);
   padding-block: clamp(80px, 10vw, 120px);
   overflow: hidden;
   position: relative;
-  border-top: 1px solid rgba(212,49,126,0.1);
 }
 
 .mb-cta::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(212,49,126,0.07) 0%, transparent 65%),
-                    radial-gradient(ellipse 35% 30% at 85% 15%, rgba(45,212,191,0.05) 0%, transparent 55%);
+  background-image: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(255,255,255,0.10) 0%, transparent 60%),
+                    radial-gradient(ellipse 40% 35% at 90% 90%, rgba(255,255,255,0.06) 0%, transparent 55%);
   pointer-events: none;
 }
 
@@ -856,7 +855,7 @@ details[open] .mb-faq-item__icon svg {
 .mb-cta__hand {
   font-family: var(--font-hand);
   font-size: 1.25rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.72);
   display: block;
   margin-bottom: 12px;
 }
@@ -867,18 +866,18 @@ details[open] .mb-faq-item__icon svg {
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: var(--text);
+  color: #fff;
   margin-bottom: 16px;
 }
 
 .mb-cta__headline em {
   font-style: italic;
-  color: var(--pink);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .mb-cta__sub {
   font-size: 1.0625rem;
-  color: var(--text-body);
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.7;
   margin-bottom: clamp(28px, 4vw, 40px);
 }
@@ -891,12 +890,34 @@ details[open] .mb-faq-item__icon svg {
   flex-wrap: wrap;
 }
 
+/* Button overrides on dark gradient */
+.mb-cta .btn-primary {
+  background: #fff;
+  color: rgb(168, 24, 90);
+  border-color: #fff;
+}
+.mb-cta .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(255, 255, 255, 0.92);
+  color: rgb(140, 18, 72);
+}
+.mb-cta .btn-outline {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+.mb-cta .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.80);
+  color: #fff;
+}
+
 /* ════════════════════════════════════════════════
    RESPONSIVE
 ════════════════════════════════════════════════ */
 @media (max-width: 960px) {
   .mb-tiers__grid { gap: 16px; }
-  .mb-tier-card__price strong { font-size: 2.25rem; }
+  .mb-tier-card__price strong { font-size: 1.75rem; }
 }
 
 @media (max-width: 900px) {
