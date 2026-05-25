@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
 
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="global.css?v=38">
+  <link rel="stylesheet" href="global.css?v=46">
   <link rel="stylesheet" href="spa-bites.css?v=7">
   <meta name="theme-color" content="#C42D7F">
 </head>
@@ -52,6 +52,21 @@
       <div class="navbar__actions">
         <a href="member.html" class="btn btn-secondary btn-sm">Members</a>
         <a href="booking.html" class="btn btn-primary btn-sm">Book appointment</a>
+        <button class="navbar__cart" id="cartToggle" aria-label="Open cart">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="navbar__cart-count" id="cartCount" style="display:none">0</span>
+        </button>
+        <div class="lang-sel" id="langSel">
+          <button class="lang-sel__btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span class="lang-sel__cur">EN</span>
+            <svg class="lang-sel__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-sel__drop" role="listbox" aria-label="Language options">
+            <button class="lang-sel__opt lang-sel__opt--active" data-lang="EN" role="option" aria-selected="true">EN — English</button>
+            <button class="lang-sel__opt" data-lang="VI" role="option" aria-selected="false">VI — Tiếng Việt</button>
+          </div>
+        </div>
         <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
@@ -82,11 +97,6 @@
     <div class="pm-hero__grid">
 
       <div class="pm-hero__content fade-up">
-        <div class="pm-hero__eyebrow">
-          <span class="pm-hero__eyebrow-dot"></span>
-          <span data-i18n="pm.hero.eyebrow">Spa Bites</span>
-        </div>
-
         <span class="pm-hero__pre-hand" data-i18n="pm.hero.prehand">— freshly prepared, every batch</span>
 
         <h1 class="pm-hero__headline" data-i18n-html="pm.hero.headline">
@@ -103,24 +113,6 @@
           <a href="#pm-plans" class="btn btn-outline btn-lg" data-i18n="pm.hero.btn2">See Recipes &amp; Pricing</a>
         </div>
 
-        <div class="pm-hero__chips">
-          <span class="pm-hero__chip">
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-i18n="pm.hero.chip1">Organic ingredients</span>
-          </span>
-          <span class="pm-hero__chip">
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-i18n="pm.hero.chip2">Human-grade quality</span>
-          </span>
-          <span class="pm-hero__chip">
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-i18n="pm.hero.chip3">Free delivery</span>
-          </span>
-          <span class="pm-hero__chip">
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            <span data-i18n="pm.hero.chip4">Vet-formulated</span>
-          </span>
-        </div>
       </div>
 
       <div class="pm-hero__image fade-up d1">
@@ -133,25 +125,11 @@
                alt="Fresh handmade pet food bowl with organic ingredients">
         </div>
 
-        <div class="pm-hero__badge">
-          <div class="pm-hero__badge-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <div>
-            <span class="pm-hero__badge-title" data-i18n="pm.hero.badge_title">Vet-approved recipe</span>
-            <p class="pm-hero__badge-sub" data-i18n="pm.hero.badge_sub">Every formula reviewed by certified nutritionists</p>
-          </div>
-        </div>
-
         <div class="pm-hero__tag">
           <span class="pm-hero__tag-hand" data-i18n="pm.hero.tag_hand">made daily</span>
           <span class="pm-hero__tag-label" data-i18n="pm.hero.tag_label">small batches only</span>
         </div>
 
-        <span class="pm-hero__annot pm-hero__annot--1" data-i18n="pm.hero.annot1">Human-grade</span>
-        <span class="pm-hero__annot pm-hero__annot--2" data-i18n="pm.hero.annot2">No fillers</span>
-        <span class="pm-hero__annot pm-hero__annot--3" data-i18n="pm.hero.annot3">Cooked fresh</span>
-        <span class="pm-hero__annot pm-hero__annot--4" data-i18n="pm.hero.annot4">Made daily</span>
 
       </div>
 
@@ -1051,7 +1029,7 @@
 </footer>
 
 <script src="translations.js?v=19"></script>
-<script src="global.js?v=27"></script>
+<script src="global.js?v=33"></script>
 </body>
 </html>
 

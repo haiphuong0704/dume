@@ -4,6 +4,61 @@
    Toast system · Newsletter · Floating chat widget
 =================================================== */
 
+// ── PAGE TRANSITIONS ─────────────────────────────
+// PRIMARY: View Transitions API is active in Chrome 126+.
+// CSS @view-transition + view-transition-name: navbar handles
+// everything — no JS needed. Return early immediately.
+//
+// FALLBACK: browsers without VT support use the pcs-in system.
+// @supports not (view-transition-name: none) in CSS already
+// guards the content opacity rules to fallback browsers only.
+(function () {
+  // Primary path: View Transitions API present — CSS handles navigation.
+  // Do not intercept clicks, do not manage content visibility.
+  if ('startViewTransition' in document) return;
+
+  // Fallback path — no View Transitions API.
+  var STANDALONE = ['booking.html', 'appointment-booking.html', 'membership.html'];
+  var page = window.location.pathname.split('/').pop() || 'index.html';
+  var de = document.documentElement;
+
+  if (STANDALONE.indexOf(page) !== -1) {
+    de.classList.add('pcs-in');
+    return;
+  }
+
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var raf = window.requestAnimationFrame || function (fn) { setTimeout(fn, 16); };
+
+  if (prefersReduced) {
+    de.classList.add('pcs-in');
+  } else {
+    raf(function () { raf(function () { de.classList.add('pcs-in'); }); });
+  }
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href]');
+    if (!link) return;
+    var href = link.getAttribute('href') || '';
+    if (
+      !href ||
+      href.indexOf('://') !== -1 ||
+      href.indexOf('//') === 0 ||
+      href.charAt(0) === '#' ||
+      href.indexOf('mailto:') === 0 ||
+      href.indexOf('tel:') === 0 ||
+      href.indexOf('javascript:') === 0 ||
+      link.target === '_blank' ||
+      link.hasAttribute('download') ||
+      e.ctrlKey || e.metaKey || e.shiftKey || e.altKey
+    ) return;
+
+    e.preventDefault();
+    if (!prefersReduced) de.classList.remove('pcs-in');
+    setTimeout(function () { window.location.href = href; }, prefersReduced ? 0 : 160);
+  });
+})();
+
 // ── NAVBAR SCROLL SHADOW ──────────────────────────
 const navbar = document.getElementById('navbar');
 if (navbar) {
@@ -142,10 +197,13 @@ PCS.toast = (() => {
   const LANG_KEY = 'pcs_lang';
   const saved = localStorage.getItem(LANG_KEY) || 'EN';
 
-  const sel = document.createElement('div');
-  sel.className = 'lang-sel';
-  sel.id = 'langSel';
-  sel.innerHTML = `
+  let sel = document.getElementById('langSel');
+  if (!sel) {
+    // Fallback: create and inject for any page without static HTML
+    sel = document.createElement('div');
+    sel.className = 'lang-sel';
+    sel.id = 'langSel';
+    sel.innerHTML = `
     <button class="lang-sel__btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <circle cx="12" cy="12" r="10"/>
@@ -160,8 +218,16 @@ PCS.toast = (() => {
       <button class="lang-sel__opt${saved === 'VI' ? ' lang-sel__opt--active' : ''}" data-lang="VI" role="option" aria-selected="${saved === 'VI'}">VI — Tiếng Việt</button>
     </div>
   `;
-
-  navToggle.parentElement.insertBefore(sel, navToggle);
+    navToggle.parentElement.insertBefore(sel, navToggle);
+  } else {
+    // Static HTML present — sync localStorage state without touching the DOM
+    const curEl = sel.querySelector('.lang-sel__cur');
+    if (curEl) curEl.textContent = saved;
+    sel.querySelectorAll('.lang-sel__opt').forEach(o => {
+      o.classList.toggle('lang-sel__opt--active', o.dataset.lang === saved);
+      o.setAttribute('aria-selected', o.dataset.lang === saved);
+    });
+  }
 
   const btn  = sel.querySelector('.lang-sel__btn');
   const drop = sel.querySelector('.lang-sel__drop');

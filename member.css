@@ -830,7 +830,10 @@ details[open] .mb-faq-item__icon svg {
    8. FOOTER CTA BANNER
 ════════════════════════════════════════════════ */
 .mb-cta {
-  background: linear-gradient(160deg, rgb(168, 24, 90) 0%, rgb(212, 49, 126) 55%, rgb(244, 114, 182) 100%);
+  background:
+    radial-gradient(ellipse at 18% 0%, rgba(255, 232, 210, 0.12) 0%, transparent 46%),
+    linear-gradient(160deg, rgba(160, 26, 86, 0.97) 0%, rgba(208, 48, 122, 0.93) 55%, rgba(236, 106, 170, 0.88) 100%);
+  background-color: #c22474;
   padding-block: clamp(80px, 10vw, 120px);
   overflow: hidden;
   position: relative;
@@ -847,37 +850,41 @@ details[open] .mb-faq-item__icon svg {
 
 .mb-cta__inner {
   text-align: center;
-  max-width: 640px;
+  max-width: 760px;
   margin: 0 auto;
   position: relative;
 }
 
 .mb-cta__hand {
   font-family: var(--font-hand);
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.4rem;
+  color: rgba(255, 222, 236, 0.82);
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.10);
 }
 
 .mb-cta__headline {
   font-family: var(--font-display);
-  font-size: clamp(2.25rem, 5vw, 3.75rem);
-  font-weight: 400;
+  font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+  font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.03em;
   color: #fff;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 24px rgba(100, 8, 50, 0.18);
 }
 
 .mb-cta__headline em {
   font-style: italic;
-  color: rgba(255, 255, 255, 0.88);
+  font-weight: 400;
+  color: #ffdaec;
 }
 
 .mb-cta__sub {
   font-size: 1.0625rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 238, 248, 0.78);
   line-height: 1.7;
   margin-bottom: clamp(28px, 4vw, 40px);
 }
@@ -890,26 +897,100 @@ details[open] .mb-faq-item__icon svg {
   flex-wrap: wrap;
 }
 
-/* Button overrides on dark gradient */
+/* Button overrides — matched to home CTA system */
 .mb-cta .btn-primary {
-  background: #fff;
-  color: rgb(168, 24, 90);
-  border-color: #fff;
+  background: rgba(255, 252, 254, 0.96);
+  color: rgb(148, 16, 76);
+  border-color: rgba(255, 252, 254, 0.96);
+  box-shadow: 0 4px 20px rgba(88, 0, 44, 0.18);
 }
 .mb-cta .btn-primary:hover {
-  background: rgba(255, 255, 255, 0.92);
-  border-color: rgba(255, 255, 255, 0.92);
-  color: rgb(140, 18, 72);
+  background: #ffffff;
+  border-color: #ffffff;
+  color: rgb(120, 8, 60);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(88, 0, 44, 0.26);
 }
 .mb-cta .btn-outline {
-  background: transparent;
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.10);
+  color: rgba(255, 245, 251, 0.90);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: none;
 }
 .mb-cta .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.80);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.50);
   color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(255, 255, 255, 0.08);
+}
+
+/* Premium transition + press feedback */
+.mb-cta .btn-primary,
+.mb-cta .btn-outline {
+  transition:
+    background 0.22s cubic-bezier(.22,.61,.36,1),
+    border-color 0.22s cubic-bezier(.22,.61,.36,1),
+    color 0.22s cubic-bezier(.22,.61,.36,1),
+    transform 0.22s cubic-bezier(.22,.61,.36,1),
+    box-shadow 0.22s cubic-bezier(.22,.61,.36,1);
+}
+.mb-cta .btn-primary:active,
+.mb-cta .btn-outline:active {
+  transform: translateY(0);
+  transition-duration: 80ms;
+}
+
+/* ── BACKGROUND SHIMMER ─────────────────────── */
+.mb-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.045) 50%,
+    transparent 80%
+  );
+  background-size: 250% 100%;
+  background-position: 200% center;
+  animation: ctaShimmer 10s cubic-bezier(0.45, 0, 0.55, 1) 1.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes ctaShimmer {
+  0%   { background-position: 200% center; }
+  40%  { background-position: -30% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ── STAGGERED CHILD ENTRANCE ───────────────── */
+.js .mb-cta__hand,
+.js .mb-cta__headline,
+.js .mb-cta__sub,
+.js .mb-cta__actions {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.70s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.70s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mb-cta__inner.visible .mb-cta__hand    { opacity: 1; transform: translateY(0); transition-delay: 0.12s; }
+.mb-cta__inner.visible .mb-cta__headline { opacity: 1; transform: translateY(0); transition-delay: 0.26s; }
+.mb-cta__inner.visible .mb-cta__sub     { opacity: 1; transform: translateY(0); transition-delay: 0.40s; }
+.mb-cta__inner.visible .mb-cta__actions { opacity: 1; transform: translateY(0); transition-delay: 0.54s; }
+
+/* ── REDUCED MOTION ─────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .mb-cta::after { animation: none; }
+  .js .mb-cta__hand,
+  .js .mb-cta__headline,
+  .js .mb-cta__sub,
+  .js .mb-cta__actions { opacity: 1; transform: none; transition: none; }
+  .mb-cta .btn-primary,
+  .mb-cta .btn-outline { transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease; }
+  .mb-cta .btn-primary:hover,
+  .mb-cta .btn-outline:hover { transform: none; }
 }
 
 /* ════════════════════════════════════════════════

@@ -85,28 +85,15 @@
   flex-wrap: nowrap;
 }
 
-/* Trust badges */
-.svc-hero__trust {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 20px;
-  margin-top: 32px;
-  align-items: center;
-}
-
-.svc-trust-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  letter-spacing: 0.02em;
-}
-
-.svc-trust-badge svg {
+/* Editorial trust note */
+.svc-trust-note {
+  display: block;
+  font-family: var(--font-hand);
+  font-size: 1.05rem;
   color: var(--mint);
-  flex-shrink: 0;
+  opacity: 0.82;
+  margin-top: 28px;
+  line-height: 1.5;
 }
 
 /* Stats bar — white, sits in normal flow below cinematic frame */
