@@ -8,7 +8,12 @@
     { "source": "/about-us",      "destination": "/about-us.html" },
     { "source": "/contact-us",    "destination": "/contact-us.html" },
     { "source": "/blog",          "destination": "/blog.html" },
-    { "source": "/terms",         "destination": "/terms.html" }
+    { "source": "/blog-post",     "destination": "/blog-post.html" },
+    { "source": "/terms",         "destination": "/terms.html" },
+    { "source": "/booking",       "destination": "/booking.html" },
+    { "source": "/policy",        "destination": "/policy.html" },
+    { "source": "/wellness",      "destination": "/wellness.html" },
+    { "source": "/product",       "destination": "/product.html" }
   ],
   "headers": [
     {

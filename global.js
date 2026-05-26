@@ -273,7 +273,7 @@ PCS.toast = (() => {
 // ── FLOATING CHAT WIDGET ─────────────────────────
 (function () {
   const page = window.location.pathname.split('/').pop() || 'index.html';
-  const excluded = ['booking.html', 'appointment-booking.html'];
+  const excluded = ['booking', 'appointment-booking.html'];
   if (excluded.includes(page)) return;
 
   const widget = document.createElement('div');
@@ -691,7 +691,7 @@ document.querySelectorAll('.p-card__add').forEach(btn => {
 // ── GLOBAL CART INJECTION ──────────────────────────
 (function () {
   var page = window.location.pathname.split('/').pop() || 'index.html';
-  if (['booking.html', 'appointment-booking.html', 'membership.html'].includes(page)) return;
+  if (['booking', 'appointment-booking.html', 'membership.html'].includes(page)) return;
   var actions = document.querySelector('.navbar__actions');
   if (!actions) return;
   if (document.getElementById('cartToggle')) return; // already present (e.g. shop.html)
@@ -729,7 +729,7 @@ document.querySelectorAll('.p-card__add').forEach(btn => {
           '<div class="cart-empty-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>' +
           '<p class="cart-empty-title">Your cart is empty</p>' +
           '<p class="cart-empty-sub">Add some products from our shop!</p>' +
-          '<a href="shop.html" class="btn btn-primary btn-sm">Browse Shop</a>' +
+          '<a href="/shop" class="btn btn-primary btn-sm">Browse Shop</a>' +
         '</div>' +
         '<ul class="cart-items" id="cartItems"></ul>' +
       '</div>' +
