@@ -71,7 +71,7 @@ if (navbar) {
 const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.navbar__nav a, .navbar__mobile-menu a').forEach(a => {
   const href = a.getAttribute('href')?.split('/').pop()?.split('?')[0] || '';
-  if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+  if (href === currentPath || (currentPath === 'index.html' && href === '') || (currentPath === '' && href === 'index.html')) {
     a.classList.add('active');
   }
 });

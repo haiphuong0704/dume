@@ -1,11 +1,14 @@
 {
   "rewrites": [
+    { "source": "/",              "destination": "/index.html" },
     { "source": "/luxe-services", "destination": "/services.html" },
     { "source": "/spa-bites",     "destination": "/spa-bites.html" },
     { "source": "/membership",    "destination": "/member.html" },
     { "source": "/shop",          "destination": "/shop.html" },
     { "source": "/about-us",      "destination": "/about-us.html" },
-    { "source": "/contact-us",    "destination": "/contact-us.html" }
+    { "source": "/contact-us",    "destination": "/contact-us.html" },
+    { "source": "/blog",          "destination": "/blog.html" },
+    { "source": "/terms",         "destination": "/terms.html" }
   ],
   "headers": [
     {
