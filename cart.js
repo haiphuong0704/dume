@@ -151,8 +151,7 @@ function render() {
     el.setAttribute('data-id', item.id);
     el.setAttribute('data-size', item.size || '');
 
-    const img = item.img
-      || 'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?q=80&w=200&auto=format&fit=crop';
+    const img = item.img || 'assets/images/products/product-grooming.jpg';
 
     el.innerHTML = `
       <div class="cart-item__img">

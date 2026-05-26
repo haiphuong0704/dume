@@ -5,17 +5,17 @@
 const planData = {
   essential: {
     label: 'Essential',
-    price: '$55/mo',
+    price: '1.390.000₫ / month',
     perks: ['Annual health exam', '2 vet consultations / yr', 'Vaccination review', 'Dental screening', '10% grooming discount', 'Email support']
   },
   premium: {
     label: 'Premium',
-    price: '$89/mo',
+    price: '2.190.000₫ / month',
     perks: ['Quarterly health reviews', '6 vet consultations / yr', 'Nutrition consultation', 'Dental cleaning 1×/yr', '20% grooming discount', 'Priority booking', '24/7 phone support']
   },
   elite: {
     label: 'Elite',
-    price: '$129/mo',
+    price: '3.290.000₫ / month',
     perks: ['Monthly wellness check-ins', 'Unlimited vet consultations', 'Personalized nutrition plan', 'Unlimited dental cleanings', 'Free grooming sessions', 'Same-day appointments', 'Concierge 24/7 support']
   }
 };

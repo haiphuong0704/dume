@@ -1,4 +1,4 @@
-﻿/* ================================================
+/* ================================================
    PETCARE SPA — GLOBAL DESIGN SYSTEM
    Shared foundation for all pages
    Tokens · Reset · Layout · Navbar · Footer · Buttons
@@ -181,7 +181,7 @@ button { font-family: inherit; cursor: pointer; }
   font-family: var(--font-display);
   font-size: clamp(2.25rem, 4.5vw, 3.5rem);
   font-weight: 500;
-  line-height: 1.08;
+  line-height: 1.12;
   letter-spacing: -0.03em;
   color: var(--text);
   margin: 16px 0 20px;
@@ -367,13 +367,17 @@ button { font-family: inherit; cursor: pointer; }
 
 .navbar__logo {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 22px;
   font-weight: 500;
-  letter-spacing: 1.8px;
+  letter-spacing: 0.1em;
+  line-height: 22px;
+  gap: 0.25em;
   color: var(--text);
   white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -573,7 +577,7 @@ button { font-family: inherit; cursor: pointer; }
 /* ── Brand column ── */
 .sf-brand-name {
   font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -844,34 +848,28 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .sf-socials a {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.10);
   display: grid;
   place-items: center;
-  color: rgba(255, 255, 255, 0.48);
+  color: rgba(255, 255, 255, 0.72);
   text-decoration: none;
   transition: background var(--t-base), color var(--t-base), transform var(--t-base);
 }
 .sf-socials a:hover {
   background: var(--mint);
   color: var(--text);
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.08);
 }
 
 .sf-socials svg {
-  width: 14px;
-  height: 14px;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  fill: none;
-}
-.sf-socials svg path[stroke="none"] { stroke: none; fill: currentColor; }
-/* TikTok is a filled icon — override stroke-only defaults */
-.sf-socials a[aria-label*="TikTok"] svg {
+  width: 18px;
+  height: 18px;
   fill: currentColor;
   stroke: none;
+  display: block;
 }
 
 /* ================================================
@@ -1479,8 +1477,7 @@ hr.divider, .divider {
 .fcw__link--zalo      .fcw__link-icon { background: #0068FF; }
 .fcw__link--messenger .fcw__link-icon { background: #0084FF; }
 .fcw__link-icon svg path,
-.fcw__link-icon svg circle,
-.fcw__link-icon svg rect { fill: #fff; }
+.fcw__link-icon svg circle { fill: #fff; stroke: none; }
 
 @media (max-width: 768px) {
   .fcw { bottom: 20px; right: 16px; }

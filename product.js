@@ -21,7 +21,7 @@ document.querySelectorAll('.pd-thumb').forEach(thumb => {
 
 // ── VARIANTS ──────────────────────────────────────
 let selectedSize  = '2 lbs';
-let selectedPrice = 48;
+let selectedPrice = 480000;
 let qty = 1;
 
 document.querySelectorAll('.pd-variant').forEach(btn => {
@@ -67,7 +67,7 @@ addBtn?.addEventListener('click', () => {
         name:  'Organic Premium Dog Food',
         price: selectedPrice,
         size:  selectedSize,
-        img:   'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?q=80&w=200&auto=format&fit=crop'
+        img:   'assets/images/petfood/photo-1596491112146-f442e098810f.avif'
       });
     }
 

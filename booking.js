@@ -3,6 +3,10 @@
    Manages: step nav, selections, calendar, slots, validation, summary
 =================================================== */
 
+function fmtVND(n) {
+  return 'From ' + Math.round(n).toLocaleString('vi-VN') + '₫';
+}
+
 const state = {
   step: 1,
   totalSteps: 5,
@@ -404,7 +408,7 @@ function validateDetails() {
 
 function renderSummary() {
   document.getElementById('sum-service').textContent  = state.serviceName || '—';
-  document.getElementById('sum-price').textContent    = state.servicePrice ? `From $${state.servicePrice}` : '—';
+  document.getElementById('sum-price').textContent    = state.servicePrice ? fmtVND(state.servicePrice) : '—';
   document.getElementById('sum-duration').textContent = state.serviceDuration || '';
 
   const petParts = [
@@ -423,7 +427,7 @@ function renderSummary() {
   document.getElementById('sum-name').textContent  = `${state.firstName} ${state.lastName}`.trim() || '—';
   document.getElementById('sum-email').textContent = state.email || '—';
   document.getElementById('sum-phone').textContent = state.phone || '—';
-  document.getElementById('sum-total').textContent = state.servicePrice ? `From $${state.servicePrice}` : '—';
+  document.getElementById('sum-total').textContent = state.servicePrice ? fmtVND(state.servicePrice) : '—';
 }
 
 // ──────────────────────────────────────────────────────────
@@ -477,7 +481,7 @@ function updateSelStrip(n) {
   // Service chip
   if (state.serviceName) {
     selSvcText.textContent  = state.serviceName;
-    selSvcPrice.textContent = `From $${state.servicePrice}`;
+    selSvcPrice.textContent = fmtVND(state.servicePrice);
     show(selService);
   } else {
     hide(selService);
