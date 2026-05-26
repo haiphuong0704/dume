@@ -2085,7 +2085,7 @@ a.img-zoom-wrap:hover img {
 .pm-recipe-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-md);
-  border-color: var(--mint-border);
+  border-color: var(--pink-border);
 }
 
 .pm-recipe-card__img {

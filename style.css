@@ -2704,7 +2704,7 @@ aspect-ratio: 4 / 3;
   text-decoration: none;
   transition: color 0.15s ease;
 }
-.sf-contact-item a:hover { color: var(--color-mint); }
+.sf-contact-item a:hover { color: #E2739E; }
 .sf-contact-hours { color: rgba(255, 255, 255, 0.32) !important; font-size: 0.78rem; }
 
 /* ── CTA strip ── */
@@ -2827,7 +2827,7 @@ aspect-ratio: 4 / 3;
   transition: color 0.15s ease;
   padding-block: 4px;
 }
-.sf-legal a:hover { color: var(--color-mint); }
+.sf-legal a:hover { color: #E2739E; }
 
 .sf-legal-sep {
   color: rgba(255, 255, 255, 0.14);
@@ -2865,8 +2865,8 @@ aspect-ratio: 4 / 3;
   transition: background var(--t-base), color var(--t-base), transform var(--t-base);
 }
 .sf-socials a:hover {
-  background: var(--mint);
-  color: var(--text);
+  background: var(--color-pink-primary);
+  color: var(--color-text-inverse);
   transform: translateY(-2px) scale(1.08);
 }
 
@@ -3418,8 +3418,8 @@ aspect-ratio: 4 / 3;
 }
 
 .hpm-feat:hover .hpm-feat-icon {
-  background: var(--color-mint);
-  border-color: var(--color-mint);
+  background: var(--color-pink-primary);
+  border-color: var(--color-pink-primary);
 }
 
 .hpm-feat-icon svg {

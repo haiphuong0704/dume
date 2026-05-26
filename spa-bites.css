@@ -1511,8 +1511,8 @@
 }
 
 .pm-video__feature:hover {
-  border-color: var(--mint-border);
-  background: var(--mint-pale);
+  border-color: var(--pink-border);
+  background: var(--pink-pale);
   transform: translateY(-2px);
 }
 
@@ -1715,7 +1715,7 @@
 }
 
 .pm-packaging__badge-item:hover {
-  border-color: var(--mint-border);
+  border-color: var(--pink-border);
   transform: translateX(4px);
   box-shadow: var(--shadow-xs);
 }

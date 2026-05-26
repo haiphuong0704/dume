@@ -409,10 +409,10 @@
 }
 
 .bp-cta .btn-primary:hover {
-  background: var(--mint);
-  border-color: var(--mint);
-  color: var(--text);
-  box-shadow: 0 8px 24px rgba(45, 212, 191, 0.35);
+  background: var(--pink-dark);
+  border-color: var(--pink-dark);
+  color: var(--white);
+  box-shadow: 0 8px 24px rgba(212, 49, 126, 0.32);
 }
 
 /* ── RESPONSIVE ── */
