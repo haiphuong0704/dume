@@ -1426,12 +1426,12 @@ button, input, textarea, select {
 
 /* ── 21. FOCUS ACCESSIBILITY ─────────────────────────────── */
 :focus-visible {
-  outline: 2px solid var(--color-mint);
+  outline: 2px solid var(--color-pink-primary);
   outline-offset: 3px;
   border-radius: 4px;
 }
 .btn:focus-visible {
-  outline: 2px solid var(--color-mint);
+  outline: 2px solid var(--color-pink-primary);
   outline-offset: 4px;
   border-radius: var(--radius-pill);
   box-shadow: none;
@@ -2621,9 +2621,9 @@ aspect-ratio: 4 / 3;
 }
 .sf-nl-input::placeholder { color: rgba(255, 255, 255, 0.38); }
 .sf-nl-input:focus {
-  border-color: var(--color-mint);
+  border-color: var(--color-pink-primary);
   background: rgba(255, 255, 255, 0.11);
-  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.15);
+  box-shadow: 0 0 0 3px rgba(212, 49, 126, 0.18);
 }
 
 .sf-nl-btn {
@@ -2668,7 +2668,7 @@ aspect-ratio: 4 / 3;
   text-decoration: none;
   transition: color 0.15s ease;
 }
-.sf-links a:hover { color: var(--color-mint); }
+.sf-links a:hover { color: #E2739E; }
 
 /* ── Contact list ── */
 .sf-contact-list {

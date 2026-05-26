@@ -480,8 +480,8 @@
 }
 
 .pm-process-step:hover .pm-process-step__circle {
-  border-color: var(--mint);
-  background: var(--mint-pale);
+  border-color: var(--pink-border);
+  background: var(--pink-pale);
 }
 
 .pm-process-step__circle svg {
@@ -494,7 +494,7 @@
 }
 
 .pm-process-step:hover .pm-process-step__circle svg {
-  stroke: var(--mint-dark);
+  stroke: var(--pink);
 }
 
 .pm-process-step__hand {
@@ -1265,9 +1265,9 @@
 }
 
 .pm-delivery-step:hover .pm-delivery-step__icon {
-  border-color: var(--mint);
-  background: var(--mint-pale);
-  box-shadow: 0 4px 16px var(--mint-glow);
+  border-color: var(--pink-border);
+  background: var(--pink-pale);
+  box-shadow: 0 4px 16px var(--pink-glow);
 }
 
 .pm-delivery-step__icon svg {

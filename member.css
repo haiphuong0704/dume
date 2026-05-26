@@ -206,7 +206,7 @@
 .mb-benefit-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: var(--mint-border);
+  border-color: var(--pink-border);
 }
 
 .mb-benefit-card__icon {
@@ -228,8 +228,8 @@
 }
 
 .mb-benefit-card:hover .mb-benefit-card__icon {
-  background: var(--mint);
-  border-color: var(--mint);
+  background: var(--pink);
+  border-color: var(--pink);
 }
 
 .mb-benefit-card:hover .mb-benefit-card__icon--pink {
@@ -768,7 +768,7 @@
   transition: border-color var(--t-base);
 }
 
-.mb-faq-item[open] { border-color: var(--mint-border); }
+.mb-faq-item[open] { border-color: var(--pink-border); }
 
 .mb-faq-item__q {
   display: flex;
@@ -808,7 +808,7 @@
   transition: transform var(--t-base), stroke var(--t-base);
 }
 
-details[open] .mb-faq-item__icon { background: var(--mint); }
+details[open] .mb-faq-item__icon { background: var(--pink); }
 details[open] .mb-faq-item__icon svg {
   stroke: var(--white);
   transform: rotate(180deg);

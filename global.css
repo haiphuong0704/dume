@@ -428,7 +428,7 @@ button { font-family: inherit; cursor: pointer; }
 .navbar__nav a.active,
 .navbar__nav a.is-active                  { color: var(--pink); }
 .navbar__nav a.active::after,
-.navbar__nav a.is-active::after           { background: var(--mint); transform: scaleX(1); }
+.navbar__nav a.is-active::after           { background: var(--pink); transform: scaleX(1); }
 .navbar__nav a:hover::after               { transform: scaleX(1); }
 
 /* ── DROPDOWN NAV ── */
@@ -627,9 +627,9 @@ button { font-family: inherit; cursor: pointer; }
 }
 .sf-nl-input::placeholder { color: rgba(255, 255, 255, 0.38); }
 .sf-nl-input:focus {
-  border-color: var(--mint);
+  border-color: var(--pink);
   background: rgba(255, 255, 255, 0.11);
-  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.15);
+  box-shadow: 0 0 0 3px rgba(212, 49, 126, 0.18);
   outline: none;
 }
 
@@ -684,7 +684,7 @@ button { font-family: inherit; cursor: pointer; }
   text-decoration: none;
   transition: color var(--t-fast);
 }
-.sf-links a:hover { color: var(--mint); }
+.sf-links a:hover { color: var(--pink-light); }
 
 /* ── Contact list ── */
 .sf-contact-list {
@@ -720,7 +720,7 @@ button { font-family: inherit; cursor: pointer; }
   text-decoration: none;
   transition: color var(--t-fast);
 }
-.sf-contact-item a:hover { color: var(--mint); }
+.sf-contact-item a:hover { color: var(--pink-light); }
 .sf-contact-hours { color: rgba(255, 255, 255, 0.32) !important; font-size: 0.78rem; }
 
 /* ── CTA strip ── */
@@ -774,8 +774,8 @@ button { font-family: inherit; cursor: pointer; }
   transition: background var(--t-fast), color var(--t-fast);
 }
 .sf-trust-chip:hover {
-  background: rgba(45, 212, 191, 0.13);
-  color: rgba(255, 255, 255, 0.78);
+  background: rgba(212, 49, 126, 0.12);
+  color: rgba(255, 255, 255, 0.82);
 }
 .sf-trust-chip svg {
   width: 11px;
@@ -821,7 +821,7 @@ button { font-family: inherit; cursor: pointer; }
   transition: color var(--t-fast);
   padding-block: 4px;
 }
-.sf-legal a:hover { color: var(--mint); }
+.sf-legal a:hover { color: var(--pink-light); }
 
 .sf-legal-sep {
   color: rgba(255, 255, 255, 0.28);
@@ -859,8 +859,8 @@ button { font-family: inherit; cursor: pointer; }
   transition: background var(--t-base), color var(--t-base), transform var(--t-base);
 }
 .sf-socials a:hover {
-  background: var(--mint);
-  color: var(--text);
+  background: var(--pink);
+  color: var(--white);
   transform: translateY(-2px) scale(1.08);
 }
 
@@ -1024,8 +1024,8 @@ button { font-family: inherit; cursor: pointer; }
 }
 .input::placeholder { color: var(--text-muted); opacity: 1; }
 .input:focus {
-  border-color: var(--mint);
-  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.16);
+  border-color: var(--pink);
+  box-shadow: 0 0 0 3px rgba(212, 49, 126, 0.14);
 }
 .input:disabled {
   background: var(--surface);
@@ -1075,13 +1075,13 @@ select.input {
    ACCESSIBILITY — FOCUS RINGS
 ================================================ */
 :focus-visible {
-  outline: 2px solid var(--mint);
+  outline: 2px solid var(--pink);
   outline-offset: 3px;
   border-radius: 4px;
 }
 /* Buttons: tighter ring using pink (matches CTA brand color) */
 .btn:focus-visible {
-  outline: 2px solid var(--mint);
+  outline: 2px solid var(--pink);
   outline-offset: 4px;
   border-radius: var(--r-pill);
 }
@@ -1319,14 +1319,14 @@ hr.divider, .divider {
 .lang-sel--open .lang-sel__caret { transform: rotate(180deg); }
 
 .lang-sel__btn:hover {
-  border-color: var(--mint);
+  border-color: var(--pink-border);
   color: var(--text);
-  background: var(--mint-pale);
+  background: var(--pink-pale);
 }
 .lang-sel--open .lang-sel__btn {
-  border-color: var(--mint);
+  border-color: var(--pink-border);
   color: var(--text);
-  background: var(--mint-pale);
+  background: var(--pink-pale);
 }
 
 .lang-sel__drop {
