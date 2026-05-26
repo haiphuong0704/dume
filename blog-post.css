@@ -209,6 +209,15 @@
   color: var(--text);
 }
 
+.bp-article__inner a {
+  color: var(--pink);
+  text-decoration: underline;
+  text-decoration-color: var(--pink-border);
+  text-underline-offset: 3px;
+  transition: color var(--t-fast);
+}
+.bp-article__inner a:hover { color: var(--pink-dark); }
+
 /* ── PULL QUOTE ── */
 .bp-quote {
   margin: clamp(40px, 5vw, 60px) 0;

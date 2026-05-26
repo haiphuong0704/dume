@@ -1449,7 +1449,7 @@ button, input, textarea, select {
 
 /* ── 23. SELECTION COLOR ─────────────────────────────────── */
 ::selection {
-  background-color: var(--color-mint-pale);
+  background-color: var(--color-pink-soft);
   color: var(--color-text-primary);
 }
 
@@ -3421,6 +3421,7 @@ aspect-ratio: 4 / 3;
   background: var(--color-pink-primary);
   border-color: var(--color-pink-primary);
 }
+.hpm-feat:hover .hpm-feat-icon svg { stroke: var(--color-text-inverse); }
 
 .hpm-feat-icon svg {
   width: 19px;

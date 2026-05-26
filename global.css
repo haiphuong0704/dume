@@ -112,7 +112,7 @@ button { font-family: inherit; cursor: pointer; }
 
 /* Branded text selection */
 ::selection {
-  background: var(--mint-pale);
+  background: var(--pink-pale);
   color: var(--text);
 }
 
@@ -536,7 +536,7 @@ button { font-family: inherit; cursor: pointer; }
   text-decoration: none;
 }
 .navbar__mobile-menu a:last-of-type { border-bottom: none; }
-.navbar__mobile-menu a:hover                { color: var(--text); }
+.navbar__mobile-menu a:hover                { color: var(--pink); }
 .navbar__mobile-menu a.active,
 .navbar__mobile-menu a.is-active            { color: var(--pink); }
 .navbar__mobile-menu .btn           { margin-top: 16px; justify-content: center; }
@@ -1505,7 +1505,7 @@ hr.divider, .divider {
   transition: color var(--t-fast);
   -webkit-tap-highlight-color: transparent;
 }
-.mobile-has-submenu:hover { color: var(--text); }
+.mobile-has-submenu:hover { color: var(--pink); }
 .mobile-has-submenu.is-active { color: var(--pink); }
 .mobile-has-submenu .nav-chevron {
   transition: transform 0.22s var(--ease);
