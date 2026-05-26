@@ -1,4 +1,12 @@
 {
+  "rewrites": [
+    { "source": "/luxe-services", "destination": "/services.html" },
+    { "source": "/spa-bites",     "destination": "/spa-bites.html" },
+    { "source": "/membership",    "destination": "/membership.html" },
+    { "source": "/shop",          "destination": "/shop.html" },
+    { "source": "/about-us",      "destination": "/about-us.html" },
+    { "source": "/contact-us",    "destination": "/contact-us.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

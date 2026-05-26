@@ -18,7 +18,7 @@
   if ('startViewTransition' in document) return;
 
   // Fallback path — no View Transitions API.
-  var STANDALONE = ['booking.html', 'appointment-booking.html', 'membership.html'];
+  var STANDALONE = ['booking.html', 'appointment-booking.html', 'membership', 'membership.html'];
   var page = window.location.pathname.split('/').pop() || 'index.html';
   var de = document.documentElement;
 

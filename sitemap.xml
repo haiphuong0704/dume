@@ -6,7 +6,7 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://petcarespa.com/services.html</loc>
+    <loc>https://petcarespa.com/luxe-services</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -16,12 +16,12 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://petcarespa.com/shop.html</loc>
+    <loc>https://petcarespa.com/shop</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://petcarespa.com/spa-bites.html</loc>
+    <loc>https://petcarespa.com/spa-bites</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -31,12 +31,12 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://petcarespa.com/about-us.html</loc>
+    <loc>https://petcarespa.com/about-us</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://petcarespa.com/contact-us.html</loc>
+    <loc>https://petcarespa.com/contact-us</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -46,7 +46,7 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://petcarespa.com/membership.html</loc>
+    <loc>https://petcarespa.com/membership</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
