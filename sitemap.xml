@@ -21,17 +21,22 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://petcarespa.com/spa-bites.html</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://petcarespa.com/blog.html</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://petcarespa.com/about.html</loc>
+    <loc>https://petcarespa.com/about-us.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://petcarespa.com/contact.html</loc>
+    <loc>https://petcarespa.com/contact-us.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
