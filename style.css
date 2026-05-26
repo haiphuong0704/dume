@@ -2781,8 +2781,8 @@ aspect-ratio: 4 / 3;
   transition: background 0.15s ease, color 0.15s ease;
 }
 .sf-trust-chip:hover {
-  background: rgba(45, 212, 191, 0.13);
-  color: rgba(255, 255, 255, 0.78);
+  background: rgba(212, 49, 126, 0.12);
+  color: rgba(255, 255, 255, 0.82);
 }
 .sf-trust-chip svg {
   width: 11px;
@@ -3253,7 +3253,7 @@ aspect-ratio: 4 / 3;
   transition: color var(--transition-base);
 }
 .promo-popup__skip:hover {
-  color: var(--color-text-secondary);
+  color: var(--color-pink-primary);
 }
 .promo-popup__disable {
   background: none;
@@ -3269,7 +3269,7 @@ aspect-ratio: 4 / 3;
 }
 .promo-popup__disable:hover {
   opacity: 1;
-  color: var(--color-text-secondary);
+  color: var(--color-pink-primary);
 }
 
 /* Responsive */

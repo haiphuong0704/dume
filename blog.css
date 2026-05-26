@@ -602,8 +602,8 @@
 }
 
 .blg-nl-form .btn-primary:hover {
-  background: rgb(160, 26, 86);
-  border-color: rgb(160, 26, 86);
+  background: var(--pink-dark);
+  border-color: var(--pink-dark);
   box-shadow: none;
   transform: none;
 }

@@ -380,7 +380,7 @@
   transition: color 0.18s ease, border-color 0.18s ease;
 }
 
-.pd-tab:hover { color: var(--text); }
+.pd-tab:hover { color: var(--pink); }
 
 .pd-tab.active {
   color: var(--pink);

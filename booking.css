@@ -51,7 +51,7 @@
 }
 
 .bk-header__help:hover { color: var(--pink); }
-.bk-header__back:hover { color: var(--text); }
+.bk-header__back:hover { color: var(--pink); }
 
 /* ── PROGRESS STEPPER ── */
 .bk-progress-wrap {

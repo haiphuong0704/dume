@@ -50,7 +50,7 @@
   transition: color 0.15s ease;
 }
 
-.ms-exit:hover { color: var(--text); }
+.ms-exit:hover { color: var(--pink); }
 
 /* ── STEPPER ─────────────────────────────────────── */
 .ms-stepper {
