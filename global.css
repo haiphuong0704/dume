@@ -691,9 +691,10 @@ button { font-family: inherit; cursor: pointer; }
   text-decoration: none;
   transition: color var(--t-fast);
 }
-.sf-links a:hover {
-  color: #9FE3D6;
-  opacity: 1;
+footer .sf-links a:hover,
+footer .sf-contact-item a:hover,
+footer .sf-legal a:hover {
+  color: #9FE3D6 !important;
 }
 
 /* ── Contact list ── */
@@ -2883,9 +2884,4 @@ body.modal-open { overflow: hidden; padding-right: var(--scrollbar-w, 0); }
       transition: none;
     }
   }
-}
-footer .sf-links a:hover,
-footer .sf-contact-item a:hover,
-footer .sf-legal a:hover {
-  color: #9FE3D6 !important;
 }
