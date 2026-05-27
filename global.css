@@ -111,15 +111,15 @@ a    { text-decoration: none; color: inherit; }
 a:not(.btn):visited { color: inherit; }
 button { font-family: inherit; cursor: pointer; }
 
-.sf-links a {
+.site-footer .sf-links a {
     font-size: 0.9375rem;
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255,255,255,0.78) !important;
     text-decoration: none;
     transition: color 0.15s ease;
 }
 
-.sf-links a:hover {
-    color: #9FE3D6;
+.site-footer .sf-links a:hover {
+    color: #9FE3D6 !important;
 }
 
 /* Branded text selection */
