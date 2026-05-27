@@ -111,6 +111,17 @@ a    { text-decoration: none; color: inherit; }
 a:not(.btn):visited { color: inherit; }
 button { font-family: inherit; cursor: pointer; }
 
+.sf-links a {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.sf-links a:hover {
+    color: #9FE3D6;
+}
+
 /* Branded text selection */
 ::selection {
   background: var(--pink-pale);
@@ -2884,15 +2895,4 @@ body.modal-open { overflow: hidden; padding-right: var(--scrollbar-w, 0); }
       transition: none;
     }
   }
-}
-.site-footer,
-.site-footer a,
-.site-footer p,
-.site-footer li,
-.site-footer span {
-  color: rgba(255,255,255,0.78) !important;
-}
-
-.site-footer a:hover {
-  color: #9FE3D6 !important;
 }
