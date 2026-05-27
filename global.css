@@ -111,17 +111,6 @@ a    { text-decoration: none; color: inherit; }
 a:not(.btn):visited { color: inherit; }
 button { font-family: inherit; cursor: pointer; }
 
-.site-footer .sf-links a {
-    font-size: 0.9375rem;
-    color: rgba(255,255,255,0.78) !important;
-    text-decoration: none;
-    transition: color 0.15s ease;
-}
-
-.site-footer .sf-links a:hover {
-    color: #9FE3D6 !important;
-}
-
 /* Branded text selection */
 ::selection {
   background: var(--pink-pale);
@@ -572,6 +561,7 @@ button { font-family: inherit; cursor: pointer; }
   border-top: 1px solid rgba(45, 212, 191, 0.18);
   padding-top: clamp(80px, 9vw, 112px);
   padding-bottom: 48px;
+  color: rgba(255, 255, 255, 0.72);
 }
 
 /* 4-column grid: brand col (wider) + 3 nav cols */
