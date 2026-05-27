@@ -2675,7 +2675,7 @@ aspect-ratio: 4 / 3;
   text-decoration: none;
   transition: color 0.15s ease;
 }
-.sf-links a:hover { color: #E2739E; }
+.sf-links a:hover { color: rgba(255,255,255,0.92); }
 
 /* ── Contact list ── */
 .sf-contact-list {
@@ -2711,7 +2711,7 @@ aspect-ratio: 4 / 3;
   text-decoration: none;
   transition: color 0.15s ease;
 }
-.sf-contact-item a:hover { color: #E2739E; }
+.sf-contact-item a:hover { color: rgba(255,255,255,0.92); }
 .sf-contact-hours { color: rgba(255, 255, 255, 0.32) !important; font-size: 0.78rem; }
 
 /* ── CTA strip ── */
@@ -2808,6 +2808,7 @@ aspect-ratio: 4 / 3;
     "legal  social";
   align-items: start;
   padding-top: 28px;
+  padding-right: 80px;
   row-gap: 6px;
   column-gap: 24px;
 }
@@ -2834,7 +2835,7 @@ aspect-ratio: 4 / 3;
   transition: color 0.15s ease;
   padding-block: 4px;
 }
-.sf-legal a:hover { color: #E2739E; }
+.sf-legal a:hover { color: rgba(255,255,255,0.92); }
 
 .sf-legal-sep {
   color: rgba(255, 255, 255, 0.14);
@@ -2913,6 +2914,7 @@ aspect-ratio: 4 / 3;
     grid-template-areas: "copy" "legal" "social";
     row-gap: 12px;
     text-align: center;
+    padding-right: 0;
   }
   .sf-socials { justify-content: center; }
   .sf-legal { justify-content: center; }

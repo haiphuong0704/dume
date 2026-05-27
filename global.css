@@ -691,7 +691,7 @@ button { font-family: inherit; cursor: pointer; }
   text-decoration: none;
   transition: color var(--t-fast);
 }
-.sf-links a:hover { color: var(--pink-light); }
+.sf-links a:hover { color: rgba(255,255,255,0.92); }
 
 /* ── Contact list ── */
 .sf-contact-list {
@@ -727,7 +727,7 @@ button { font-family: inherit; cursor: pointer; }
   text-decoration: none;
   transition: color var(--t-fast);
 }
-.sf-contact-item a:hover { color: var(--pink-light); }
+.sf-contact-item a:hover { color: rgba(255,255,255,0.92); }
 .sf-contact-hours { color: rgba(255, 255, 255, 0.32) !important; font-size: 0.78rem; }
 
 /* ── CTA strip ── */
@@ -802,6 +802,7 @@ button { font-family: inherit; cursor: pointer; }
     "legal  social";
   align-items: start;
   padding-top: 28px;
+  padding-right: 80px;
   row-gap: 6px;
   column-gap: 24px;
 }
@@ -828,7 +829,7 @@ button { font-family: inherit; cursor: pointer; }
   transition: color var(--t-fast);
   padding-block: 4px;
 }
-.sf-legal a:hover { color: var(--pink-light); }
+.sf-legal a:hover { color: rgba(255,255,255,0.92); }
 
 .sf-legal-sep {
   color: rgba(255, 255, 255, 0.28);
@@ -960,6 +961,7 @@ button { font-family: inherit; cursor: pointer; }
     grid-template-areas: "copy" "legal" "social";
     row-gap: 12px;
     text-align: center;
+    padding-right: 0;
   }
   .sf-socials { justify-content: center; }
   .sf-legal { justify-content: center; }
