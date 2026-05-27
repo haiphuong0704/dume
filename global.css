@@ -1316,7 +1316,7 @@ hr.divider, .divider {
   padding: 5px 10px 5px 8px;
   cursor: pointer;
   color: var(--text-body);
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.03em;
@@ -1370,7 +1370,7 @@ hr.divider, .divider {
   border: none;
   text-align: left;
   cursor: pointer;
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-size: 0.8125rem;
   color: var(--text-body);
   transition: background 0.14s, color 0.14s;
