@@ -289,7 +289,7 @@ PCS.toast = (() => {
       </a>
       <a class="fcw__link fcw__link--zalo" href="https://zalo.me/07816047387" target="_blank" rel="noopener" role="menuitem" aria-label="Chat on Zalo">
         <span class="fcw__link-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm-3.5 6h4.25l-4.5 5H12v1H7.75l4.5-5H9V9zm7 7h-1v-3.5L13 17h-1v-5h1v3.5L15.5 12H16v4z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7L19 7L19 9.5L9 15.5L19 15.5L19 18L5 18L5 15.5L15 9.5L5 9.5Z"/></svg>
         </span>
         Zalo
       </a>
