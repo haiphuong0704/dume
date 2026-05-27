@@ -92,7 +92,7 @@
 }
 
 .bk-step__label {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-muted);
   letter-spacing: 0.02em;
@@ -118,7 +118,7 @@
 
 .bk-step.done .bk-step__num::before {
   content: '✓';
-  font-size: 0.72rem;
+  font-size: 0.75rem;
 }
 
 .bk-step.done .bk-step__num { font-size: 0; }
@@ -383,7 +383,7 @@
 }
 
 .bk-size-btn span {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 400;
   color: var(--text-muted);
 }
@@ -420,7 +420,7 @@
 }
 
 .bk-age-btn span {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 400;
   color: var(--text-muted);
 }
@@ -546,7 +546,7 @@
 }
 
 .bk-calendar__weekdays span {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--text-muted);
   letter-spacing: 0.04em;
@@ -653,7 +653,7 @@
 }
 
 .bk-slots__label {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1029,7 +1029,7 @@
   font-style: normal;
   font-weight: 700;
   color: var(--pink);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   background: var(--pink-pale);
   border-radius: var(--r-pill);
   padding: 1px 7px;
@@ -1183,5 +1183,5 @@
 
 @media (max-width: 560px) {
   .bk-sel-strip__inner { gap: 6px; }
-  .bk-sel-chip { font-size: 0.72rem; padding: 4px 10px 4px 7px; }
+  .bk-sel-chip { font-size: 0.75rem; padding: 4px 10px 4px 7px; }
 }

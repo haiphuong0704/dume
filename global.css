@@ -603,7 +603,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .sf-nl-label {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -669,7 +669,7 @@ button { font-family: inherit; cursor: pointer; }
 
 /* ── Nav columns ── */
 .sf-col-title {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -692,11 +692,7 @@ button { font-family: inherit; cursor: pointer; }
   text-decoration: none;
   transition: color var(--t-fast);
 }
-footer .sf-links a:hover,
-footer .sf-contact-item a:hover,
-footer .sf-legal a:hover {
-  color: #9FE3D6 !important;
-}
+.sf-links a:hover { color: var(--mint); }
 
 /* ── Contact list ── */
 .sf-contact-list {
@@ -732,7 +728,7 @@ footer .sf-legal a:hover {
   text-decoration: none;
   transition: color var(--t-fast);
 }
-.sf-contact-item a:hover { color: rgba(255,255,255,0.92); }
+.sf-contact-item a:hover { color: var(--mint); }
 .sf-contact-hours { color: rgba(255, 255, 255, 0.32) !important; font-size: 0.78rem; }
 
 /* ── CTA strip ── */
@@ -779,7 +775,7 @@ footer .sf-legal a:hover {
   border: 1px solid rgba(45, 212, 191, 0.18);
   border-radius: var(--r-pill);
   padding: 5px 12px 5px 8px;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.58);
   letter-spacing: 0.01em;
@@ -834,7 +830,7 @@ footer .sf-legal a:hover {
   transition: color var(--t-fast);
   padding-block: 4px;
 }
-.sf-legal a:hover { color: rgba(255,255,255,0.92); }
+.sf-legal a:hover { color: var(--mint); }
 
 .sf-legal-sep {
   color: rgba(255, 255, 255, 0.28);
@@ -851,7 +847,7 @@ footer .sf-legal a:hover {
 }
 
 .sf-follow {
-  font-size: 0.63rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -872,7 +868,7 @@ footer .sf-legal a:hover {
   transition: background var(--t-base), color var(--t-base), transform var(--t-base);
 }
 .sf-socials a:hover {
-  background: var(--pink);
+  background: var(--mint);
   color: var(--white);
   transform: translateY(-2px) scale(1.08);
 }
@@ -1933,7 +1929,7 @@ a.img-zoom-wrap:hover img {
 }
 
 .bp-share__label {
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -2017,7 +2013,7 @@ a.img-zoom-wrap:hover img {
   border: 1px solid var(--border-soft);
   border-radius: var(--r-pill);
   padding: 4px 11px 4px 8px;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-body);
 }
@@ -2033,7 +2029,7 @@ a.img-zoom-wrap:hover img {
 }
 
 .pd-pairs__label {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -2120,7 +2116,7 @@ a.img-zoom-wrap:hover img {
 
 .pm-recipe-card__tag {
   display: inline-block;
-  font-size: 0.67rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -2154,7 +2150,7 @@ a.img-zoom-wrap:hover img {
   margin-top: 14px;
   padding-top: 12px;
   border-top: 1px solid var(--border-soft);
-  font-size: 0.73rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
   font-weight: 500;
 }
@@ -2275,7 +2271,7 @@ a.img-zoom-wrap:hover img {
 }
 
 .mb-milestone__label {
-  font-size: 0.67rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-muted);
   text-align: center;
@@ -2384,7 +2380,7 @@ body { overflow-x: hidden; }
 /* ── TRUST CHIPS — wrap cleanly on mobile ── */
 @media (max-width: 540px) {
   .pcs-trust-row { gap: 8px; }
-  .pcs-trust-chip { font-size: 0.73rem; padding: 7px 12px; }
+  .pcs-trust-chip { font-size: 0.75rem; padding: 7px 12px; }
 }
 
 /* ================================================
@@ -2485,7 +2481,7 @@ body.modal-open { overflow: hidden; padding-right: var(--scrollbar-w, 0); }
   border-radius: var(--r-pill);
   background: var(--pink);
   color: #fff;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 700;
   line-height: 18px;
   text-align: center;
@@ -2702,7 +2698,7 @@ body.modal-open { overflow: hidden; padding-right: var(--scrollbar-w, 0); }
 }
 
 .cart-item__remove {
-  font-size: 0.73rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--text-muted);
   background: none;

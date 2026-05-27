@@ -241,7 +241,7 @@
 
 .wlns-plan__badge {
   display: inline-block;
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -255,7 +255,7 @@
 
 .wlns-plan__tier {
   display: block;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -364,7 +364,7 @@
   font-weight: 500;
 }
 
-.wlns-plans__note a:hover { color: var(--pink-dark); }
+.wlns-plans__note a:hover { color: var(--mint-dark); }
 
 /* ── BENEFITS ── */
 .wlns-benefits__grid {

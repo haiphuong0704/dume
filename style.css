@@ -2272,13 +2272,13 @@ aspect-ratio: 4 / 3;
       margin-bottom: var(--space-2);
     }
     .p-card__rating {
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       color: var(--color-pink-primary);
       letter-spacing: 2px;
       margin-bottom: var(--space-3);
     }
     .p-card__rating span {
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       color: var(--color-text-muted);
       letter-spacing: 0;
       margin-left: 2px;
@@ -2598,7 +2598,7 @@ aspect-ratio: 4 / 3;
 }
 
 .sf-nl-label {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -2629,9 +2629,9 @@ aspect-ratio: 4 / 3;
 }
 .sf-nl-input::placeholder { color: rgba(255, 255, 255, 0.38); }
 .sf-nl-input:focus {
-  border-color: var(--color-pink-primary);
+  border-color: var(--color-mint);
   background: rgba(255, 255, 255, 0.11);
-  box-shadow: 0 0 0 3px rgba(212, 49, 126, 0.18);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.18);
 }
 
 .sf-nl-btn {
@@ -2654,7 +2654,7 @@ aspect-ratio: 4 / 3;
 }
 
 .sf-col-title {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -2676,7 +2676,7 @@ aspect-ratio: 4 / 3;
   text-decoration: none;
   transition: color 0.15s ease;
 }
-.sf-links a:hover { color: rgba(255,255,255,0.92); }
+.sf-links a:hover { color: var(--color-mint); }
 
 /* ── Contact list ── */
 .sf-contact-list {
@@ -2712,7 +2712,7 @@ aspect-ratio: 4 / 3;
   text-decoration: none;
   transition: color 0.15s ease;
 }
-.sf-contact-item a:hover { color: rgba(255,255,255,0.92); }
+.sf-contact-item a:hover { color: var(--color-mint); }
 .sf-contact-hours { color: rgba(255, 255, 255, 0.32) !important; font-size: 0.78rem; }
 
 /* ── CTA strip ── */
@@ -2782,7 +2782,7 @@ aspect-ratio: 4 / 3;
   border: 1px solid rgba(45, 212, 191, 0.18);
   border-radius: 999px;
   padding: 5px 12px 5px 8px;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.58);
   letter-spacing: 0.01em;
@@ -2836,7 +2836,7 @@ aspect-ratio: 4 / 3;
   transition: color 0.15s ease;
   padding-block: 4px;
 }
-.sf-legal a:hover { color: rgba(255,255,255,0.92); }
+.sf-legal a:hover { color: var(--color-mint); }
 
 .sf-legal-sep {
   color: rgba(255, 255, 255, 0.14);
@@ -2853,7 +2853,7 @@ aspect-ratio: 4 / 3;
 }
 
 .sf-follow {
-  font-size: 0.63rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -2874,7 +2874,7 @@ aspect-ratio: 4 / 3;
   transition: background var(--t-base), color var(--t-base), transform var(--t-base);
 }
 .sf-socials a:hover {
-  background: var(--color-pink-primary);
+  background: var(--color-mint);
   color: var(--color-text-inverse);
   transform: translateY(-2px) scale(1.08);
 }
@@ -3108,7 +3108,7 @@ aspect-ratio: 4 / 3;
   border: 1px solid rgba(255, 255, 255, 0.22);
   color: rgba(255, 255, 255, 0.95);
   font-family: var(--font-body);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -3154,7 +3154,7 @@ aspect-ratio: 4 / 3;
   align-items: center;
   gap: var(--space-2);
   font-family: var(--font-body);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -3556,7 +3556,7 @@ aspect-ratio: 4 / 3;
 }
 
 .hpm-badge-sub {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   color: var(--color-text-muted);
   margin: 0;
 }

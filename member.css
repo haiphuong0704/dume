@@ -403,7 +403,7 @@
   transition: box-shadow var(--t-smooth), border-color var(--t-smooth);
 }
 
-.mb-tier-card:hover { box-shadow: var(--shadow-md); border-color: var(--pink-border); }
+.mb-tier-card:hover { box-shadow: var(--shadow-md); border-color: var(--mint-border); }
 
 .mb-tier-card--featured {
   border-color: var(--pink);

@@ -170,7 +170,7 @@
 }
 
 .blg-tag--sm {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   padding: 3px 8px;
 }
 
@@ -527,7 +527,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -688,7 +688,7 @@
 
 .blg-stories__label {
   display: inline-block;
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -930,7 +930,7 @@
 }
 
 .blg-reel-card__body span:last-child {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
 }
 

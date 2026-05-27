@@ -146,7 +146,7 @@
   left: 12px;
   background: var(--text);
   color: var(--white);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
   padding: 5px 12px;
   border-radius: var(--r-pill);
@@ -162,7 +162,7 @@
 }
 
 .product-category {
-  font-size: 0.71rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -245,7 +245,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -321,7 +321,7 @@
   background: #fff;
   border: none;
   border-radius: var(--r-pill);
-  color: #A8225F;
+  color: var(--pink-dark);
   cursor: pointer;
   flex-shrink: 0;
   transition: background 0.2s ease, transform 0.2s ease;
