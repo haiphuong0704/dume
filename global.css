@@ -634,9 +634,9 @@ button { font-family: inherit; cursor: pointer; }
 }
 .sf-nl-input::placeholder { color: rgba(255, 255, 255, 0.38); }
 .sf-nl-input:focus {
-  border-color: var(--pink);
+  border-color: var(--mint);
   background: rgba(255, 255, 255, 0.11);
-  box-shadow: 0 0 0 3px rgba(212, 49, 126, 0.18);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.18);
   outline: none;
 }
 
