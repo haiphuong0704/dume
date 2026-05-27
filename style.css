@@ -2788,7 +2788,7 @@ aspect-ratio: 4 / 3;
   transition: background 0.15s ease, color 0.15s ease;
 }
 .sf-trust-chip:hover {
-  background: rgba(212, 49, 126, 0.12);
+  background: rgba(45, 212, 191, 0.12);
   color: rgba(255, 255, 255, 0.82);
 }
 .sf-trust-chip svg {
@@ -3427,8 +3427,8 @@ aspect-ratio: 4 / 3;
 }
 
 .hpm-feat:hover .hpm-feat-icon {
-  background: var(--color-pink-primary);
-  border-color: var(--color-pink-primary);
+  background: var(--color-mint);
+  border-color: var(--color-mint);
 }
 .hpm-feat:hover .hpm-feat-icon svg { stroke: var(--color-text-inverse); }
 

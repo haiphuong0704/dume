@@ -206,7 +206,7 @@
 .mb-benefit-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: var(--pink-border);
+  border-color: var(--mint-border);
 }
 
 .mb-benefit-card__icon {
@@ -223,18 +223,18 @@
 }
 
 .mb-benefit-card__icon--pink {
-  background: var(--pink-pale);
-  border-color: var(--pink-border);
+  background: var(--mint-pale);
+  border-color: var(--mint-border);
 }
 
 .mb-benefit-card:hover .mb-benefit-card__icon {
-  background: var(--pink);
-  border-color: var(--pink);
+  background: var(--mint);
+  border-color: var(--mint);
 }
 
 .mb-benefit-card:hover .mb-benefit-card__icon--pink {
-  background: var(--pink);
-  border-color: var(--pink);
+  background: var(--mint);
+  border-color: var(--mint);
 }
 
 .mb-benefit-card__icon svg {
@@ -245,7 +245,7 @@
 }
 
 .mb-benefit-card__icon--pink svg {
-  stroke: var(--pink);
+  stroke: var(--mint-dark);
 }
 
 .mb-benefit-card:hover .mb-benefit-card__icon svg { stroke: var(--white); }

@@ -781,7 +781,7 @@ button { font-family: inherit; cursor: pointer; }
   transition: background var(--t-fast), color var(--t-fast);
 }
 .sf-trust-chip:hover {
-  background: rgba(212, 49, 126, 0.12);
+  background: rgba(45, 212, 191, 0.12);
   color: rgba(255, 255, 255, 0.82);
 }
 .sf-trust-chip svg {
