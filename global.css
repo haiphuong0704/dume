@@ -2885,10 +2885,12 @@ body.modal-open { overflow: hidden; padding-right: var(--scrollbar-w, 0); }
     }
   }
 }
+.site-footer,
 .site-footer a,
-.site-footer a:visited {
+.site-footer p,
+.site-footer li,
+.site-footer span {
   color: rgba(255,255,255,0.78) !important;
-  text-decoration: none;
 }
 
 .site-footer a:hover {
