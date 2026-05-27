@@ -2888,10 +2888,9 @@ body.modal-open { overflow: hidden; padding-right: var(--scrollbar-w, 0); }
 footer a,
 footer a:visited {
   color: rgba(255,255,255,0.78) !important;
+  text-decoration: none;
 }
 
-footer .sf-links a:hover,
-footer .sf-contact-item a:hover,
-footer .sf-legal a:hover {
+footer a:hover {
   color: #9FE3D6 !important;
 }
