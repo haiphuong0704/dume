@@ -338,9 +338,9 @@ button { font-family: inherit; cursor: pointer; }
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(253, 248, 244, 0.92);
-  border-bottom: 1px solid rgba(212, 49, 126, 0.08);
-  box-shadow: 0 1px 0 rgba(212, 49, 126, 0.06), 0 4px 24px rgba(15, 23, 42, 0.04);
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(212, 49, 126, 0.10);
+  box-shadow: 0 1px 0 rgba(212, 49, 126, 0.08), 0 4px 24px rgba(15, 23, 42, 0.06);
   will-change: transform;
   transition: box-shadow var(--t-base), background-color var(--t-base);
   /* Named view-transition group: browser holds navbar steady across navigations */
@@ -348,8 +348,8 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .navbar.scrolled {
-  background: rgba(253, 248, 244, 0.97);
-  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.07), 0 1px 0 rgba(212, 49, 126, 0.08);
+  background: #FFFFFF;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.09), 0 1px 0 rgba(212, 49, 126, 0.10);
 }
 
 /* Pass-through: neutralise any page-specific .container width/padding overrides */
@@ -365,7 +365,7 @@ button { font-family: inherit; cursor: pointer; }
 .navbar__inner {
   width: 1220px;
   margin-inline: auto;
-  height: 68px;
+  height: 76px;
   display: grid;
   grid-template-columns: 240px 560px 420px;
   align-items: center;
