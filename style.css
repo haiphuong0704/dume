@@ -3017,16 +3017,12 @@ aspect-ratio: 4 / 3;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  background: none;
-  border-radius: 0;
-  border: none;
 }
 .fcw__link-icon svg,
 .fcw__link-icon img {
   width: 22px;
   height: 22px;
   display: block;
-  filter: none;
 }
 
 @media (max-width: 768px) {
