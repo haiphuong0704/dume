@@ -2884,3 +2884,8 @@ body.modal-open { overflow: hidden; padding-right: var(--scrollbar-w, 0); }
     }
   }
 }
+footer .sf-links a:hover,
+footer .sf-contact-item a:hover,
+footer .sf-legal a:hover {
+  color: #9FE3D6 !important;
+}
