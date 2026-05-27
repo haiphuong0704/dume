@@ -2937,6 +2937,7 @@ aspect-ratio: 4 / 3;
   align-items: flex-end;
   gap: 10px;
   pointer-events: none;
+  isolation: isolate;
 }
 
 .fcw__trigger {
@@ -2990,7 +2991,7 @@ aspect-ratio: 4 / 3;
   align-items: center;
   gap: 10px;
   padding: 10px 16px 10px 12px;
-  background: rgba(212, 49, 126, 0.06);
+  background: #FCF3F7;
   border: 1px solid rgba(212, 49, 126, 0.25);
   border-radius: 40px;
   text-decoration: none;
@@ -3008,7 +3009,7 @@ aspect-ratio: 4 / 3;
 }
 .fcw__link:hover {
   border-color: rgba(212, 49, 126, 0.4);
-  background: rgba(212, 49, 126, 0.10);
+  background: #FBEAF2;
 }
 .fcw__link-icon {
   width: 32px;
