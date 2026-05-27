@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -18,14 +18,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=65" />
+  <link rel="stylesheet" href="style.css?v=66" />
 
   <style>
-    /* ── Page Shell ────────────────────────────────────── */
+    /* â”€â”€ Page Shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     *, *::before, *::after { box-sizing: border-box; }
     body { background: var(--color-surface); font-family: var(--font-body); margin: 0; }
 
-    /* ── Minimal Header ────────────────────────────────── */
+    /* â”€â”€ Minimal Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .bk-header {
       background: var(--color-white);
       border-bottom: 1px solid var(--color-pink-border);
@@ -46,12 +46,14 @@
       width: 100%;
     }
     .bk-logo {
-      font-family: inherit;
+      font-family: var(--font-display);
       font-size: 22px;
-      font-weight: inherit;
+      font-weight: 500;
+      letter-spacing: 0.1em;
       line-height: 1;
       color: var(--color-text-primary);
       text-decoration: none;
+      text-transform: uppercase;
     }
     .bk-logo span {
       color: var(--color-pink-primary);
@@ -77,14 +79,14 @@
     }
     .bk-header-secure svg { width: 13px; height: 13px; stroke: var(--color-success); stroke-width: 2; fill: none; }
 
-    /* ── Main Container ────────────────────────────────── */
+    /* â”€â”€ Main Container â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .bk-main {
       max-width: 960px;
       margin: 0 auto;
       padding: var(--space-10) var(--space-8) var(--space-24);
     }
 
-    /* ── Progress Indicator ────────────────────────────── */
+    /* â”€â”€ Progress Indicator â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .bk-progress-wrap { margin-bottom: var(--space-10); }
     .bk-progress {
       display: flex;
@@ -157,12 +159,12 @@
       margin-top: var(--space-5);
     }
 
-    /* ── Step Panels ───────────────────────────────────── */
+    /* â”€â”€ Step Panels â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .bk-step { display: none; }
     .bk-step.active { display: block; animation: stepIn 240ms ease; }
     @keyframes stepIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* ── Step Header ───────────────────────────────────── */
+    /* â”€â”€ Step Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .bk-step-head { margin-bottom: var(--space-8); }
     .bk-step-eyebrow {
       display: inline-block;
@@ -188,7 +190,7 @@
       line-height: var(--leading-relaxed);
     }
 
-    /* ── Step Navigation ───────────────────────────────── */
+    /* â”€â”€ Step Navigation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .bk-nav {
       display: flex;
       align-items: center;
@@ -198,7 +200,7 @@
       border-top: 1px solid var(--color-pink-border);
     }
 
-    /* ── Step 1: Service Cards ─────────────────────────── */
+    /* â”€â”€ Step 1: Service Cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .bk-svc-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -256,7 +258,7 @@
     .bk-svc-card__check svg { width: 10px; height: 10px; stroke: white; stroke-width: 2.5; fill: none; }
     .bk-svc-card.selected .bk-svc-card__check { display: flex; }
 
-    /* ── Step 2: Pet Type + Form ───────────────────────── */
+    /* â”€â”€ Step 2: Pet Type + Form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .bk-pet-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -311,7 +313,7 @@
     .bk-textarea { resize: vertical; min-height: 80px; }
     .bk-input::placeholder, .bk-textarea::placeholder { color: var(--color-text-muted); }
 
-    /* ── Step 3: Calendar + Time ───────────────────────── */
+    /* â”€â”€ Step 3: Calendar + Time â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .bk-calendar-wrap {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -406,7 +408,7 @@
     .bk-time-slot.selected { background: var(--color-pink-primary); border-color: var(--color-pink-primary); color: white; font-weight: var(--weight-semibold); }
     .bk-time-slot.unavailable { background: var(--color-surface); color: var(--color-warm-gray-200); cursor: not-allowed; border-color: var(--color-pink-border); text-decoration: line-through; font-size: 11px; }
 
-    /* ── Step 4: Specialist ────────────────────────────── */
+    /* â”€â”€ Step 4: Specialist â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .spbg-any { background: linear-gradient(145deg, #fdf0f4 0%, #f5d4e2 100%); }
     .spbg-1   { background: linear-gradient(145deg, #fdf0f4 0%, #f5d4e2 100%); }
     .spbg-2   { background: linear-gradient(145deg, #f0f4fd 0%, #d4e2f5 100%); }
@@ -480,7 +482,7 @@
     .bk-spec-check svg { width: 12px; height: 12px; stroke: white; stroke-width: 2.5; fill: none; display: none; }
     .bk-spec-card.selected .bk-spec-check svg { display: block; }
 
-    /* ── Step 5: Review ────────────────────────────────── */
+    /* â”€â”€ Step 5: Review â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .bk-confirm-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -543,7 +545,7 @@
     }
     .bk-terms a { color: var(--color-pink-primary); }
 
-    /* ── Success State ─────────────────────────────────── */
+    /* â”€â”€ Success State â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .bk-success { display: none; text-align: center; padding: var(--space-20) var(--space-8); }
     .bk-success.active { display: block; animation: stepIn 300ms ease; }
     .bk-success__icon {
@@ -591,7 +593,7 @@
     }
     .bk-success__confirm-text { font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3); }
 
-    /* ── Responsive ────────────────────────────────────── */
+    /* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     @media (max-width: 768px) {
       .bk-main { padding: var(--space-8) var(--space-4) var(--space-16); }
       .bk-header-inner { padding-inline: var(--space-4); }
@@ -614,7 +616,7 @@
 
 <body>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• HEADER -->
+  <!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â HEADER -->
   <header class="bk-header" role="banner">
     <div class="bk-header-inner">
       <a href="/" class="bk-logo" aria-label="Petcare Spa home">Petcare <span>Spa</span></a>
@@ -632,7 +634,7 @@
 
   <div class="bk-main">
 
-    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• PROGRESS -->
+    <!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â PROGRESS -->
     <div class="bk-progress-wrap" aria-label="Booking progress">
       <div class="bk-progress" role="list">
         <div class="bk-prog-item is-active" role="listitem" data-step="1">
@@ -659,10 +661,10 @@
       <div class="bk-step-counter" aria-live="polite">Step 1 of 5</div>
     </div>
 
-    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• BOOKING FLOW -->
+    <!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â BOOKING FLOW -->
     <div class="bk-flow">
 
-      <!-- ──────── STEP 1: Select Service -->
+      <!-- â”€â”€â”€â”€â”€â”€â”€â”€ STEP 1: Select Service -->
       <div class="bk-step active" data-step="1" aria-labelledby="step1-title">
         <div class="bk-step-head">
           <span class="bk-step-eyebrow">Step 1 of 5</span>
@@ -755,7 +757,7 @@
       </div>
 
 
-      <!-- ──────── STEP 2: Your Pet -->
+      <!-- â”€â”€â”€â”€â”€â”€â”€â”€ STEP 2: Your Pet -->
       <div class="bk-step" data-step="2" aria-labelledby="step2-title">
         <div class="bk-step-head">
           <span class="bk-step-eyebrow">Step 2 of 5</span>
@@ -817,7 +819,7 @@
       </div>
 
 
-      <!-- ──────── STEP 3: Date & Time -->
+      <!-- â”€â”€â”€â”€â”€â”€â”€â”€ STEP 3: Date & Time -->
       <div class="bk-step" data-step="3" aria-labelledby="step3-title">
         <div class="bk-step-head">
           <span class="bk-step-eyebrow">Step 3 of 5</span>
@@ -863,7 +865,7 @@
       </div>
 
 
-      <!-- ──────── STEP 4: Specialist -->
+      <!-- â”€â”€â”€â”€â”€â”€â”€â”€ STEP 4: Specialist -->
       <div class="bk-step" data-step="4" aria-labelledby="step4-title">
         <div class="bk-step-head">
           <span class="bk-step-eyebrow">Step 4 of 5</span>
@@ -939,7 +941,7 @@
       </div>
 
 
-      <!-- ──────── STEP 5: Review & Confirm -->
+      <!-- â”€â”€â”€â”€â”€â”€â”€â”€ STEP 5: Review & Confirm -->
       <div class="bk-step" data-step="5" aria-labelledby="step5-title">
         <div class="bk-step-head">
           <span class="bk-step-eyebrow">Step 5 of 5</span>
@@ -1034,7 +1036,7 @@
     </div><!-- end .bk-flow -->
 
 
-    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• SUCCESS STATE -->
+    <!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â SUCCESS STATE -->
     <div class="bk-success" role="main" aria-live="polite">
       <div class="bk-success__icon" aria-hidden="true">
         <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
@@ -1062,7 +1064,7 @@
 
 
   <script>
-    /* ── State ── */
+    /* â”€â”€ State â”€â”€ */
     const state = {
       step: 1,
       service: null,
@@ -1086,7 +1088,7 @@
     const DAYS_SHORT = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
     const UNAVAIL_SLOTS = ['10:30 AM', '1:30 PM', '3:00 PM'];
 
-    /* ── Step Navigation ── */
+    /* â”€â”€ Step Navigation â”€â”€ */
     function goTo(step) {
       document.querySelectorAll('.bk-step').forEach(el => el.classList.remove('active'));
       document.querySelector(`.bk-step[data-step="${step}"]`).classList.add('active');
@@ -1118,7 +1120,7 @@
       });
     }
 
-    /* ── Guards & Navigation ── */
+    /* â”€â”€ Guards & Navigation â”€â”€ */
     function nextStep() {
       if (state.step === 1) {
         if (!state.service) { showToast('Please select a service to continue.'); return; }
@@ -1145,7 +1147,7 @@
       if (state.step > 1) goTo(state.step - 1);
     }
 
-    /* ── Toast notification ── */
+    /* â”€â”€ Toast notification â”€â”€ */
     function showToast(msg) {
       const existing = document.querySelector('.bk-toast');
       if (existing) existing.remove();
@@ -1164,7 +1166,7 @@
       setTimeout(() => { if (toast.parentNode) toast.remove(); }, 3500);
     }
 
-    /* ── Service Selection ── */
+    /* â”€â”€ Service Selection â”€â”€ */
     function selectService(id) {
       state.service = id;
       document.querySelectorAll('.bk-svc-card').forEach(c => {
@@ -1174,7 +1176,7 @@
       });
     }
 
-    /* ── Pet Type Selection ── */
+    /* â”€â”€ Pet Type Selection â”€â”€ */
     function selectPetType(type) {
       state.petType = type;
       document.querySelectorAll('.bk-pet-card').forEach(c => {
@@ -1184,7 +1186,7 @@
       });
     }
 
-    /* ── Calendar ── */
+    /* â”€â”€ Calendar â”€â”€ */
     function renderCalendar() {
       const { year, month } = state.cal;
       const today = new Date();
@@ -1269,7 +1271,7 @@
       renderCalendar();
     }
 
-    /* ── Specialist Selection ── */
+    /* â”€â”€ Specialist Selection â”€â”€ */
     function selectSpecialist(id) {
       state.specialist = id;
       document.querySelectorAll('.bk-spec-card').forEach(c => {
@@ -1279,7 +1281,7 @@
       });
     }
 
-    /* ── Render Summary ── */
+    /* â”€â”€ Render Summary â”€â”€ */
     function renderSummary() {
       const petName = document.getElementById('petName').value.trim();
       const petType = state.petType ? (state.petType.charAt(0).toUpperCase() + state.petType.slice(1)) : '&mdash;';
@@ -1293,7 +1295,7 @@
       document.getElementById('summSpec').textContent = state.specialist ? (SPEC_LABELS[state.specialist] || state.specialist) : '&mdash;';
     }
 
-    /* ── Confirm Booking ── */
+    /* â”€â”€ Confirm Booking â”€â”€ */
     function confirmBooking() {
       const name = document.getElementById('ownerName').value.trim();
       const email = document.getElementById('ownerEmail').value.trim();
@@ -1318,7 +1320,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    /* ── Init ── */
+    /* â”€â”€ Init â”€â”€ */
     document.addEventListener('DOMContentLoaded', () => {
       renderCalendar();
 
