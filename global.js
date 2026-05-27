@@ -283,19 +283,19 @@ PCS.toast = (() => {
     <div class="fcw__popup" role="menu">
       <a class="fcw__link fcw__link--whatsapp" href="https://wa.me/847816047387" target="_blank" rel="noopener" role="menuitem" aria-label="Chat on WhatsApp">
         <span class="fcw__link-icon">
-          <img src="assets/icons/whatsapp.svg" width="18" height="18" alt="" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 2C6.495 2 2 6.495 2 12.05c0 1.88.502 3.64 1.375 5.156L2 22l4.886-1.347A10.04 10.04 0 0 0 12.05 22.1C17.605 22.1 22.1 17.605 22.1 12.05S17.605 2 12.05 2zm0 18.3c-1.702 0-3.294-.47-4.656-1.286l-.334-.198-3.463.953.97-3.375-.218-.347A8.284 8.284 0 0 1 3.7 12.05c0-4.603 3.748-8.35 8.35-8.35s8.35 3.747 8.35 8.35-3.747 8.35-8.35 8.35z"/></svg>
         </span>
         WhatsApp
       </a>
       <a class="fcw__link fcw__link--zalo" href="https://zalo.me/07816047387" target="_blank" rel="noopener" role="menuitem" aria-label="Chat on Zalo">
         <span class="fcw__link-icon">
-          <img src="assets/icons/zalo.svg" width="18" height="18" alt="" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 7L19 7L19 9.5L9 15.5L19 15.5L19 18L5 18L5 15.5L15 9.5L5 9.5Z"/></svg>
         </span>
         Zalo
       </a>
       <a class="fcw__link fcw__link--messenger" href="https://m.me/petcarespa" target="_blank" rel="noopener" role="menuitem" aria-label="Chat on Messenger">
         <span class="fcw__link-icon">
-          <img src="assets/icons/messenger.svg" width="18" height="18" alt="" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.145 2 11.259c0 2.86 1.38 5.415 3.55 7.11V21l3.246-1.784a10.6 10.6 0 0 0 3.204.484c5.523 0 10-4.145 10-9.259S17.523 2 12 2zm1.013 12.478-2.548-2.718-4.97 2.718 5.472-5.808 2.61 2.717 4.908-2.717-5.472 5.808z"/></svg>
         </span>
         Messenger
       </a>
