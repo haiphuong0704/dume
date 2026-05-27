@@ -1479,9 +1479,14 @@ hr.divider, .divider {
   justify-content: center;
   flex-shrink: 0;
 }
-.fcw__link-icon svg {
+.fcw__link-icon svg,
+.fcw__link-icon img {
   width: 18px;
   height: 18px;
+  display: block;
+}
+.fcw__link-icon img {
+  filter: brightness(0) invert(1);
 }
 .fcw__link--whatsapp .fcw__link-icon { background: #25D366; }
 .fcw__link--zalo      .fcw__link-icon { background: #0068FF; }
