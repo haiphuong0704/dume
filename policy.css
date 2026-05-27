@@ -94,8 +94,8 @@
 }
 
 .plc-nav__link:hover {
-  background: var(--surface);
-  color: var(--text);
+  background: var(--pink-pale);
+  color: var(--pink);
 }
 
 .plc-nav__link.active {

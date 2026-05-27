@@ -105,8 +105,8 @@
 }
 
 .tos-nav__link:hover {
-  background: var(--surface);
-  color: var(--text);
+  background: var(--pink-pale);
+  color: var(--pink);
 }
 
 .tos-nav__link.active {

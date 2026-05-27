@@ -352,12 +352,13 @@
   border-radius: var(--r-2xl);
   overflow: hidden;
   box-shadow: var(--shadow-card);
-  transition: transform 0.32s var(--ease), box-shadow 0.32s var(--ease);
+  transition: transform 0.32s var(--ease), box-shadow 0.32s var(--ease), border-color 0.32s var(--ease);
 }
 
 .blg-editorial__feature:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
+  border-color: var(--pink-border);
 }
 
 .blg-editorial__image-wrap {
@@ -751,7 +752,7 @@
 
 .blg-stories__card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 12px 40px rgba(212, 49, 126, 0.10), var(--shadow-lg);
 }
 
 .blg-stories__thumb {

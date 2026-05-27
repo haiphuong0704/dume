@@ -310,12 +310,13 @@
   border-radius: var(--r-lg);
   padding: 24px;
   position: relative;
-  transition: transform var(--t-smooth), box-shadow var(--t-smooth);
+  transition: transform var(--t-smooth), box-shadow var(--t-smooth), border-color var(--t-smooth);
 }
 
 .mb-reward-tile:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
+  border-color: var(--pink-border);
 }
 
 .mb-reward-tile--pink {
@@ -402,7 +403,7 @@
   transition: box-shadow var(--t-smooth), border-color var(--t-smooth);
 }
 
-.mb-tier-card:hover { box-shadow: var(--shadow-md); }
+.mb-tier-card:hover { box-shadow: var(--shadow-md); border-color: var(--pink-border); }
 
 .mb-tier-card--featured {
   border-color: var(--pink);
@@ -651,12 +652,13 @@
   padding: clamp(24px, 3vw, 36px);
   display: flex;
   flex-direction: column;
-  transition: transform var(--t-smooth), box-shadow var(--t-smooth);
+  transition: transform var(--t-smooth), box-shadow var(--t-smooth), border-color var(--t-smooth);
 }
 
 .mb-testimonial:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
+  border-color: var(--pink-border);
 }
 
 .mb-testimonial__stars {
@@ -787,7 +789,7 @@
 
 .mb-faq-item__q::-webkit-details-marker { display: none; }
 .mb-faq-item__q::marker { display: none; }
-.mb-faq-item__q:hover { background: var(--surface); }
+.mb-faq-item__q:hover { background: var(--pink-pale); }
 
 .mb-faq-item__icon {
   width: 28px;

@@ -272,7 +272,7 @@
   font-family: var(--font-body);
 }
 
-.pd-qty__btn:hover { background: var(--surface); }
+.pd-qty__btn:hover { background: var(--pink-pale); color: var(--pink); }
 
 .pd-qty__val {
   min-width: 40px;
