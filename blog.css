@@ -205,8 +205,8 @@
 }
 
 .blg-cat:hover {
-  border-color: var(--pink-border);
-  color: var(--pink);
+  border-color: var(--mint-border);
+  color: var(--mint-dark);
 }
 
 .blg-cat.active {
@@ -235,8 +235,8 @@
 
 .blg-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(212, 49, 126, 0.12), var(--shadow-lg);
-  border-color: rgba(212, 49, 126, 0.28);
+  box-shadow: 0 12px 40px rgba(45, 212, 191, 0.12), var(--shadow-lg);
+  border-color: rgba(45, 212, 191, 0.28);
 }
 
 .blg-card__image-wrap {
@@ -358,7 +358,7 @@
 .blg-editorial__feature:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--pink-border);
+  border-color: var(--mint-border);
 }
 
 .blg-editorial__image-wrap {
@@ -444,7 +444,7 @@
 }
 
 .blg-list-card:hover {
-  border-color: var(--pink-border);
+  border-color: var(--mint-border);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
@@ -752,7 +752,7 @@
 
 .blg-stories__card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(212, 49, 126, 0.10), var(--shadow-lg);
+  box-shadow: 0 12px 40px rgba(45, 212, 191, 0.10), var(--shadow-lg);
 }
 
 .blg-stories__thumb {
@@ -857,7 +857,7 @@
 .blg-reel-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-sm);
-  border-color: var(--pink-border);
+  border-color: var(--mint-border);
 }
 
 .blg-reel-card__thumb {

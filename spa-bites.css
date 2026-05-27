@@ -480,8 +480,8 @@
 }
 
 .pm-process-step:hover .pm-process-step__circle {
-  border-color: var(--pink-border);
-  background: var(--pink-pale);
+  border-color: var(--mint-border);
+  background: var(--mint-pale);
 }
 
 .pm-process-step__circle svg {
@@ -494,7 +494,7 @@
 }
 
 .pm-process-step:hover .pm-process-step__circle svg {
-  stroke: var(--pink);
+  stroke: var(--mint-dark);
 }
 
 .pm-process-step__hand {
@@ -732,7 +732,7 @@
 }
 
 .pm-ing-card:hover {
-  border-color: var(--pink-border);
+  border-color: var(--mint-border);
   transform: translateY(-4px);
   box-shadow: var(--shadow-sm);
 }
@@ -1086,7 +1086,7 @@
 }
 
 .pm-plan-card:hover {
-  border-color: var(--pink-border);
+  border-color: var(--mint-border);
   box-shadow: var(--shadow-md);
   transform: translateY(-4px);
 }
@@ -1265,9 +1265,9 @@
 }
 
 .pm-delivery-step:hover .pm-delivery-step__icon {
-  border-color: var(--pink-border);
-  background: var(--pink-pale);
-  box-shadow: 0 4px 16px var(--pink-glow);
+  border-color: var(--mint-border);
+  background: var(--mint-pale);
+  box-shadow: 0 4px 16px var(--mint-glow);
 }
 
 .pm-delivery-step__icon svg {
@@ -1511,8 +1511,8 @@
 }
 
 .pm-video__feature:hover {
-  border-color: var(--pink-border);
-  background: var(--pink-pale);
+  border-color: var(--mint-border);
+  background: var(--mint-pale);
   transform: translateY(-2px);
 }
 
@@ -1715,7 +1715,7 @@
 }
 
 .pm-packaging__badge-item:hover {
-  border-color: var(--pink-border);
+  border-color: var(--mint-border);
   transform: translateX(4px);
   box-shadow: var(--shadow-xs);
 }

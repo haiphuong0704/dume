@@ -221,7 +221,7 @@
 .wlns-plan-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--pink-border);
+  border-color: var(--mint-border);
 }
 
 /* Featured card — dark treatment */
@@ -383,7 +383,7 @@
 }
 
 .wlns-benefit-card:hover {
-  border-color: var(--pink-border);
+  border-color: var(--mint-border);
   box-shadow: var(--shadow-md);
   transform: translateY(-4px);
 }
@@ -623,7 +623,7 @@
 .wlns-faq__question::-webkit-details-marker { display: none; }
 .wlns-faq__question::marker { display: none; }
 
-.wlns-faq__question:hover { color: var(--pink); }
+.wlns-faq__question:hover { color: var(--mint-dark); }
 
 /* Plus/minus icon */
 .wlns-faq__icon {
@@ -661,7 +661,7 @@
   opacity: 0;
 }
 
-.wlns-faq__item[open] .wlns-faq__question { color: var(--pink); }
+.wlns-faq__item[open] .wlns-faq__question { color: var(--mint-dark); }
 
 .wlns-faq__answer {
   padding-bottom: 22px;
