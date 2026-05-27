@@ -1450,15 +1450,15 @@ hr.divider, .divider {
   align-items: center;
   gap: 10px;
   padding: 10px 16px 10px 12px;
-  background: #fff;
+  background: rgba(212, 49, 126, 0.06);
+  border: 1px solid rgba(212, 49, 126, 0.25);
   border-radius: 40px;
   text-decoration: none;
-  color: var(--text);
+  color: #111;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   white-space: nowrap;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
-  transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease);
+  transition: border-color 0.18s var(--ease), background 0.18s var(--ease);
   /* pointer-events does NOT cascade from parent in HTML CSS —
      disable here explicitly so invisible links never block click targets below */
   pointer-events: none;
@@ -1467,8 +1467,8 @@ hr.divider, .divider {
   pointer-events: auto;
 }
 .fcw__link:hover {
-  transform: translateX(-4px);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.16);
+  border-color: rgba(212, 49, 126, 0.4);
+  background: rgba(212, 49, 126, 0.10);
 }
 .fcw__link-icon {
   width: 32px;
