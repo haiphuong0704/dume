@@ -373,16 +373,14 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .navbar__logo {
-  font-family: var(--font-display);
+  font-family: inherit;
   font-size: 22px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  line-height: 22px;
+  font-weight: inherit;
+  line-height: 1;
   gap: 0.25em;
   color: var(--text);
   white-space: nowrap;
   text-decoration: none;
-  text-transform: uppercase;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   display: flex;
