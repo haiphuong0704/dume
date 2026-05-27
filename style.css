@@ -3013,7 +3013,6 @@ aspect-ratio: 4 / 3;
 .fcw__link-icon {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3021,18 +3020,10 @@ aspect-ratio: 4 / 3;
 }
 .fcw__link-icon svg,
 .fcw__link-icon img {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   display: block;
 }
-.fcw__link-icon img {
-  filter: brightness(0) invert(1);
-}
-.fcw__link--whatsapp .fcw__link-icon { background: #25D366; }
-.fcw__link--zalo      .fcw__link-icon { background: #0068FF; }
-.fcw__link--messenger .fcw__link-icon { background: #0084FF; }
-.fcw__link-icon svg path,
-.fcw__link-icon svg circle { fill: #fff; stroke: none; }
 
 @media (max-width: 768px) {
   .fcw { bottom: 20px; right: 16px; }
