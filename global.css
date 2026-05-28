@@ -625,9 +625,9 @@ button { font-family: inherit; cursor: pointer; }
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.20);
   border-radius: 999px;
-  padding: 10px 16px;
+  padding: 14px 18px;
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   color: #fff;
   outline: none;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
@@ -646,9 +646,9 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--text);
   border: none;
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  padding: 10px 20px;
+  padding: 14px 22px;
   border-radius: 999px;
   white-space: nowrap;
   transition: background var(--t-base), box-shadow var(--t-base);
@@ -669,9 +669,9 @@ button { font-family: inherit; cursor: pointer; }
 
 /* ── Nav columns ── */
 .sf-col-title {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--mint);
   margin-bottom: 20px;
@@ -708,7 +708,7 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   color: rgba(255, 255, 255, 0.62);
   line-height: 1.5;
 }
