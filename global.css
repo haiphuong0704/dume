@@ -374,9 +374,9 @@ button { font-family: inherit; cursor: pointer; }
 
 .navbar__logo {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: 1.8px;
   line-height: 1;
   gap: 0.25em;
   color: var(--text);
@@ -585,9 +585,9 @@ button { font-family: inherit; cursor: pointer; }
 /* ── Brand column ── */
 .sf-brand-name {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 24px;
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 14px;
