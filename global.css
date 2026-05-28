@@ -1379,7 +1379,7 @@ hr.divider, .divider {
   border-top: 1px solid var(--border-soft);
 }
 .lang-sel__opt:hover         { background: var(--pink-pale); color: var(--text); }
-.lang-sel__opt--active       { color: var(--pink); font-weight: 600; }
+.lang-sel__opt--active       { color: var(--pink); font-weight: 500; }
 .lang-sel__opt--active:hover { background: var(--pink-pale); }
 
 @media (max-width: 640px) { .lang-sel { display: none; } }
