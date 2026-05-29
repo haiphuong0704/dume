@@ -2554,6 +2554,13 @@ aspect-ratio: 4 / 3;
     @media (max-width: 480px) {
       .products-grid { grid-template-columns: 1fr; }
     }
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: clamp(48px, 10vw, 72px);
+        padding-bottom: clamp(40px, 8vw, 56px);
+      }
+      .hero__headline { font-size: clamp(2.25rem, 7vw, 3rem); }
+    }
 
 /* ================================================
    SHARED FOOTER — sf-* prefix
