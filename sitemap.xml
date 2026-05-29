@@ -11,7 +11,7 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://petcarespa.com/wellness.html</loc>
+    <loc>https://petcarespa.com/wellness</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -41,7 +41,7 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://petcarespa.com/booking.html</loc>
+    <loc>https://petcarespa.com/booking</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -51,7 +51,7 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://petcarespa.com/policy.html</loc>
+    <loc>https://petcarespa.com/policy</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
