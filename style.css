@@ -18,14 +18,14 @@
   --brand-teal:            rgb(45, 212, 191);  /* official primary teal */
 
   /* Brand Colors */
-  --color-pink-primary:    #D4317E;  /* warm pink — not purple */
+  --color-pink-primary:    #E347ca;  /* warm pink — not purple */
   --color-pink-deep:       #A8225F;  /* deeper hover — warm dark pink */
   --color-pink-soft:       #FDF0F8;
   --color-pink-muted:      #F0D0E8;
   --color-pink-border:     #F0C0E0;
 
   /* Teal Accent */
-  --color-mint:            #2DD4BF;  /* vivid premium teal */
+  --color-mint:            #008e82;  /* vivid premium teal */
   --color-mint-dark:       #22A896;  /* deeper teal hover */
   --color-mint-pale:       #EBF9F7;
   --color-mint-border:     #C4EEE9;
@@ -196,7 +196,7 @@ body {
   font-size: var(--text-base);
   line-height: var(--leading-normal);
   color: var(--color-text-primary);
-  background-color: var(--color-white);
+  background-color: #c3d6d0;
 }
 
 img, video {
