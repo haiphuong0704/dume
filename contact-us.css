@@ -198,7 +198,7 @@
 .cnt-form__input:focus {
   border-color: var(--pink);
   background: var(--white);
-  box-shadow: 0 0 0 3px rgba(212, 49, 126, 0.1);
+  box-shadow: 0 0 0 3px rgba(227, 71, 202, 0.1);
 }
 
 .cnt-form__input.cnt-form__select {
@@ -325,7 +325,7 @@
   height: 56px;
   border-radius: 50%;
   background: var(--white);
-  box-shadow: 0 8px 24px rgba(212, 49, 126, 0.2);
+  box-shadow: 0 8px 24px rgba(227, 71, 202, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -569,7 +569,7 @@
 
 .cnt-nl-input:focus {
   border-color: var(--pink);
-  box-shadow: 0 0 0 3px rgba(212, 49, 126, 0.1);
+  box-shadow: 0 0 0 3px rgba(227, 71, 202, 0.1);
 }
 
 /* ── RESPONSIVE ── */

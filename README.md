@@ -88,8 +88,10 @@ Defined in `style.css` (`:root`) and `global.css` (`:root`):
 
 - `--font-display`: Playfair Display (brand headings, logo)
 - `--font-body`: Manrope (body text, UI)
-- `--color-pink-primary` / `--pink`: `#C42D7F` (brand pink)
-- `--color-mint` / `--mint`: `#2DD4BF` (accent mint)
+- `--color-pink-primary` / `--pink`: `#E347CA` (brand pink)
+- `--color-mint` / `--mint`: `#008E82` (accent teal)
+- `--bg`: `#C3D6D0` (page background)
+- `--text`: `#6C422B` (primary text)
 
 > Note: `style.css` uses `--color-pink-primary` / `--color-mint`. `global.css` uses `--pink` / `--mint`. Both resolve to the same values.
 
@@ -99,9 +101,22 @@ Defined in `style.css` (`:root`) and `global.css` (`:root`):
 
 | File | Version |
 |---|---|
-| `global.css` | v78 |
+| `global.css` | v79 |
 | `global.js` | v38 |
-| `style.css` | v70 |
-| `shop.css` | v20 |
+| `style.css` | v71 |
+| `shop.css` | v21 |
+| `services.css` | v29 |
+| `booking.css` | v15 |
+| `product.css` | v17 |
+| `member.css` | v18 |
+| `wellness.css` | v16 |
+| `blog.css` | v18 |
+| `blog-post.css` | v7 |
+| `about-us.css` | v15 |
+| `contact-us.css` | v15 |
+| `spa-bites.css` | v14 |
+| `policy.css` | v11 |
+| `terms.css` | v11 |
+| `membership.css` | v15 |
 | `translations.js` | v21 |
 | `cart.js` | v12 |

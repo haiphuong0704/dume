@@ -354,7 +354,7 @@
 
 /* ── CTA STRIP ── */
 .bp-cta {
-  background: linear-gradient(145deg, #7A1950 0%, #D4317E 100%);
+  background: linear-gradient(145deg, #6B1A8E 0%, #E347CA 100%);
   padding-block: clamp(60px, 8vw, 96px);
   text-align: center;
 }
@@ -421,7 +421,7 @@
   background: var(--pink-dark);
   border-color: var(--pink-dark);
   color: var(--white);
-  box-shadow: 0 8px 24px rgba(212, 49, 126, 0.32);
+  box-shadow: 0 8px 24px rgba(227, 71, 202, 0.32);
 }
 
 /* ── RESPONSIVE ── */

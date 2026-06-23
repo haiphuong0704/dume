@@ -121,8 +121,8 @@
 }
 
 .product-card:hover {
-  border-color: rgba(212, 49, 126, 0.38);
-  box-shadow: 0 8px 32px rgba(212, 49, 126, 0.12), var(--shadow-md);
+  border-color: rgba(227, 71, 202, 0.38);
+  box-shadow: 0 8px 32px rgba(227, 71, 202, 0.12), var(--shadow-md);
   transform: translateY(-4px);
 }
 

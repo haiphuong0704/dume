@@ -64,7 +64,7 @@
 .blg-featured__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(26, 18, 20, 0.18) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(108, 66, 43, 0.18) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -235,8 +235,8 @@
 
 .blg-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(45, 212, 191, 0.12), var(--shadow-lg);
-  border-color: rgba(45, 212, 191, 0.28);
+  box-shadow: 0 12px 40px rgba(0, 142, 130, 0.12), var(--shadow-lg);
+  border-color: rgba(0, 142, 130, 0.28);
 }
 
 .blg-card__image-wrap {
@@ -752,7 +752,7 @@
 
 .blg-stories__card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(45, 212, 191, 0.10), var(--shadow-lg);
+  box-shadow: 0 12px 40px rgba(0, 142, 130, 0.10), var(--shadow-lg);
 }
 
 .blg-stories__thumb {

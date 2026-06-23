@@ -340,8 +340,8 @@
   margin-bottom: 14px;
 }
 
-.mb-reward-tile--pink .mb-reward-tile__icon { background: rgba(212, 49, 126, 0.10); }
-.mb-reward-tile--mint .mb-reward-tile__icon { background: rgba(45, 212, 191, 0.20); }
+.mb-reward-tile--pink .mb-reward-tile__icon { background: rgba(227, 71, 202, 0.10); }
+.mb-reward-tile--mint .mb-reward-tile__icon { background: rgba(0, 142, 130, 0.20); }
 
 .mb-reward-tile__icon svg {
   width: 18px;
