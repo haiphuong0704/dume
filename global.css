@@ -13,7 +13,7 @@
   --brand-teal:    rgb(45, 212, 191);   /* official primary teal */
 
   /* Brand pink */
-  --pink:          #D4317E;  /* brand pink — warm, not purple */
+  --pink:          #;  /* brand pink — warm, not purple */
   --pink-dark:     #A8225F;  /* hover / active — deeper warm pink */
   --pink-light:    #E2739E;  /* medium rose accent */
   --pink-pale:     #FDF0F8;  /* barely-there pink tint */
@@ -96,7 +96,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--bg);
+  background: #c3d6d0;
   color: var(--text);
   line-height: 1.7;
 }
