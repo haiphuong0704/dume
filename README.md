@@ -118,5 +118,5 @@ Defined in `style.css` (`:root`) and `global.css` (`:root`):
 | `policy.css` | v11 |
 | `terms.css` | v11 |
 | `membership.css` | v15 |
-| `translations.js` | v21 |
+| `translations.js` | v22 |
 | `cart.js` | v12 |

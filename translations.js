@@ -993,9 +993,6 @@
     document.querySelectorAll('.navbar__mobile-menu a:not(.btn)').forEach((a, i) => {
       if (mobileNavKeys[i] && t[mobileNavKeys[i]]) a.textContent = t[mobileNavKeys[i]];
     });
-    document.querySelectorAll('.navbar__actions a.btn-secondary').forEach(btn => {
-      if (t['nav.signin']) btn.textContent = t['nav.signin'];
-    });
     document.querySelectorAll('.navbar__actions a.btn-primary, .navbar__mobile-menu a.btn-primary').forEach(btn => {
       if (t['nav.book']) btn.textContent = t['nav.book'];
     });
