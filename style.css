@@ -379,7 +379,7 @@ button, input, textarea, select {
   justify-content: center;
   gap: var(--space-2);
   font-family: var(--font-body);
-  font-size: var(--text-sm);
+  font-size: 0.875rem;
   font-weight: var(--weight-semibold);
   letter-spacing: 0.005em;
   border: 1.5px solid transparent;
@@ -403,10 +403,10 @@ button, input, textarea, select {
 }
 .btn:focus-visible { outline: none; box-shadow: var(--shadow-focus); }
 
-/* Sizes */
-.btn-sm { padding: var(--space-2) var(--space-4); font-size: var(--text-xs); }
+/* Sizes — must match global.css exactly so homepage and other pages are identical */
+.btn-sm { padding: 0.525rem 1.25rem; font-size: 0.8125rem; }
 .btn-md { padding: 0.625rem var(--space-5); }
-.btn-lg { padding: 0.875rem var(--space-8); font-size: var(--text-base); }
+.btn-lg { padding: 1.0rem 2.375rem; font-size: 0.9375rem; letter-spacing: 0.01em; }
 
 /* Primary */
 .btn-primary {

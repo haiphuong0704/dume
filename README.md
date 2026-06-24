@@ -103,7 +103,7 @@ Defined in `style.css` (`:root`) and `global.css` (`:root`):
 |---|---|
 | `global.css` | v79 |
 | `global.js` | v38 |
-| `style.css` | v71 |
+| `style.css` | v72 |
 | `shop.css` | v21 |
 | `services.css` | v29 |
 | `booking.css` | v15 |
