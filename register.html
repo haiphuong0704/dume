@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account | Petcare Spa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="global.css?v=80">
+  <link rel="stylesheet" href="register.css?v=1">
+  <meta name="description" content="Create your Petcare Spa account to manage bookings, earn rewards, and track your pet's wellness history.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#C42D7F">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ─── NAVBAR ─── -->
+<header class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar__inner">
+
+      <a href="/" class="navbar__logo">Petcare <span>Spa</span></a>
+
+      <nav class="navbar__desktop">
+        <ul class="navbar__nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/luxe-services">Luxe Services</a></li>
+          <li><a href="/spa-bites">Spa Bites</a></li>
+          <li><a href="/shop">Shop</a></li>
+          <li class="has-dropdown">
+            <a href="javascript:void(0)">About Us <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+            <div class="nav-dropdown">
+              <a href="/contact-us">Contact Us</a>
+              <a href="/blog">Blog</a>
+              <a href="/membership">Membership</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="/login" class="btn btn-secondary btn-sm" data-i18n="nav.signin">Sign in</a>
+        <a href="/booking" class="btn btn-primary btn-sm">Book appointment</a>
+        <button class="navbar__cart" id="cartToggle" aria-label="Open cart">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="navbar__cart-count" id="cartCount" style="display:none">0</span>
+        </button>
+        <div class="lang-sel" id="langSel">
+          <button class="lang-sel__btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span class="lang-sel__cur">EN</span>
+            <svg class="lang-sel__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-sel__drop" role="listbox" aria-label="Language options">
+            <button class="lang-sel__opt lang-sel__opt--active" data-lang="EN" role="option" aria-selected="true">EN &#8212; English</button>
+            <button class="lang-sel__opt" data-lang="VI" role="option" aria-selected="false">VI &#8212; Ti&#7871;ng Vi&#7879;t</button>
+          </div>
+        </div>
+        <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="navbar__mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href="/luxe-services">Luxe Services</a>
+    <a href="/spa-bites">Spa Bites</a>
+    <a href="/shop">Shop</a>
+    <button type="button" class="mobile-has-submenu" aria-expanded="false">About Us <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="mobile-submenu">
+      <a href="/contact-us">Contact Us</a>
+      <a href="/blog">Blog</a>
+      <a href="/membership">Membership</a>
+    </div>
+    <a href="/booking" class="btn btn-primary">Book appointment</a>
+  </div>
+</header>
+
+<!-- ─── MAIN ─── -->
+<main id="main-content">
+  <section class="rgr-section">
+    <div class="container">
+      <div class="rgr-inner">
+        <div class="rgr-card">
+
+          <div class="rgr-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <line x1="19" y1="8" x2="19" y2="14"/>
+              <line x1="22" y1="11" x2="16" y2="11"/>
+            </svg>
+          </div>
+
+          <h1 class="rgr-heading">Join <em>Petcare Spa.</em></h1>
+          <p class="rgr-subtext">Create your account to book appointments, earn rewards, and track your pet's wellness.</p>
+
+          <form class="rgr-form" id="registerForm" novalidate>
+
+            <div class="rgr-name-grid">
+              <div class="form-field">
+                <label class="form-label" for="rgr-firstname">First name</label>
+                <input class="input" type="text" id="rgr-firstname" name="first_name" placeholder="First name" autocomplete="given-name" required>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="rgr-lastname">Last name</label>
+                <input class="input" type="text" id="rgr-lastname" name="last_name" placeholder="Last name" autocomplete="family-name" required>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="rgr-email">Email address</label>
+              <input class="input" type="email" id="rgr-email" name="email" placeholder="your@email.com" autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="rgr-phone">Phone number <span style="font-weight:400;opacity:.65">(optional)</span></label>
+              <input class="input" type="tel" id="rgr-phone" name="phone" placeholder="+84 000 000 0000" autocomplete="tel">
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="rgr-password">Password</label>
+              <div class="rgr-pw-wrap">
+                <input class="input" type="password" id="rgr-password" name="password" placeholder="Create a password" autocomplete="new-password" required>
+                <button type="button" class="rgr-eye" id="rgrEyeToggle1" aria-label="Show password">
+                  <svg id="rgrEyeShow1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <svg id="rgrEyeHide1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                </button>
+              </div>
+              <p class="rgr-pw-hint">At least 8 characters.</p>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="rgr-confirm">Confirm password</label>
+              <div class="rgr-pw-wrap">
+                <input class="input" type="password" id="rgr-confirm" name="confirm_password" placeholder="Repeat your password" autocomplete="new-password" required>
+                <button type="button" class="rgr-eye" id="rgrEyeToggle2" aria-label="Show password">
+                  <svg id="rgrEyeShow2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <svg id="rgrEyeHide2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg rgr-submit">Create Account</button>
+
+          </form>
+
+          <p class="rgr-terms">By creating an account you agree to our <a href="/terms">Terms of Service</a> and <a href="/policy">Privacy Policy</a>.</p>
+
+          <p class="rgr-switch">Already have an account? <a href="/login">Sign in</a></p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ─── FOOTER ─── -->
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="sf-grid">
+
+      <div class="sf-brand">
+        <p class="sf-brand-name">Petcare <span>Spa</span></p>
+        <p class="sf-brand-tagline">Organic wellness, grooming, and handcrafted nutrition for modern pet families.</p>
+        <span class="sf-nl-label">Newsletter</span>
+        <form class="sf-nl">
+          <input class="sf-nl-input" type="email" placeholder="your@email.com" aria-label="Email address for newsletter">
+          <button class="sf-nl-btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div>
+        <p class="sf-col-title">Contact</p>
+        <ul class="sf-contact-list">
+          <li class="sf-contact-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>18/2 35 Cat Lai, Thu Duc city, Ho Chi Minh city</span>
+          </li>
+          <li class="sf-contact-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:EpsiPrime@gmail.com">EpsiPrime@gmail.com</a>
+          </li>
+          <li class="sf-contact-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.59 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.08 6.08l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+842873009999">+84 28 7300 9999</a>
+          </li>
+          <li class="sf-contact-item sf-contact-hours">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Open daily &middot; 8:00 &ndash; 19:00</span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="sf-col-title">Membership</p>
+        <ul class="sf-links">
+          <li><a href="/membership">Loyalty rewards</a></li>
+          <li><a href="/membership">Free meal upgrades</a></li>
+          <li><a href="/membership">Priority booking</a></li>
+          <li><a href="/membership">Member-only wellness perks</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="sf-col-title">Navigate</p>
+        <ul class="sf-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/luxe-services">Luxe Services</a></li>
+          <li><a href="/about-us">About Us</a></li>
+          <li><a href="/spa-bites">Spa Bites</a></li>
+          <li><a href="/shop">Shop</a></li>
+          <li><a href="/membership">Membership</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact-us">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="sf-base">
+      <p class="sf-copy">&copy; 2026 Petcare Spa. All rights reserved.</p>
+      <p class="sf-legal"><a href="/policy">Privacy Policy</a><span class="sf-legal-sep" aria-hidden="true">&middot;</span><a href="/terms">Terms of Service</a></p>
+      <div class="sf-socials">
+        <span class="sf-follow">Follow us</span>
+        <a href="https://www.instagram.com/petcarespa" target="_blank" rel="noopener" aria-label="Follow Petcare Spa on Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12c0 3.259.014 3.668.072 4.948.059 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24c3.259 0 3.668-.014 4.948-.072 1.277-.059 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.689.072-4.948 0-3.259-.014-3.667-.072-4.947-.059-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/petcarespa" target="_blank" rel="noopener" aria-label="Follow Petcare Spa on Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@petcarespa" target="_blank" rel="noopener" aria-label="Follow Petcare Spa on TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="translations.js?v=22"></script>
+<script src="global.js?v=38"></script>
+<script>
+(function () {
+  function makeToggle(btnId, inputId, showId, hideId) {
+    var btn = document.getElementById(btnId);
+    var inp = document.getElementById(inputId);
+    var show = document.getElementById(showId);
+    var hide = document.getElementById(hideId);
+    if (!btn || !inp) return;
+    btn.addEventListener('click', function () {
+      var isPassword = inp.type === 'password';
+      inp.type = isPassword ? 'text' : 'password';
+      show.style.display = isPassword ? 'none' : '';
+      hide.style.display = isPassword ? '' : 'none';
+      btn.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
+    });
+  }
+  makeToggle('rgrEyeToggle1', 'rgr-password', 'rgrEyeShow1', 'rgrEyeHide1');
+  makeToggle('rgrEyeToggle2', 'rgr-confirm', 'rgrEyeShow2', 'rgrEyeHide2');
+})();
+</script>
+
+</body>
+</html>

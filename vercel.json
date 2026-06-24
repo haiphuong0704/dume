@@ -13,7 +13,9 @@
     { "source": "/booking",       "destination": "/booking.html" },
     { "source": "/policy",        "destination": "/policy.html" },
     { "source": "/wellness",      "destination": "/wellness.html" },
-    { "source": "/product",       "destination": "/product.html" }
+    { "source": "/product",       "destination": "/product.html" },
+    { "source": "/login",         "destination": "/login.html" },
+    { "source": "/register",      "destination": "/register.html" }
   ],
   "headers": [
     {

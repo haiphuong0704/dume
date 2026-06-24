@@ -6,7 +6,7 @@ Premium pet wellness brand. Vanilla HTML/CSS/JS static site deployed on Vercel.
 
 ## Stack
 
-- **HTML** — 16 pages, each with a dedicated CSS file
+- **HTML** — 18 pages, each with a dedicated CSS file
 - **CSS** — `global.css` (all pages) + `style.css` (homepage only) + per-page stylesheets
 - **JS** — `global.js` (all pages) + per-page scripts
 - **Deploy** — Vercel (static), routes defined in `vercel.json`
@@ -32,6 +32,8 @@ Premium pet wellness brand. Vanilla HTML/CSS/JS static site deployed on Vercel.
 | `/spa-bites` | `spa-bites.html` | Blog/journal |
 | `/policy` | `policy.html` | Policies |
 | `/terms` | `terms.html` | Terms of service |
+| `/login` | `login.html` | Sign in page |
+| `/register` | `register.html` | Create account page |
 
 **Standalone pages** (no global nav — accessed via direct `.html` path):
 
@@ -118,5 +120,7 @@ Defined in `style.css` (`:root`) and `global.css` (`:root`):
 | `policy.css` | v11 |
 | `terms.css` | v11 |
 | `membership.css` | v15 |
+| `login.css` | v1 |
+| `register.css` | v1 |
 | `translations.js` | v22 |
 | `cart.js` | v12 |
