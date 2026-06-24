@@ -1,5 +1,5 @@
-/* ==================================================
-   PETCARE SPA — i18n Localization System v1.0
+﻿/* ==================================================
+   PETCARE SPA — i18n Localization System v1.1
    Languages: EN (English) | VI (Vietnamese)
    Frontend-only. Persists via localStorage('pcs_lang').
 ================================================== */
@@ -481,6 +481,359 @@
       'abt.cta.sub':           'Book a visit or explore our full range of services. We\'d love to meet your pet.',
       'abt.cta.btn1':          'Book a visit',
       'abt.cta.btn2':          'Explore services',
+      /* ── CART DRAWER */
+      'cart.title':        'Your Cart',
+      'cart.empty.title':  'Your cart is empty',
+      'cart.empty.sub':    'Add some products from our shop!',
+      'cart.empty.browse': 'Browse Shop',
+      'cart.subtotal':     'Subtotal',
+      'cart.checkout':     'Checkout',
+
+      /* ── TOASTS */
+      'toast.newsletter': "You're on the list! We'll be in touch.",
+      'toast.promo':      'Offer claimed! Your 20% discount code is on its way.',
+
+      /* ── FOOTER — EXTRAS */
+      'footer.hours':         'Open daily · 8:00 – 19:00',
+      'footer.legal.privacy': 'Privacy Policy',
+      'footer.legal.terms':   'Terms of Service',
+      'footer.follow':        'Follow us',
+
+      /* ── SHOP — FILTERS & SORT */
+      'shop.filter.all':        'All Products',
+      'shop.filter.food':       'Food',
+      'shop.filter.grooming':   'Grooming',
+      'shop.filter.wellness':   'Wellness',
+      'shop.filter.accessories':'Accessories',
+      'shop.sort.featured':     'Featured',
+      'shop.sort.newest':       'Newest',
+      'shop.sort.price_asc':    'Price: Low to High',
+      'shop.sort.price_desc':   'Price: High to Low',
+
+      /* ── SHOP — EXPLORE SECTION */
+      'shop.explore.eyebrow':  'Curated for your pet',
+      'shop.explore.heading':  'Find the right care<br><em>for your pet.</em>',
+      'shop.explore.desc':     "Every product in our collection is reviewed by veterinary specialists. Search by breed, age or need — we'll help you find exactly what your pet requires.",
+      'shop.explore.ph':       'Search by breed, size or need…',
+
+      /* ── SHOP — TRENDING */
+      'shop.trending.eyebrow': 'Trending now',
+      'shop.trending.headline':'Popular <em>this week</em>',
+      'shop.trending.sub':     'Products pet parents are loving right now — vet-reviewed and community-approved.',
+
+      /* ── SHOP — RECENTLY VIEWED */
+      'shop.rv.eyebrow':    'Revisit your picks',
+      'shop.rv.headline':   'Recently <em>viewed</em>',
+
+      /* ── SHOP — CTA */
+      'shop.cta.headline':  'Personalized wellness starts here',
+      'shop.cta.sub':       'Explore premium products trusted by modern pet families.',
+      'shop.cta.btn':       'Explore Collection',
+
+      /* ── SHOP — PRODUCT CATEGORIES & BADGES */
+      'shop.cat.nutrition':    'Nutrition',
+      'shop.cat.grooming':     'Grooming',
+      'shop.cat.wellness':     'Wellness',
+      'shop.cat.accessories':  'Accessories',
+      'shop.badge.bestseller': 'Bestseller',
+      'shop.badge.vet':        'Vet Approved',
+      'shop.badge.popular':    'Popular',
+      'shop.badge.fresh':      'Fresh',
+      'shop.badge.member':     'Member Fav',
+      'shop.badge.new':        'New',
+      'shop.add':              'Add',
+      'shop.added':            'Added',
+
+      /* ── BOOKING — STEP HEADERS */
+      'bk.step1.eyebrow': 'Step 1 of 5',
+      'bk.step1.h2':      'What service are you looking for?',
+      'bk.step1.sub':     "Choose the service that's right for your pet. All services include a complimentary wellbeing check.",
+      'bk.step2.eyebrow': 'Step 2 of 5',
+      'bk.step2.h2':      'Tell us about your pet',
+      'bk.step2.sub':     "We'll use this to prepare the ideal experience before your arrival.",
+      'bk.step3.eyebrow': 'Step 3 of 5',
+      'bk.step3.h2':      'Choose a date and time',
+      'bk.step3.sub':     'Select an available appointment slot that works for you.',
+      'bk.step4.eyebrow': 'Step 4 of 5',
+      'bk.step4.h2':      'Your details',
+      'bk.step4.sub':     "We'll use this to confirm your appointment and send reminders.",
+      'bk.step5.eyebrow': 'Step 5 of 5',
+      'bk.step5.h2':      'Review and confirm',
+      'bk.step5.sub':     'Please check your details before confirming your appointment.',
+
+      /* ── BOOKING — SERVICE CARDS */
+      'bk.svc.grooming':      'Grooming & Bath',
+      'bk.svc.grooming.desc': 'Full bath, blow-dry, breed cut, nail trim and ear cleaning.',
+      'bk.svc.vet':           'Veterinary Consultation',
+      'bk.svc.vet.desc':      'Health assessment, diagnosis, vaccinations and treatment plans.',
+      'bk.svc.wellness':      'Wellness Assessment',
+      'bk.svc.wellness.desc': 'Preventive care review, nutrition check and lifestyle guidance.',
+      'bk.svc.nail':          'Nail & Paw Care',
+      'bk.svc.nail.desc':     'Nail clipping, paw moisturising and pad health check.',
+      'bk.svc.dental':        'Dental Care',
+      'bk.svc.dental.desc':   'Professional tooth cleaning, breath treatment and gum health review.',
+      'bk.svc.hotel':         'Pet Hotel',
+      'bk.svc.hotel.desc':    'Comfortable overnight stays with supervised play, meals and care.',
+      'bk.svc.per_night':     'Per night',
+
+      /* ── BOOKING — PET STEP */
+      'bk.pet.type':       'Pet type',
+      'bk.pet.dog':        'Dog',
+      'bk.pet.cat':        'Cat',
+      'bk.pet.small':      'Small Animal',
+      'bk.pet.bird':       'Bird',
+      'bk.pet.size':       'Size',
+      'bk.pet.size_note':  '(helps us prepare)',
+      'bk.pet.name_label': "Pet's name",
+      'bk.pet.name_note':  'optional',
+      'bk.pet.name_ph':    'e.g. Luna',
+      'bk.pet.age':        'Age group',
+      'bk.size.small':     'Small',
+      'bk.size.small_note':'Under 10 lbs',
+      'bk.size.medium':    'Medium',
+      'bk.size.med_note':  '10–40 lbs',
+      'bk.size.large':     'Large',
+      'bk.size.large_note':'40–80 lbs',
+      'bk.size.xl':        'Extra Large',
+      'bk.size.xl_note':   '80+ lbs',
+      'bk.age.puppy':      'Puppy / Kitten',
+      'bk.age.puppy_note': 'Under 1 year',
+      'bk.age.adult':      'Adult',
+      'bk.age.adult_note': '1–7 years',
+      'bk.age.senior':     'Senior',
+      'bk.age.senior_note':'7+ years',
+
+      /* ── BOOKING — DATE STEP */
+      'bk.slots.empty':     'Select a date to see available times',
+      'bk.slots.morning':   'Morning',
+      'bk.slots.afternoon': 'Afternoon',
+
+      /* ── BOOKING — DETAILS FORM */
+      'bk.field.first':      'First name',
+      'bk.field.last':       'Last name',
+      'bk.field.email':      'Email',
+      'bk.field.phone':      'Phone',
+      'bk.field.breed':      'Pet breed',
+      'bk.field.breed_note': 'optional',
+      'bk.field.notes':      'Special requests or notes',
+      'bk.field.notes_note': 'optional',
+      'bk.field.notes_ph':   'Any allergies, health conditions or preferences we should know about…',
+      'bk.privacy':          'Your information is encrypted and never shared. By continuing you agree to our <a href="/policy">Privacy Policy</a>.',
+
+      /* ── BOOKING — SUMMARY & CONFIRM */
+      'bk.sum.service':     'Service',
+      'bk.sum.pet':         'Your Pet',
+      'bk.sum.datetime':    'Date & Time',
+      'bk.sum.contact':     'Contact',
+      'bk.sum.total':       'Estimated total',
+      'bk.confirm.free':    'Free cancellation',
+      'bk.confirm.free.d':  'Cancel or reschedule up to 24 hours before your appointment at no charge.',
+      'bk.confirm.email':   'Confirmation by email',
+      'bk.confirm.email.d': "You'll receive a confirmation and reminder 24 hours before your visit.",
+
+      /* ── BOOKING — NAV */
+      'bk.back_btn':    'Back',
+      'bk.continue':    'Continue',
+      'bk.confirm_btn': 'Confirm booking',
+      'bk.confirming':  'Confirming…',
+      'bk.step_of':     'Step {n} of 5',
+
+      /* ── BOOKING — SUCCESS */
+      'bk.success.h2':    'Appointment confirmed',
+      'bk.success.sent':  "We've sent a confirmation to",
+      'bk.success.look':  'We look forward to seeing you and your pet.',
+      'bk.success.home':  'Back to home',
+      'bk.success.svcs':  'View all services',
+
+      /* ── LOGIN PAGE */
+      'lgn.h1':          'Welcome <em>back.</em>',
+      'lgn.sub':         'Sign in to manage your bookings, rewards, and wellness history.',
+      'lgn.email':       'Email address',
+      'lgn.email_ph':    'your@email.com',
+      'lgn.pw':          'Password',
+      'lgn.pw_ph':       'Your password',
+      'lgn.forgot':      'Forgot password?',
+      'lgn.remember':    'Keep me signed in',
+      'lgn.submit':      'Sign In',
+      'lgn.switch':      "Don't have an account?",
+      'lgn.switch_link': 'Create one',
+
+      /* ── REGISTER PAGE */
+      'rgr.h1':          'Join <em>Petcare Spa.</em>',
+      'rgr.sub':         "Create your account to book appointments, earn rewards, and track your pet's wellness.",
+      'rgr.first':       'First name',
+      'rgr.first_ph':    'First name',
+      'rgr.last':        'Last name',
+      'rgr.last_ph':     'Last name',
+      'rgr.email':       'Email address',
+      'rgr.email_ph':    'your@email.com',
+      'rgr.phone':       'Phone number',
+      'rgr.phone_note':  '(optional)',
+      'rgr.pw':          'Password',
+      'rgr.pw_ph':       'Create a password',
+      'rgr.pw_hint':     'At least 8 characters.',
+      'rgr.confirm':     'Confirm password',
+      'rgr.confirm_ph':  'Repeat your password',
+      'rgr.submit':      'Create Account',
+      'rgr.terms':       'By creating an account you agree to our <a href="/terms">Terms of Service</a> and <a href="/policy">Privacy Policy</a>.',
+      'rgr.switch':      'Already have an account?',
+      'rgr.switch_link': 'Sign in',
+
+      /* ── MEMBERSHIP PAGE */
+      'mb.hero.eyebrow':  'Wellness Membership',
+      'mb.hero.h1':       'Wellness made for<br>modern <em>pet families.</em>',
+      'mb.hero.hand':     '— because they deserve the best',
+      'mb.hero.body':     'Join thousands of pet parents who have made preventive care part of daily life. Exclusive benefits, real savings, and expert support — always available, always personal.',
+      'mb.hero.btn1':     'Join Membership',
+      'mb.hero.btn2':     'Explore Benefits',
+      'mb.stat1.val':     '12,000+',
+      'mb.stat1.label':   'Pets enrolled',
+      'mb.stat2.val':     'Up to 35%',
+      'mb.stat2.label':   'Savings vs. pay-as-you-go',
+      'mb.stat3.val':     'Cancel',
+      'mb.stat3.label':   'Anytime, no fees',
+      'mb.benefits.eyebrow': 'Member Benefits',
+      'mb.benefits.h2':   'Everything your pet<br>deserves, <em>included.</em>',
+      'mb.benefits.sub':  'Every plan comes with core benefits designed around long-term wellbeing — not just reactive care.',
+      'mb.benefits.hand': '— wellness without compromise',
+      'mb.b1.h3':  'Free annual wellness exam',
+      'mb.b1.p':   'A comprehensive head-to-tail health check every year, included at no extra cost across all plans.',
+      'mb.b2.h3':  '10–20% grooming discount',
+      'mb.b2.p':   'Save on every grooming session. Your discount grows with your plan tier — automatically applied at checkout.',
+      'mb.b3.h3':  'Priority booking',
+      'mb.b3.p':   'Skip the waitlist. Members always get first access to appointments, specialist consultations, and urgent slots.',
+      'mb.b4.h3':  'Free Spa Bites delivery',
+      'mb.b4.p':   'Complimentary refrigerated delivery on all Spa Bites orders — every order, every time, no minimum spend.',
+      'mb.b5.h3':  'Vaccination discounts',
+      'mb.b5.p':   "Scheduled core and non-core vaccinations at member rates, tracked and reminded for your pet's life stage.",
+      'mb.b6.h3':  '24/7 expert consultations',
+      'mb.b6.p':   'Day or night, your specialist is reachable for guidance, urgent questions, and genuine peace of mind.',
+      'mb.loyalty.eyebrow': 'Loyalty Program',
+      'mb.loyalty.h2':   'The more you care,<br>the more you <em>earn.</em>',
+      'mb.loyalty.body': "Every visit, every order, every milestone — rewarded. Our loyalty program grows alongside your pet's journey, giving you meaningful perks every step of the way.",
+      'mb.loyalty.cta':  'Start earning today',
+      'mb.r1.h4':  'Earn on every visit',
+      'mb.r1.p':   '1 point per 10.000₫ spent. Redeem for services, grooming, or Spa Bites credits.',
+      'mb.r1.tag': 'Points',
+      'mb.r2.h4':  'Pet birthday reward',
+      'mb.r2.p':   'A free birthday treat, wellness check, or grooming token — every single year.',
+      'mb.r2.tag': 'Annual',
+      'mb.r3.h4':  'Grooming milestone',
+      'mb.r3.p':   'Book 5 grooming sessions and receive your 6th one completely free.',
+      'mb.r3.tag': 'Milestone',
+      'mb.r4.h4':  'Welcome gift pack',
+      'mb.r4.p':   'New members receive a curated wellness box — treats, supplements, and a care guide.',
+      'mb.r4.tag': 'Welcome',
+      'mb.journey.eyebrow': 'Your journey',
+      'mb.journey.h2':    'Every visit brings you <em>closer.</em>',
+      'mb.journey.p':     'From your first appointment to your hundredth, each interaction earns points that grow into meaningful rewards for you and your pet.',
+      'mb.journey.title': 'Wellness journey progress',
+      'mb.journey.pts':   'Current: <strong>620 pts</strong>  ·  Next reward at 750 pts',
+      'mb.m.welcome':  'Welcome<br>gift',
+      'mb.m.groom':    'Free<br>groom',
+      'mb.m.wellness': 'Wellness<br>check',
+      'mb.m.here':     'You are<br>here',
+      'mb.m.dental':   'Free<br>dental',
+      'mb.m.meals':    'Meals<br>credit',
+      'mb.m.elite':    'Elite<br>status',
+      'mb.tiers.eyebrow':  'Membership Plans',
+      'mb.tiers.h2':       'Simple plans, serious <em>results.</em>',
+      'mb.tiers.sub':      "Choose the level of care that fits your pet's life. All plans include core benefits, no hidden fees, and no long-term contracts.",
+      'mb.tiers.hand':     '— care made simple',
+      'mb.tier.month':     '/ month',
+      'mb.tier.cta':       'Get started',
+      'mb.tier.note':      'No contract · Cancel anytime',
+      'mb.tier.popular':   'Most Popular',
+      'mb.tiers.footnote': 'All plans billed monthly · Annual billing available at 15% off · Cancel anytime with no penalty',
+      'mb.meals.eyebrow':  'Spa Bites × Membership',
+      'mb.meals.h2':       'Fresh nutrition,<br>delivered with <em>care.</em>',
+      'mb.meals.hand':     '— exclusively for members',
+      'mb.meals.body':     'Members unlock exclusive access to our Spa Bites subscription — freshly cooked, certified organic, and delivered cold. Personalized portions, zero fillers, and free delivery on every single order.',
+      'mb.meals.p1':       'Free refrigerated delivery, every order',
+      'mb.meals.p2':       '15% member discount on all meal plans',
+      'mb.meals.p3':       'Personalized nutrition consultation included',
+      'mb.meals.p4':       'Organic wellness bundles at exclusive pricing',
+      'mb.meals.cta':      'Explore Spa Bites',
+      'mb.meals.tag':      'organic',
+      'mb.test.eyebrow':   'Member Stories',
+      'mb.test.h2':        'Loved by <em>pet families</em><br>everywhere.',
+      'mb.trust1.val':     '4.9 ★',
+      'mb.trust1.label':   'Average member rating',
+      'mb.trust2.val':     '98%',
+      'mb.trust2.label':   'Annual renewal rate',
+      'mb.trust3.val':     '12,000+',
+      'mb.trust3.label':   'Active members',
+      'mb.faq.eyebrow':    'Questions',
+      'mb.faq.h2':         'Frequently <em>asked.</em>',
+      'mb.faq.sub':        'Everything you need to know before you join.',
+
+      /* ── MEMBERSHIP — FAQ */
+      'mb.faq1.q': 'How does my membership work?',
+      'mb.faq1.a': 'Once you join, your plan activates immediately. You&rsquo;ll receive a welcome email with your member card, plan details, and instructions to book your first appointment. All benefits are available from day one &mdash; priority booking, discounts, consultation support, and Spa Bites delivery.',
+      'mb.faq2.q': 'Can I cancel my membership anytime?',
+      'mb.faq2.a': 'Yes. There are no long-term contracts. You can cancel anytime from your member dashboard or by contacting our team. Your benefits remain active through the end of your current billing period, and there are absolutely no cancellation fees.',
+      'mb.faq3.q': 'How do loyalty points work?',
+      'mb.faq3.a': 'You earn 1 loyalty point for every 10.000&#8363; spent on services, grooming, Spa Bites, and shop purchases. Points accumulate in your account and can be redeemed for free services, grooming sessions, or Spa Bites credits. Points never expire while your membership is active.',
+      'mb.faq4.q': 'Where does Spa Bites delivery cover?',
+      'mb.faq4.a': 'We currently deliver within a 30-km radius of our main locations. Members receive free refrigerated delivery on all Spa Bites orders regardless of size. We are expanding our coverage area regularly &mdash; contact us to check availability in your neighborhood.',
+      'mb.faq5.q': 'How do I book appointments as a member?',
+      'mb.faq5.a': 'Members book via our website booking page or by calling our priority line. Your member status is recognized automatically. Essential members receive priority in the standard queue; Premium and Elite members access dedicated specialist slots, often same-day or next-morning.',
+
+      /* ── MEMBERSHIP — TESTIMONIALS */
+      'mb.t1.q': '"Joining the Premium plan was honestly the best decision we made for Luna. The quarterly reviews caught something early that we would have missed for months. Worth every penny."',
+      'mb.t1.author': 'Sarah M.',
+      'mb.t1.role': 'Luna&rsquo;s mom &middot; Premium Member',
+      'mb.t2.q': '"Priority booking alone is worth the subscription. I used to wait two weeks for an appointment. Now it&rsquo;s same-day or next morning. That&rsquo;s peace of mind I can&rsquo;t price."',
+      'mb.t2.author': 'James T.',
+      'mb.t2.role': 'Mochi&rsquo;s dad &middot; Essential Member',
+      'mb.t3.q': '"The Spa Bites delivery bundled with our Elite plan changed our whole routine. Coco eats better than ever, and the nutrition consultation changed how I think about pet diet entirely."',
+      'mb.t3.author': 'Anh N.',
+      'mb.t3.role': 'Coco&rsquo;s mom &middot; Elite Member',
+
+      /* ── MEMBERSHIP — TIER NAMES & TAGLINES */
+      'mb.tier.essential': 'Essential',
+      'mb.tier.essential.tag': 'Solid preventive care for healthy adult pets.',
+      'mb.tier.premium': 'Premium',
+      'mb.tier.premium.tag': 'Comprehensive care for pets at every life stage.',
+      'mb.tier.elite': 'Elite',
+      'mb.tier.elite.tag': 'Concierge-level care with zero compromises.',
+
+      /* ── MEMBERSHIP — TIER FEATURES (Essential) */
+      'mb.ef1': 'Annual comprehensive health exam',
+      'mb.ef2': '2 vet consultations per year',
+      'mb.ef3': 'Core vaccination review',
+      'mb.ef4': 'Dental health screening',
+      'mb.ef5': '10% grooming discount',
+      'mb.ef6': 'Free Spa Bites delivery',
+      'mb.ef7': 'Email support',
+
+      /* ── MEMBERSHIP — TIER FEATURES (Premium) */
+      'mb.pf1': 'Quarterly health reviews',
+      'mb.pf2': '6 vet consultations per year',
+      'mb.pf3': 'Full vaccination schedule',
+      'mb.pf4': 'Nutrition consultation',
+      'mb.pf5': 'Dental cleaning (1&times;/year)',
+      'mb.pf6': '20% grooming discount',
+      'mb.pf7': 'Free Spa Bites delivery',
+      'mb.pf8': 'Priority booking',
+      'mb.pf9': '24/7 phone support',
+
+      /* ── MEMBERSHIP — TIER FEATURES (Elite) */
+      'mb.lf1': 'Monthly wellness check-ins',
+      'mb.lf2': 'Unlimited vet consultations',
+      'mb.lf3': 'Full vaccination + parasite plan',
+      'mb.lf4': 'Personalized nutrition plan',
+      'mb.lf5': 'Unlimited dental cleanings',
+      'mb.lf6': 'Free grooming sessions',
+      'mb.lf7': 'Free Spa Bites + meal planning',
+      'mb.lf8': 'Dedicated wellness specialist',
+      'mb.lf9': 'Same-day appointments',
+      'mb.lf10': 'Concierge 24/7 support',
+      'mb.cta.hand':    '— start today',
+      'mb.cta.h2':      'Give your pet a healthier,<br><em>happier routine.</em>',
+      'mb.cta.sub':     'Join thousands of pet families who trust Petcare Spa for preventive, compassionate, expert-guided care.',
+      'mb.cta.btn1':    'Join Today',
+      'mb.cta.btn2':    'Book Consultation',
     },
 
     VI: {
@@ -959,6 +1312,423 @@
       'abt.cta.sub':           'Đặt lịch thăm khám hoặc khám phá đầy đủ các dịch vụ của chúng tôi. Chúng tôi rất mong gặp thú cưng của bạn.',
       'abt.cta.btn1':          'Đặt lịch thăm khám',
       'abt.cta.btn2':          'Khám phá dịch vụ',
+
+      /* ── CART DRAWER */
+      'cart.title':        'Giỏ hàng của bạn',
+      'cart.empty.title':  'Giỏ hàng trống',
+      'cart.empty.sub':    'Thêm sản phẩm từ cửa hàng của chúng tôi!',
+      'cart.empty.browse': 'Duyệt cửa hàng',
+      'cart.subtotal':     'Tạm tính',
+      'cart.checkout':     'Thanh toán',
+
+      /* ── TOASTS */
+      'toast.newsletter': 'Bạn đã đăng ký! Chúng tôi sẽ liên hệ sớm.',
+      'toast.promo':      'Đã nhận ưu đãi! Mã giảm giá 20% đang được gửi đến bạn.',
+
+      /* ── FOOTER — EXTRAS */
+      'footer.hours':         'Mở cửa hàng ngày · 8:00 – 19:00',
+      'footer.legal.privacy': 'Chính sách Bảo mật',
+      'footer.legal.terms':   'Điều khoản Dịch vụ',
+      'footer.follow':        'Theo dõi chúng tôi',
+
+      /* ── SHOP — FILTERS & SORT */
+      'shop.filter.all':        'Tất cả sản phẩm',
+      'shop.filter.food':       'Thức ăn',
+      'shop.filter.grooming':   'Chăm sóc lông',
+      'shop.filter.wellness':   'Sức khỏe',
+      'shop.filter.accessories':'Phụ kiện',
+      'shop.sort.featured':     'Nổi bật',
+      'shop.sort.newest':       'Mới nhất',
+      'shop.sort.price_asc':    'Giá: Thấp đến Cao',
+      'shop.sort.price_desc':   'Giá: Cao đến Thấp',
+
+      /* ── SHOP — EXPLORE SECTION */
+      'shop.explore.eyebrow':  'Tuyển chọn cho thú cưng của bạn',
+      'shop.explore.heading':  'Tìm đúng sản phẩm<br><em>cho thú cưng của bạn.</em>',
+      'shop.explore.desc':     'Mọi sản phẩm trong bộ sưu tập đều được kiểm tra bởi chuyên gia thú y. Tìm theo giống, tuổi hoặc nhu cầu — chúng tôi sẽ giúp bạn tìm đúng sản phẩm.',
+      'shop.explore.ph':       'Tìm theo giống, kích thước hoặc nhu cầu…',
+
+      /* ── SHOP — TRENDING */
+      'shop.trending.eyebrow': 'Đang thịnh hành',
+      'shop.trending.headline':'Phổ biến <em>tuần này</em>',
+      'shop.trending.sub':     'Sản phẩm được gia đình thú cưng yêu thích — được bác sĩ kiểm tra và cộng đồng xác nhận.',
+
+      /* ── SHOP — RECENTLY VIEWED */
+      'shop.rv.eyebrow':    'Xem lại lựa chọn của bạn',
+      'shop.rv.headline':   'Đã xem <em>gần đây</em>',
+
+      /* ── SHOP — CTA */
+      'shop.cta.headline':  'Chăm sóc cá nhân hóa bắt đầu từ đây',
+      'shop.cta.sub':       'Khám phá sản phẩm cao cấp được gia đình thú cưng hiện đại tin dùng.',
+      'shop.cta.btn':       'Khám phá bộ sưu tập',
+
+      /* ── SHOP — PRODUCT CATEGORIES & BADGES */
+      'shop.cat.nutrition':    'Dinh dưỡng',
+      'shop.cat.grooming':     'Chăm sóc lông',
+      'shop.cat.wellness':     'Sức khỏe',
+      'shop.cat.accessories':  'Phụ kiện',
+      'shop.badge.bestseller': 'Bán chạy',
+      'shop.badge.vet':        'Được bác sĩ phê duyệt',
+      'shop.badge.popular':    'Phổ biến',
+      'shop.badge.fresh':      'Mới',
+      'shop.badge.member':     'Thành viên yêu thích',
+      'shop.badge.new':        'Mới ra',
+      'shop.add':              'Thêm',
+      'shop.added':            'Đã thêm',
+
+      /* ── BOOKING — STEP HEADERS */
+      'bk.step1.eyebrow': 'Bước 1 trên 5',
+      'bk.step1.h2':      'Bạn đang tìm dịch vụ gì?',
+      'bk.step1.sub':     'Chọn dịch vụ phù hợp với thú cưng của bạn. Tất cả dịch vụ đều bao gồm kiểm tra sức khỏe miễn phí.',
+      'bk.step2.eyebrow': 'Bước 2 trên 5',
+      'bk.step2.h2':      'Kể cho chúng tôi về thú cưng của bạn',
+      'bk.step2.sub':     'Chúng tôi sẽ dùng thông tin này để chuẩn bị trải nghiệm lý tưởng trước khi bạn đến.',
+      'bk.step3.eyebrow': 'Bước 3 trên 5',
+      'bk.step3.h2':      'Chọn ngày và giờ',
+      'bk.step3.sub':     'Chọn khung giờ có sẵn phù hợp với bạn.',
+      'bk.step4.eyebrow': 'Bước 4 trên 5',
+      'bk.step4.h2':      'Thông tin của bạn',
+      'bk.step4.sub':     'Chúng tôi sẽ dùng thông tin này để xác nhận và nhắc nhở lịch hẹn.',
+      'bk.step5.eyebrow': 'Bước 5 trên 5',
+      'bk.step5.h2':      'Xem lại và xác nhận',
+      'bk.step5.sub':     'Vui lòng kiểm tra thông tin trước khi xác nhận lịch hẹn.',
+
+      /* ── BOOKING — SERVICE CARDS */
+      'bk.svc.grooming':      'Tắm & Chải lông',
+      'bk.svc.grooming.desc': 'Tắm toàn thân, sấy khô, cắt tỉa theo giống, cắt móng và vệ sinh tai.',
+      'bk.svc.vet':           'Tư vấn Thú y',
+      'bk.svc.vet.desc':      'Đánh giá sức khỏe, chẩn đoán, tiêm phòng và kế hoạch điều trị.',
+      'bk.svc.wellness':      'Đánh giá Sức khỏe',
+      'bk.svc.wellness.desc': 'Kiểm tra chăm sóc phòng ngừa, kiểm tra dinh dưỡng và hướng dẫn lối sống.',
+      'bk.svc.nail':          'Chăm sóc Móng & Chân',
+      'bk.svc.nail.desc':     'Cắt móng, dưỡng ẩm lòng bàn chân và kiểm tra sức khỏe đệm chân.',
+      'bk.svc.dental':        'Chăm sóc Răng miệng',
+      'bk.svc.dental.desc':   'Làm sạch răng chuyên nghiệp, điều trị hơi thở và kiểm tra sức khỏe nướng.',
+      'bk.svc.hotel':         'Khách sạn Thú cưng',
+      'bk.svc.hotel.desc':    'Lưu trú qua đêm thoải mái với vui chơi có giám sát, bữa ăn và chăm sóc.',
+      'bk.svc.per_night':     'Mỗi đêm',
+
+      /* ── BOOKING — PET STEP */
+      'bk.pet.type':       'Loại thú cưng',
+      'bk.pet.dog':        'Chó',
+      'bk.pet.cat':        'Mèo',
+      'bk.pet.small':      'Động vật nhỏ',
+      'bk.pet.bird':       'Chim',
+      'bk.pet.size':       'Kích thước',
+      'bk.pet.size_note':  '(giúp chúng tôi chuẩn bị)',
+      'bk.pet.name_label': 'Tên thú cưng',
+      'bk.pet.name_note':  'tùy chọn',
+      'bk.pet.name_ph':    'ví dụ: Luna',
+      'bk.pet.age':        'Nhóm tuổi',
+      'bk.size.small':     'Nhỏ',
+      'bk.size.small_note':'Dưới 4.5 kg',
+      'bk.size.medium':    'Vừa',
+      'bk.size.med_note':  '4.5–18 kg',
+      'bk.size.large':     'Lớn',
+      'bk.size.large_note':'18–36 kg',
+      'bk.size.xl':        'Rất lớn',
+      'bk.size.xl_note':   '36+ kg',
+      'bk.age.puppy':      'Chó con / Mèo con',
+      'bk.age.puppy_note': 'Dưới 1 năm',
+      'bk.age.adult':      'Trưởng thành',
+      'bk.age.adult_note': '1–7 năm',
+      'bk.age.senior':     'Cao tuổi',
+      'bk.age.senior_note':'7+ năm',
+
+      /* ── BOOKING — DATE STEP */
+      'bk.slots.empty':     'Chọn ngày để xem các khung giờ có sẵn',
+      'bk.slots.morning':   'Buổi sáng',
+      'bk.slots.afternoon': 'Buổi chiều',
+
+      /* ── BOOKING — DETAILS FORM */
+      'bk.field.first':      'Họ',
+      'bk.field.last':       'Tên',
+      'bk.field.email':      'Email',
+      'bk.field.phone':      'Điện thoại',
+      'bk.field.breed':      'Giống thú cưng',
+      'bk.field.breed_note': 'tùy chọn',
+      'bk.field.notes':      'Yêu cầu đặc biệt hoặc ghi chú',
+      'bk.field.notes_note': 'tùy chọn',
+      'bk.field.notes_ph':   'Bất kỳ dị ứng, tình trạng sức khỏe hoặc sở thích nào chúng tôi nên biết…',
+      'bk.privacy':          'Thông tin của bạn được mã hóa và không bao giờ chia sẻ. Bằng cách tiếp tục bạn đồng ý với <a href="/policy">Chính sách Bảo mật</a>.',
+
+      /* ── BOOKING — SUMMARY & CONFIRM */
+      'bk.sum.service':     'Dịch vụ',
+      'bk.sum.pet':         'Thú cưng',
+      'bk.sum.datetime':    'Ngày & Giờ',
+      'bk.sum.contact':     'Liên hệ',
+      'bk.sum.total':       'Tổng ước tính',
+      'bk.confirm.free':    'Hủy miễn phí',
+      'bk.confirm.free.d':  'Hủy hoặc đổi lịch đến 24 giờ trước lịch hẹn mà không mất phí.',
+      'bk.confirm.email':   'Xác nhận qua email',
+      'bk.confirm.email.d': 'Bạn sẽ nhận được xác nhận và nhắc nhở 24 giờ trước chuyến thăm.',
+
+      /* ── BOOKING — NAV */
+      'bk.back_btn':    'Quay lại',
+      'bk.continue':    'Tiếp tục',
+      'bk.confirm_btn': 'Xác nhận đặt lịch',
+      'bk.confirming':  'Đang xác nhận…',
+      'bk.step_of':     'Bước {n} trên 5',
+
+      /* ── BOOKING — SUCCESS */
+      'bk.success.h2':    'Đã xác nhận lịch hẹn',
+      'bk.success.sent':  'Chúng tôi đã gửi xác nhận đến',
+      'bk.success.look':  'Chúng tôi rất mong gặp bạn và thú cưng.',
+      'bk.success.home':  'Về trang chủ',
+      'bk.success.svcs':  'Xem tất cả dịch vụ',
+
+      /* ── LOGIN PAGE */
+      'lgn.h1':          'Chào mừng <em>trở lại.</em>',
+      'lgn.sub':         'Đăng nhập để quản lý đặt lịch, điểm thưởng và lịch sử sức khỏe.',
+      'lgn.email':       'Địa chỉ email',
+      'lgn.email_ph':    'email@cuaban.com',
+      'lgn.pw':          'Mật khẩu',
+      'lgn.pw_ph':       'Mật khẩu của bạn',
+      'lgn.forgot':      'Quên mật khẩu?',
+      'lgn.remember':    'Duy trì đăng nhập',
+      'lgn.submit':      'Đăng nhập',
+      'lgn.switch':      'Chưa có tài khoản?',
+      'lgn.switch_link': 'Tạo ngay',
+
+      /* ── REGISTER PAGE */
+      'rgr.h1':          'Tham gia <em>Petcare Spa.</em>',
+      'rgr.sub':         'Tạo tài khoản để đặt lịch, tích điểm thưởng và theo dõi sức khỏe thú cưng.',
+      'rgr.first':       'Họ',
+      'rgr.first_ph':    'Họ của bạn',
+      'rgr.last':        'Tên',
+      'rgr.last_ph':     'Tên của bạn',
+      'rgr.email':       'Địa chỉ email',
+      'rgr.email_ph':    'email@cuaban.com',
+      'rgr.phone':       'Số điện thoại',
+      'rgr.phone_note':  '(tùy chọn)',
+      'rgr.pw':          'Mật khẩu',
+      'rgr.pw_ph':       'Tạo mật khẩu',
+      'rgr.pw_hint':     'Tối thiểu 8 ký tự.',
+      'rgr.confirm':     'Xác nhận mật khẩu',
+      'rgr.confirm_ph':  'Nhập lại mật khẩu',
+      'rgr.submit':      'Tạo tài khoản',
+      'rgr.terms':       'Khi tạo tài khoản, bạn đồng ý với <a href="/terms">Điều khoản Dịch vụ</a> và <a href="/policy">Chính sách Bảo mật</a>.',
+      'rgr.switch':      'Đã có tài khoản?',
+      'rgr.switch_link': 'Đăng nhập',
+
+      /* ── MEMBERSHIP PAGE */
+      'mb.hero.eyebrow':  'Thành viên Sức khỏe',
+      'mb.hero.h1':       'Sức khỏe được tạo ra cho<br>gia đình thú cưng <em>hiện đại.</em>',
+      'mb.hero.hand':     '— vì chúng xứng đáng được điều tốt nhất',
+      'mb.hero.body':     'Tham gia cùng hàng nghìn cha mẹ thú cưng đã đưa chăm sóc phòng ngừa vào cuộc sống hàng ngày. Quyền lợi độc quyền, tiết kiệm thực sự và hỗ trợ chuyên gia — luôn có sẵn, luôn cá nhân hóa.',
+      'mb.hero.btn1':     'Tham gia Thành viên',
+      'mb.hero.btn2':     'Khám phá Quyền lợi',
+      'mb.stat1.val':     '12.000+',
+      'mb.stat1.label':   'Thú cưng đã đăng ký',
+      'mb.stat2.val':     'Lên đến 35%',
+      'mb.stat2.label':   'Tiết kiệm so với lẻ',
+      'mb.stat3.val':     'Hủy',
+      'mb.stat3.label':   'Bất cứ lúc nào, không phí',
+      'mb.benefits.eyebrow': 'Quyền lợi Thành viên',
+      'mb.benefits.h2':   'Mọi thứ thú cưng xứng đáng,<br><em>đã bao gồm.</em>',
+      'mb.benefits.sub':  'Mỗi gói đều có quyền lợi cốt lõi được thiết kế cho sức khỏe lâu dài — không chỉ chăm sóc phản ứng.',
+      'mb.benefits.hand': '— sức khỏe không thỏa hiệp',
+      'mb.b1.h3':  'Khám sức khỏe hàng năm miễn phí',
+      'mb.b1.p':   'Kiểm tra sức khỏe toàn diện mỗi năm, không tính thêm phí cho tất cả các gói.',
+      'mb.b2.h3':  'Giảm 10–20% dịch vụ chải lông',
+      'mb.b2.p':   'Tiết kiệm cho mỗi buổi chải lông. Giảm giá tăng theo gói — tự động áp dụng khi thanh toán.',
+      'mb.b3.h3':  'Đặt lịch ưu tiên',
+      'mb.b3.p':   'Bỏ qua danh sách chờ. Thành viên luôn được ưu tiên đặt lịch, tư vấn chuyên gia và khung giờ khẩn cấp.',
+      'mb.b4.h3':  'Giao hàng Spa Bites miễn phí',
+      'mb.b4.p':   'Giao hàng lạnh miễn phí cho mọi đơn Spa Bites — mọi đơn hàng, không cần đơn tối thiểu.',
+      'mb.b5.h3':  'Giảm giá tiêm phòng',
+      'mb.b5.p':   'Tiêm phòng theo lịch với giá thành viên, theo dõi và nhắc nhở theo giai đoạn sống.',
+      'mb.b6.h3':  'Tư vấn chuyên gia 24/7',
+      'mb.b6.p':   'Ngày hay đêm, chuyên gia của bạn luôn có thể liên hệ để tư vấn và giải đáp thắc mắc.',
+      'mb.loyalty.eyebrow': 'Chương trình Khách hàng thân thiết',
+      'mb.loyalty.h2':   'Càng chăm sóc nhiều,<br>càng <em>nhận thưởng nhiều.</em>',
+      'mb.loyalty.body': 'Mỗi lần thăm khám, mỗi đơn hàng, mỗi cột mốc — đều được thưởng. Chương trình tích điểm của chúng tôi phát triển cùng hành trình của thú cưng bạn.',
+      'mb.loyalty.cta':  'Bắt đầu tích điểm hôm nay',
+      'mb.r1.h4':  'Tích điểm mỗi lần thăm khám',
+      'mb.r1.p':   '1 điểm mỗi 10.000₫ chi tiêu. Đổi lấy dịch vụ, chải lông hoặc tín dụng Spa Bites.',
+      'mb.r1.tag': 'Điểm',
+      'mb.r2.h4':  'Phần thưởng sinh nhật thú cưng',
+      'mb.r2.p':   'Quà sinh nhật miễn phí, kiểm tra sức khỏe hoặc voucher chải lông — mỗi năm.',
+      'mb.r2.tag': 'Hàng năm',
+      'mb.r3.h4':  'Cột mốc chải lông',
+      'mb.r3.p':   'Đặt 5 lần chải lông và nhận lần thứ 6 hoàn toàn miễn phí.',
+      'mb.r3.tag': 'Cột mốc',
+      'mb.r4.h4':  'Gói quà chào mừng',
+      'mb.r4.p':   'Thành viên mới nhận hộp sức khỏe tuyển chọn — đồ ăn vặt, thực phẩm bổ sung và hướng dẫn chăm sóc.',
+      'mb.r4.tag': 'Chào mừng',
+      'mb.journey.eyebrow': 'Hành trình của bạn',
+      'mb.journey.h2':    'Mỗi lần thăm khám đưa bạn <em>đến gần hơn.</em>',
+      'mb.journey.p':     'Từ lần hẹn đầu tiên đến lần thứ một trăm, mỗi tương tác tích điểm thành phần thưởng có ý nghĩa.',
+      'mb.journey.title': 'Tiến trình hành trình sức khỏe',
+      'mb.journey.pts':   'Hiện tại: <strong>620 điểm</strong>  ·  Phần thưởng tiếp theo ở 750 điểm',
+      'mb.m.welcome':  'Quà<br>chào mừng',
+      'mb.m.groom':    'Chải lông<br>miễn phí',
+      'mb.m.wellness': 'Kiểm tra<br>sức khỏe',
+      'mb.m.here':     'Bạn đang<br>ở đây',
+      'mb.m.dental':   'Nha khoa<br>miễn phí',
+      'mb.m.meals':    'Tín dụng<br>bữa ăn',
+      'mb.m.elite':    'Trạng thái<br>Elite',
+      'mb.tiers.eyebrow':  'Các Gói Thành viên',
+      'mb.tiers.h2':       'Gói đơn giản, kết quả <em>thực chất.</em>',
+      'mb.tiers.sub':      'Chọn mức chăm sóc phù hợp với cuộc sống thú cưng. Tất cả gói đều bao gồm quyền lợi cốt lõi, không phí ẩn, không hợp đồng dài hạn.',
+      'mb.tiers.hand':     '— chăm sóc đơn giản hóa',
+      'mb.tier.month':     '/ tháng',
+      'mb.tier.cta':       'Bắt đầu ngay',
+      'mb.tier.note':      'Không hợp đồng · Hủy bất cứ lúc nào',
+      'mb.tier.popular':   'Phổ biến nhất',
+      'mb.tiers.footnote': 'Tất cả gói tính theo tháng · Thanh toán hàng năm giảm 15% · Hủy bất cứ lúc nào không phí',
+      'mb.meals.eyebrow':  'Spa Bites × Thành viên',
+      'mb.meals.h2':       'Dinh dưỡng tươi,<br>giao hàng với <em>sự chăm sóc.</em>',
+      'mb.meals.hand':     '— dành riêng cho thành viên',
+      'mb.meals.body':     'Thành viên được truy cập độc quyền vào gói Spa Bites — nấu tươi, hữu cơ có chứng nhận và giao lạnh. Khẩu phần cá nhân hóa, không chất độn và giao hàng miễn phí mọi đơn hàng.',
+      'mb.meals.p1':       'Giao hàng lạnh miễn phí, mọi đơn hàng',
+      'mb.meals.p2':       'Giảm 15% cho thành viên trên tất cả gói bữa ăn',
+      'mb.meals.p3':       'Bao gồm tư vấn dinh dưỡng cá nhân hóa',
+      'mb.meals.p4':       'Gói sức khỏe hữu cơ với giá ưu đãi độc quyền',
+      'mb.meals.cta':      'Khám phá Spa Bites',
+      'mb.meals.tag':      'hữu cơ',
+      'mb.test.eyebrow':   'Câu chuyện Thành viên',
+      'mb.test.h2':        'Được yêu thích bởi <em>gia đình thú cưng</em><br>khắp nơi.',
+      'mb.trust1.val':     '4.9 ★',
+      'mb.trust1.label':   'Đánh giá thành viên trung bình',
+      'mb.trust2.val':     '98%',
+      'mb.trust2.label':   'Tỷ lệ gia hạn hàng năm',
+      'mb.trust3.val':     '12.000+',
+      'mb.trust3.label':   'Thành viên đang hoạt động',
+      'mb.faq.eyebrow':    'Câu hỏi',
+      'mb.faq.h2':         'Thường được <em>hỏi.</em>',
+      'mb.faq.sub':        'Mọi thứ bạn cần biết trước khi tham gia.',
+
+      /* ── MEMBERSHIP — FAQ */
+      'mb.faq1.q': 'How does my membership work?',
+      'mb.faq1.a': 'Once you join, your plan activates immediately. You&rsquo;ll receive a welcome email with your member card, plan details, and instructions to book your first appointment. All benefits are available from day one &mdash; priority booking, discounts, consultation support, and Spa Bites delivery.',
+      'mb.faq2.q': 'Can I cancel my membership anytime?',
+      'mb.faq2.a': 'Yes. There are no long-term contracts. You can cancel anytime from your member dashboard or by contacting our team. Your benefits remain active through the end of your current billing period, and there are absolutely no cancellation fees.',
+      'mb.faq3.q': 'How do loyalty points work?',
+      'mb.faq3.a': 'You earn 1 loyalty point for every 10.000&#8363; spent on services, grooming, Spa Bites, and shop purchases. Points accumulate in your account and can be redeemed for free services, grooming sessions, or Spa Bites credits. Points never expire while your membership is active.',
+      'mb.faq4.q': 'Where does Spa Bites delivery cover?',
+      'mb.faq4.a': 'We currently deliver within a 30-km radius of our main locations. Members receive free refrigerated delivery on all Spa Bites orders regardless of size. We are expanding our coverage area regularly &mdash; contact us to check availability in your neighborhood.',
+      'mb.faq5.q': 'How do I book appointments as a member?',
+      'mb.faq5.a': 'Members book via our website booking page or by calling our priority line. Your member status is recognized automatically. Essential members receive priority in the standard queue; Premium and Elite members access dedicated specialist slots, often same-day or next-morning.',
+
+      /* ── MEMBERSHIP — TESTIMONIALS */
+      'mb.t1.q': '"Joining the Premium plan was honestly the best decision we made for Luna. The quarterly reviews caught something early that we would have missed for months. Worth every penny."',
+      'mb.t1.author': 'Sarah M.',
+      'mb.t1.role': 'Luna&rsquo;s mom &middot; Premium Member',
+      'mb.t2.q': '"Priority booking alone is worth the subscription. I used to wait two weeks for an appointment. Now it&rsquo;s same-day or next morning. That&rsquo;s peace of mind I can&rsquo;t price."',
+      'mb.t2.author': 'James T.',
+      'mb.t2.role': 'Mochi&rsquo;s dad &middot; Essential Member',
+      'mb.t3.q': '"The Spa Bites delivery bundled with our Elite plan changed our whole routine. Coco eats better than ever, and the nutrition consultation changed how I think about pet diet entirely."',
+      'mb.t3.author': 'Anh N.',
+      'mb.t3.role': 'Coco&rsquo;s mom &middot; Elite Member',
+
+      /* ── MEMBERSHIP — TIER NAMES & TAGLINES */
+      'mb.tier.essential': 'Essential',
+      'mb.tier.essential.tag': 'Solid preventive care for healthy adult pets.',
+      'mb.tier.premium': 'Premium',
+      'mb.tier.premium.tag': 'Comprehensive care for pets at every life stage.',
+      'mb.tier.elite': 'Elite',
+      'mb.tier.elite.tag': 'Concierge-level care with zero compromises.',
+
+      /* ── MEMBERSHIP — TIER FEATURES (Essential) */
+      'mb.ef1': 'Annual comprehensive health exam',
+      'mb.ef2': '2 vet consultations per year',
+      'mb.ef3': 'Core vaccination review',
+      'mb.ef4': 'Dental health screening',
+      'mb.ef5': '10% grooming discount',
+      'mb.ef6': 'Free Spa Bites delivery',
+      'mb.ef7': 'Email support',
+
+      /* ── MEMBERSHIP — TIER FEATURES (Premium) */
+      'mb.pf1': 'Quarterly health reviews',
+      'mb.pf2': '6 vet consultations per year',
+      'mb.pf3': 'Full vaccination schedule',
+      'mb.pf4': 'Nutrition consultation',
+      'mb.pf5': 'Dental cleaning (1&times;/year)',
+      'mb.pf6': '20% grooming discount',
+      'mb.pf7': 'Free Spa Bites delivery',
+      'mb.pf8': 'Priority booking',
+      'mb.pf9': '24/7 phone support',
+
+      /* ── MEMBERSHIP — TIER FEATURES (Elite) */
+      'mb.lf1': 'Monthly wellness check-ins',
+      'mb.lf2': 'Unlimited vet consultations',
+      'mb.lf3': 'Full vaccination + parasite plan',
+      'mb.lf4': 'Personalized nutrition plan',
+      'mb.lf5': 'Unlimited dental cleanings',
+      'mb.lf6': 'Free grooming sessions',
+      'mb.lf7': 'Free Spa Bites + meal planning',
+      'mb.lf8': 'Dedicated wellness specialist',
+      'mb.lf9': 'Same-day appointments',
+      'mb.lf10': 'Concierge 24/7 support',
+
+      /* ── MEMBERSHIP — FAQ */
+      'mb.faq1.q': 'Thành viên của tôi hoạt động như thế nào?',
+      'mb.faq1.a': 'Sau khi tham gia, gói của bạn được kích hoạt ngay lập tức. Bạn sẽ nhận được email chào mừng kèm thẻ thành viên, chi tiết gói và hướng dẫn đặt lịch hẹn đầu tiên. Tất cả quyền lợi có ngay từ ngày đầu &mdash; đặt lịch ưu tiên, giảm giá, hỗ trợ tư vấn và giao hàng Spa Bites.',
+      'mb.faq2.q': 'Tôi có thể hủy thành viên bất cứ lúc nào không?',
+      'mb.faq2.a': 'Có. Không có hợp đồng dài hạn. Bạn có thể hủy bất cứ lúc nào từ bảng điều khiển thành viên hoặc liên hệ đội ngũ của chúng tôi. Quyền lợi vẫn còn hiệu lực đến hết chu kỳ thanh toán hiện tại, và hoàn toàn không có phí hủy.',
+      'mb.faq3.q': 'Điểm tích lũy hoạt động như thế nào?',
+      'mb.faq3.a': 'Bạn nhận 1 điểm cho mỗi 10.000&#8363; chi tiêu cho dịch vụ, chải lông, Spa Bites và mua sắm. Điểm tích lũy trong tài khoản và có thể đổi lấy dịch vụ miễn phí, buổi chải lông hoặc tín dụng Spa Bites. Điểm không hết hạn khi thành viên còn hoạt động.',
+      'mb.faq4.q': 'Spa Bites giao hàng đến đâu?',
+      'mb.faq4.a': 'Hiện tại chúng tôi giao trong bán kính 30 km từ các cơ sở chính. Thành viên nhận giao hàng lạnh miễn phí cho mọi đơn Spa Bites bất kể kích cỡ. Chúng tôi đang mở rộng vùng phủ thường xuyên &mdash; liên hệ để kiểm tra khả năng giao đến khu vực của bạn.',
+      'mb.faq5.q': 'Làm sao đặt lịch hẹn với tư cách thành viên?',
+      'mb.faq5.a': 'Thành viên đặt lịch qua trang đặt lịch trực tuyến hoặc gọi đường dây ưu tiên. Trạng thái thành viên được nhận diện tự động. Thành viên Essential được ưu tiên trong hàng chờ tiêu chuẩn; Premium và Elite được truy cập vào các khung giờ chuyên gia riêng, thường là trong ngày hoặc sáng hôm sau.',
+
+      /* ── MEMBERSHIP — TESTIMONIALS */
+      'mb.t1.q': '"Tham gia gói Premium thực sự là quyết định tốt nhất chúng tôi đã làm cho Luna. Các đánh giá theo quý đã phát hiện điều gì đó sớm mà chúng tôi có thể đã bỏ lỡ trong nhiều tháng. Xứng đáng từng đồng."',
+      'mb.t1.author': 'Sarah M.',
+      'mb.t1.role': 'Mẹ của Luna &middot; Thành viên Premium',
+      'mb.t2.q': '"Chỉ riêng đặt lịch ưu tiên đã xứng đáng với đăng ký. Tôi từng phải chờ hai tuần cho một cuộc hẹn. Bây giờ là trong ngày hoặc sáng hôm sau. Đó là sự an tâm không thể định giá."',
+      'mb.t2.author': 'James T.',
+      'mb.t2.role': 'Bố của Mochi &middot; Thành viên Essential',
+      'mb.t3.q': '"Giao hàng Spa Bites kết hợp với gói Elite đã thay đổi toàn bộ thói quen của chúng tôi. Coco ăn ngon hơn bao giờ hết, và tư vấn dinh dưỡng đã thay đổi cách tôi nghĩ về chế độ ăn của thú cưng."',
+      'mb.t3.author': 'Anh N.',
+      'mb.t3.role': 'Mẹ của Coco &middot; Thành viên Elite',
+
+      /* ── MEMBERSHIP — TIER NAMES & TAGLINES */
+      'mb.tier.essential': 'Cơ bản',
+      'mb.tier.essential.tag': 'Chăm sóc phòng ngừa vững chắc cho thú cưng trưởng thành khỏe mạnh.',
+      'mb.tier.premium': 'Cao cấp',
+      'mb.tier.premium.tag': 'Chăm sóc toàn diện cho thú cưng ở mọi giai đoạn cuộc sống.',
+      'mb.tier.elite': 'Elite',
+      'mb.tier.elite.tag': 'Chăm sóc cấp concierge không có sự thỏa hiệp.',
+
+      /* ── MEMBERSHIP — TIER FEATURES (Essential) */
+      'mb.ef1': 'Kiểm tra sức khỏe toàn diện hàng năm',
+      'mb.ef2': '2 lần tư vấn bác sĩ mỗi năm',
+      'mb.ef3': 'Xem xét tiêm phòng cốt lõi',
+      'mb.ef4': 'Kiểm tra sức khỏe răng miệng',
+      'mb.ef5': 'Giảm 10% dịch vụ chải lông',
+      'mb.ef6': 'Giao hàng Spa Bites miễn phí',
+      'mb.ef7': 'Hỗ trợ qua email',
+
+      /* ── MEMBERSHIP — TIER FEATURES (Premium) */
+      'mb.pf1': 'Đánh giá sức khỏe theo quý',
+      'mb.pf2': '6 lần tư vấn bác sĩ mỗi năm',
+      'mb.pf3': 'Lịch tiêm phòng đầy đủ',
+      'mb.pf4': 'Tư vấn dinh dưỡng',
+      'mb.pf5': 'Làm sạch răng (1 lần/năm)',
+      'mb.pf6': 'Giảm 20% dịch vụ chải lông',
+      'mb.pf7': 'Giao hàng Spa Bites miễn phí',
+      'mb.pf8': 'Đặt lịch ưu tiên',
+      'mb.pf9': 'Hỗ trợ điện thoại 24/7',
+
+      /* ── MEMBERSHIP — TIER FEATURES (Elite) */
+      'mb.lf1': 'Kiểm tra sức khỏe hàng tháng',
+      'mb.lf2': 'Tư vấn bác sĩ không giới hạn',
+      'mb.lf3': 'Tiêm phòng đầy đủ + kế hoạch phòng ký sinh',
+      'mb.lf4': 'Kế hoạch dinh dưỡng cá nhân hóa',
+      'mb.lf5': 'Làm sạch răng không giới hạn',
+      'mb.lf6': 'Buổi chải lông miễn phí',
+      'mb.lf7': 'Spa Bites miễn phí + lập kế hoạch bữa ăn',
+      'mb.lf8': 'Chuyên gia sức khỏe riêng',
+      'mb.lf9': 'Đặt lịch trong ngày',
+      'mb.lf10': 'Hỗ trợ concierge 24/7',
+            'mb.cta.hand':    '— bắt đầu hôm nay',
+      'mb.cta.h2':      'Mang đến cho thú cưng cuộc sống<br><em>khỏe mạnh hơn, hạnh phúc hơn.</em>',
+      'mb.cta.sub':     'Tham gia cùng hàng nghìn gia đình thú cưng tin tưởng Petcare Spa cho dịch vụ chăm sóc phòng ngừa, tận tâm, chuyên nghiệp.',
+      'mb.cta.btn1':    'Tham gia Ngay',
+      'mb.cta.btn2':    'Đặt Tư vấn'
     }
   };
 
@@ -988,11 +1758,20 @@
     const desktopNavKeys = ['nav.home','nav.services','nav.spa_bites','nav.shop','nav.about','nav.contact','nav.blog','nav.membership'];
     const mobileNavKeys  = ['nav.home','nav.services','nav.spa_bites','nav.shop','nav.contact','nav.blog','nav.membership'];
     document.querySelectorAll('.navbar__nav li a').forEach((a, i) => {
-      if (desktopNavKeys[i] && t[desktopNavKeys[i]]) a.textContent = t[desktopNavKeys[i]];
+      if (!desktopNavKeys[i] || !t[desktopNavKeys[i]]) return;
+      const svg = a.querySelector('svg');
+      a.textContent = t[desktopNavKeys[i]];
+      if (svg) a.appendChild(svg);
     });
     document.querySelectorAll('.navbar__mobile-menu a:not(.btn)').forEach((a, i) => {
       if (mobileNavKeys[i] && t[mobileNavKeys[i]]) a.textContent = t[mobileNavKeys[i]];
     });
+    const mobileAboutBtn = document.querySelector('.navbar__mobile-menu .mobile-has-submenu');
+    if (mobileAboutBtn && t['nav.about']) {
+      const btnSvg = mobileAboutBtn.querySelector('svg');
+      mobileAboutBtn.childNodes.forEach(n => { if (n.nodeType === 3) n.textContent = t['nav.about'] + ' '; });
+      if (!mobileAboutBtn.querySelector('svg') && btnSvg) mobileAboutBtn.appendChild(btnSvg);
+    }
     document.querySelectorAll('.navbar__actions a.btn-primary, .navbar__mobile-menu a.btn-primary').forEach(btn => {
       if (t['nav.book']) btn.textContent = t['nav.book'];
     });
@@ -1041,6 +1820,24 @@
     document.querySelectorAll('.sf-copy').forEach(el => {
       if (t['footer.copyright']) el.textContent = t['footer.copyright'];
     });
+
+    /* ── CART DRAWER (injected by global.js or static in shop.html) ── */
+    const cartTitle = document.querySelector('#cartDrawer .cart-drawer__header h3');
+    if (cartTitle) {
+      const countEl = cartTitle.querySelector('.cart-drawer__count');
+      cartTitle.textContent = t['cart.title'] || 'Your Cart';
+      if (countEl) cartTitle.appendChild(countEl);
+    }
+    const cartEmptyTitle = document.querySelector('#cartEmpty .cart-empty-title');
+    if (cartEmptyTitle) cartEmptyTitle.textContent = t['cart.empty.title'] || cartEmptyTitle.textContent;
+    const cartEmptySub = document.querySelector('#cartEmpty .cart-empty-sub');
+    if (cartEmptySub) cartEmptySub.textContent = t['cart.empty.sub'] || cartEmptySub.textContent;
+    const cartBrowse = document.querySelector('#cartEmpty a.btn');
+    if (cartBrowse) cartBrowse.textContent = t['cart.empty.browse'] || cartBrowse.textContent;
+    const cartSubtotalLabel = document.querySelector('#cartFooter .cart-drawer__subtotal > span:first-child');
+    if (cartSubtotalLabel) cartSubtotalLabel.textContent = t['cart.subtotal'] || cartSubtotalLabel.textContent;
+    const cartCheckout = document.querySelector('#cartCheckout');
+    if (cartCheckout) cartCheckout.textContent = t['cart.checkout'] || cartCheckout.textContent;
 
     /* ── HTML lang attribute ── */
     document.documentElement.lang = lang === 'VI' ? 'vi' : 'en';

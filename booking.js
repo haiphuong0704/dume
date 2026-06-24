@@ -3,6 +3,11 @@
    Manages: step nav, selections, calendar, slots, validation, summary
 =================================================== */
 
+function bkT(key) {
+  const lang = localStorage.getItem('pcs_lang') || 'EN';
+  return window.PCS?.i18n?.translations?.[lang]?.[key] || window.PCS?.i18n?.translations?.EN?.[key] || key;
+}
+
 function fmtVND(n) {
   return 'From ' + Math.round(n).toLocaleString('vi-VN') + '₫';
 }
@@ -71,14 +76,14 @@ function goTo(n) {
 
   // Update nav buttons
   backBtn.style.visibility = n > 1 ? 'visible' : 'hidden';
-  stepInfo.textContent = n <= state.totalSteps ? `Step ${n} of ${state.totalSteps}` : '';
+  stepInfo.textContent = n <= state.totalSteps ? bkT('bk.step_of').replace('{n}', n) : '';
   footerNav.style.display = n > state.totalSteps ? 'none' : '';
 
   if (n === state.totalSteps) {
     nextBtn.textContent = '';
-    nextBtn.innerHTML = 'Confirm booking <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>';
+    nextBtn.innerHTML = bkT('bk.confirm_btn') + ' <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>';
   } else if (n < state.totalSteps) {
-    nextBtn.innerHTML = 'Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>';
+    nextBtn.innerHTML = bkT('bk.continue') + ' <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>';
   }
 
   // Step-specific setup
@@ -285,11 +290,11 @@ function renderSlots(date) {
     slotsWrap.innerHTML = `
       <p class="bk-slots__day" id="bk-slots-day"></p>
       <div class="bk-slots__group">
-        <span class="bk-slots__label">Morning</span>
+        <span class="bk-slots__label">${bkT('bk.slots.morning')}</span>
         <div class="bk-slot-grid" id="bk-morning-slots"></div>
       </div>
       <div class="bk-slots__group">
-        <span class="bk-slots__label">Afternoon</span>
+        <span class="bk-slots__label">${bkT('bk.slots.afternoon')}</span>
         <div class="bk-slot-grid" id="bk-afternoon-slots"></div>
       </div>`;
 
@@ -437,7 +442,7 @@ function renderSummary() {
 function confirmBooking() {
   const original = nextBtn.innerHTML;
   nextBtn.disabled = true;
-  nextBtn.innerHTML = '<span class="spinner spinner-sm"></span> Confirming…';
+  nextBtn.innerHTML = `<span class="spinner spinner-sm"></span> ${bkT('bk.confirming')}`;
 
   setTimeout(() => {
     nextBtn.innerHTML = original;

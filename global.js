@@ -355,7 +355,9 @@ document.querySelectorAll('.sf-nl, form[data-newsletter]').forEach(form => {
         btn.disabled = false;
         btn.innerHTML = original;
       }
-      PCS.toast.success('You\'re on the list! We\'ll be in touch.');
+      const _lang = localStorage.getItem('pcs_lang') || 'EN';
+      const _toastMsg = window.PCS?.i18n?.translations?.[_lang]?.['toast.newsletter'] || "You're on the list! We'll be in touch.";
+      PCS.toast.success(_toastMsg);
     }, 900);
   });
 });
@@ -501,7 +503,9 @@ document.querySelectorAll('.sf-nl, form[data-newsletter]').forEach(form => {
   document.getElementById('promoForm')?.addEventListener('submit', e => {
     e.preventDefault();
     claimOffer();
-    PCS.toast.success('Offer claimed! Your 20% discount code is on its way.');
+    const _lang2 = localStorage.getItem('pcs_lang') || 'EN';
+    const _promoMsg = window.PCS?.i18n?.translations?.[_lang2]?.['toast.promo'] || 'Offer claimed! Your 20% discount code is on its way.';
+    PCS.toast.success(_promoMsg);
   });
 })();
 

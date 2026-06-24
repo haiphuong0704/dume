@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -101,48 +101,48 @@
             </svg>
           </div>
 
-          <h1 class="rgr-heading">Join <em>Petcare Spa.</em></h1>
-          <p class="rgr-subtext">Create your account to book appointments, earn rewards, and track your pet's wellness.</p>
+          <h1 class="rgr-heading" data-i18n-html="rgr.h1">Join <em>Petcare Spa.</em></h1>
+          <p class="rgr-subtext" data-i18n="rgr.sub">Create your account to book appointments, earn rewards, and track your pet's wellness.</p>
 
           <form class="rgr-form" id="registerForm" novalidate>
 
             <div class="rgr-name-grid">
               <div class="form-field">
-                <label class="form-label" for="rgr-firstname">First name</label>
-                <input class="input" type="text" id="rgr-firstname" name="first_name" placeholder="First name" autocomplete="given-name" required>
+                <label class="form-label" for="rgr-firstname" data-i18n="rgr.first">First name</label>
+                <input class="input" type="text" id="rgr-firstname" name="first_name" placeholder="First name" data-i18n-placeholder="rgr.first_ph" autocomplete="given-name" required>
               </div>
               <div class="form-field">
-                <label class="form-label" for="rgr-lastname">Last name</label>
-                <input class="input" type="text" id="rgr-lastname" name="last_name" placeholder="Last name" autocomplete="family-name" required>
+                <label class="form-label" for="rgr-lastname" data-i18n="rgr.last">Last name</label>
+                <input class="input" type="text" id="rgr-lastname" name="last_name" placeholder="Last name" data-i18n-placeholder="rgr.last_ph" autocomplete="family-name" required>
               </div>
             </div>
 
             <div class="form-field">
-              <label class="form-label" for="rgr-email">Email address</label>
-              <input class="input" type="email" id="rgr-email" name="email" placeholder="your@email.com" autocomplete="email" required>
+              <label class="form-label" for="rgr-email" data-i18n="rgr.email">Email address</label>
+              <input class="input" type="email" id="rgr-email" name="email" placeholder="your@email.com" data-i18n-placeholder="rgr.email_ph" autocomplete="email" required>
             </div>
 
             <div class="form-field">
-              <label class="form-label" for="rgr-phone">Phone number <span style="font-weight:400;opacity:.65">(optional)</span></label>
+              <label class="form-label" for="rgr-phone"><span data-i18n="rgr.phone">Phone number</span> <span style="font-weight:400;opacity:.65" data-i18n="rgr.phone_note">(optional)</span></label>
               <input class="input" type="tel" id="rgr-phone" name="phone" placeholder="+84 000 000 0000" autocomplete="tel">
             </div>
 
             <div class="form-field">
-              <label class="form-label" for="rgr-password">Password</label>
+              <label class="form-label" for="rgr-password" data-i18n="rgr.pw">Password</label>
               <div class="rgr-pw-wrap">
-                <input class="input" type="password" id="rgr-password" name="password" placeholder="Create a password" autocomplete="new-password" required>
+                <input class="input" type="password" id="rgr-password" name="password" placeholder="Create a password" data-i18n-placeholder="rgr.pw_ph" autocomplete="new-password" required>
                 <button type="button" class="rgr-eye" id="rgrEyeToggle1" aria-label="Show password">
                   <svg id="rgrEyeShow1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                   <svg id="rgrEyeHide1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
                 </button>
               </div>
-              <p class="rgr-pw-hint">At least 8 characters.</p>
+              <p class="rgr-pw-hint" data-i18n="rgr.pw_hint">At least 8 characters.</p>
             </div>
 
             <div class="form-field">
-              <label class="form-label" for="rgr-confirm">Confirm password</label>
+              <label class="form-label" for="rgr-confirm" data-i18n="rgr.confirm">Confirm password</label>
               <div class="rgr-pw-wrap">
-                <input class="input" type="password" id="rgr-confirm" name="confirm_password" placeholder="Repeat your password" autocomplete="new-password" required>
+                <input class="input" type="password" id="rgr-confirm" name="confirm_password" placeholder="Repeat your password" data-i18n-placeholder="rgr.confirm_ph" autocomplete="new-password" required>
                 <button type="button" class="rgr-eye" id="rgrEyeToggle2" aria-label="Show password">
                   <svg id="rgrEyeShow2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                   <svg id="rgrEyeHide2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
@@ -150,13 +150,13 @@
               </div>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-lg rgr-submit">Create Account</button>
+            <button type="submit" class="btn btn-primary btn-lg rgr-submit" data-i18n="rgr.submit">Create Account</button>
 
           </form>
 
-          <p class="rgr-terms">By creating an account you agree to our <a href="/terms">Terms of Service</a> and <a href="/policy">Privacy Policy</a>.</p>
+          <p class="rgr-terms" data-i18n-html="rgr.terms">By creating an account you agree to our <a href="/terms">Terms of Service</a> and <a href="/policy">Privacy Policy</a>.</p>
 
-          <p class="rgr-switch">Already have an account? <a href="/login">Sign in</a></p>
+          <p class="rgr-switch"><span data-i18n="rgr.switch">Already have an account?</span> <a href="/login" data-i18n="rgr.switch_link">Sign in</a></p>
 
         </div>
       </div>
@@ -248,8 +248,8 @@
   </div>
 </footer>
 
-<script src="translations.js?v=22"></script>
-<script src="global.js?v=38"></script>
+<script src="translations.js?v=23"></script>
+<script src="global.js?v=39"></script>
 <script>
 (function () {
   function makeToggle(btnId, inputId, showId, hideId) {

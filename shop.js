@@ -43,7 +43,8 @@ const CHECK_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
 document.querySelectorAll('.cart-btn[data-id]').forEach(btn => {
   // Stamp initial icon
   if (!btn.querySelector('svg')) {
-    btn.innerHTML = `${CART_ICON} ${btn.textContent.trim() || 'Add to cart'}`;
+    const _addLabel = (function(){ const lang = localStorage.getItem('pcs_lang')||'EN'; return window.PCS?.i18n?.translations?.[lang]?.['shop.add'] || btn.textContent.trim() || 'Add'; })();
+    btn.innerHTML = `${CART_ICON} ${_addLabel}`;
   }
 
   btn.addEventListener('click', () => {
@@ -59,7 +60,8 @@ document.querySelectorAll('.cart-btn[data-id]').forEach(btn => {
 
     // Success state
     const original = btn.innerHTML;
-    btn.innerHTML = `${CHECK_ICON} Added`;
+    const _addedLabel = (function(){ const lang = localStorage.getItem('pcs_lang')||'EN'; return window.PCS?.i18n?.translations?.[lang]?.['shop.added'] || 'Đã thêm'; })();
+    btn.innerHTML = `${CHECK_ICON} ${_addedLabel}`;
     btn.classList.add('btn-added');
     btn.disabled = true;
 
