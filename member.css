@@ -899,19 +899,19 @@ details[open] .mb-faq-item__icon svg {
   flex-wrap: wrap;
 }
 
-/* Button overrides — matched to home CTA system */
+/* Button overrides — inverted context (white btn on dark CTA band) */
 .mb-cta .btn-primary {
   background: rgba(255, 252, 254, 0.96);
-  color: rgb(148, 16, 76);
+  color: #B530A0;
   border-color: rgba(255, 252, 254, 0.96);
-  box-shadow: 0 4px 20px rgba(88, 0, 44, 0.18);
+  box-shadow: 0 4px 20px rgba(108, 66, 43, 0.22);
 }
 .mb-cta .btn-primary:hover {
   background: #ffffff;
   border-color: #ffffff;
-  color: rgb(120, 8, 60);
+  color: #6C422B;
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(88, 0, 44, 0.26);
+  box-shadow: 0 8px 30px rgba(108, 66, 43, 0.32);
 }
 .mb-cta .btn-outline {
   background: rgba(255, 255, 255, 0.10);

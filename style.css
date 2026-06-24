@@ -414,17 +414,17 @@ button, input, textarea, select {
   color: #6C422B;
   border-color: var(--color-pink-primary);
 }
-.btn-primary:hover,
 .btn-primary:visited,
 .btn-primary:active,
 .btn-primary:focus {
   color: #6C422B;
 }
 .btn-primary:hover {
+  color: #FFFFFF;
   background-color: var(--color-pink-deep);
   border-color: var(--color-pink-deep);
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(227, 71, 202, 0.24);
+  box-shadow: 0 8px 28px rgba(227, 71, 202, 0.45);
 }
 
 /* Dark / CTA variant */
@@ -450,7 +450,7 @@ button, input, textarea, select {
 .btn-outline:hover {
   border-color: var(--color-pink-primary);
   background-color: var(--color-pink-soft);
-  color: var(--color-pink-primary);
+  color: var(--color-text-primary);
   box-shadow: 0 6px 22px rgba(227, 71, 202, 0.16);
   transform: translateY(-2px);
 }

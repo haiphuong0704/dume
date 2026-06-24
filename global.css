@@ -251,16 +251,17 @@ button { font-family: inherit; cursor: pointer; }
   border-color: var(--pink);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 1px 4px rgba(227, 71, 202, 0.18);
 }
-.btn-primary:hover,
 .btn-primary:visited,
 .btn-primary:active,
 .btn-primary:focus {
   color: var(--text);
 }
 .btn-primary:hover {
+  color: #FFFFFF;
   background: var(--pink-dark);
   border-color: var(--pink-dark);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 6px 24px rgba(227, 71, 202, 0.36);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.14), 0 8px 28px rgba(227, 71, 202, 0.45);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
@@ -294,6 +295,7 @@ button { font-family: inherit; cursor: pointer; }
 .btn-outline:hover {
   border-color: var(--pink);
   background: var(--pink-pale);
+  color: var(--text);
   box-shadow: 0 4px 16px rgba(227, 71, 202, 0.14);
 }
 
@@ -1329,12 +1331,12 @@ hr.divider, .divider {
 .lang-sel--open .lang-sel__caret { transform: rotate(180deg); }
 
 .lang-sel__btn:hover {
-  border-color: var(--pink-border);
+  border-color: var(--pink);
   color: var(--text);
   background: var(--pink-pale);
 }
 .lang-sel--open .lang-sel__btn {
-  border-color: var(--pink-border);
+  border-color: var(--pink);
   color: var(--text);
   background: var(--pink-pale);
 }
@@ -2451,7 +2453,7 @@ body.modal-open { overflow: hidden; padding-right: var(--scrollbar-w, 0); }
   height: 40px;
   border-radius: var(--r-sm);
   background: transparent;
-  border: 1.5px solid var(--border);
+  border: 1.5px solid var(--pink-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2466,7 +2468,7 @@ body.modal-open { overflow: hidden; padding-right: var(--scrollbar-w, 0); }
   transition: color 0.18s ease;
 }
 
-.navbar__cart:hover { border-color: var(--pink-border); }
+.navbar__cart:hover { border-color: var(--pink); background: var(--pink-pale); }
 .navbar__cart:hover svg { color: var(--pink); }
 
 .navbar__cart-count {

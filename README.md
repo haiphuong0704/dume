@@ -101,14 +101,14 @@ Defined in `style.css` (`:root`) and `global.css` (`:root`):
 
 | File | Version |
 |---|---|
-| `global.css` | v79 |
+| `global.css` | v80 |
 | `global.js` | v38 |
-| `style.css` | v72 |
+| `style.css` | v73 |
 | `shop.css` | v21 |
 | `services.css` | v29 |
 | `booking.css` | v15 |
 | `product.css` | v17 |
-| `member.css` | v18 |
+| `member.css` | v19 |
 | `wellness.css` | v16 |
 | `blog.css` | v18 |
 | `blog-post.css` | v7 |
