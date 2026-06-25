@@ -1393,6 +1393,81 @@
   letter-spacing: 0;
 }
 
+/* ── PET BADGE ── */
+.bk-pet-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--pink-pale);
+  border: 1.5px solid var(--pink-border, #f9d5e5);
+  border-radius: var(--r-md);
+  margin-bottom: 24px;
+}
+
+.bk-pet-badge__icon {
+  flex-shrink: 0;
+  color: var(--pink);
+  display: flex;
+  align-items: center;
+}
+
+.bk-pet-badge__label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.bk-pet-badge__value {
+  display: block;
+  font-weight: 600;
+  color: var(--pink);
+  font-size: 0.9375rem;
+}
+
+/* ── PRICE DISPLAY ── */
+.bk-price-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  background: var(--surface-alt, #fef6fb);
+  border: 1.5px solid var(--pink-border, #f9d5e5);
+  border-radius: var(--r-lg);
+  margin-top: 16px;
+  margin-bottom: 16px;
+  animation: bkFadeUp 0.28s var(--ease) forwards;
+}
+
+.bk-price-display__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-body);
+  display: block;
+}
+
+.bk-price-display__note {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.bk-price-display__amount {
+  font-family: var(--font-display);
+  font-size: 1.625rem;
+  font-weight: 500;
+  color: var(--pink);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
 @media (max-width: 500px) {
   .bk-service-grid--2col { grid-template-columns: 1fr; }
 }

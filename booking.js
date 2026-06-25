@@ -15,7 +15,7 @@ function fmtVND(n) {
 const state = {
   step: 1,
   totalSteps: 5,
-  service: null, serviceName: '', servicePrice: 0, serviceDuration: '',
+  service: null, serviceName: '', servicePrice: 0, baseServicePrice: 0, serviceDuration: '',
   petType: null, petSize: null, petAge: null, petName: '',
   date: null, time: null,
   firstName: '', lastName: '', email: '', phone: '', breed: '', notes: ''
@@ -100,7 +100,7 @@ function validateStep(n) {
   let valid = false;
   switch (n) {
     case 1: valid = !!state.service; break;
-    case 2: valid = !!state.petType && !!state.petAge; break;
+    case 2: valid = !!state.petSize; break;
     case 3: valid = !!state.date && !!state.time; break;
     case 4: valid = !!(state.firstName && state.lastName && state.email && state.phone); break;
     case 5: valid = true; break;
@@ -160,10 +160,11 @@ document.querySelectorAll('.bk-service-card').forEach(card => {
     }
     document.querySelectorAll('.bk-service-card').forEach(c => c.classList.remove('selected'));
     card.classList.add('selected');
-    state.service         = card.dataset.service;
-    state.serviceName     = card.dataset.name;
-    state.servicePrice    = parseFloat(card.dataset.price);
-    state.serviceDuration = card.dataset.duration;
+    state.service            = card.dataset.service;
+    state.serviceName        = card.dataset.name;
+    state.servicePrice       = parseFloat(card.dataset.price);
+    state.baseServicePrice   = parseFloat(card.dataset.price);
+    state.serviceDuration    = card.dataset.duration;
 
     // If picked from a sub-panel, also mark the parent has-sub card
     const parentSub = card.closest('.bk-sub-panel');
@@ -189,36 +190,29 @@ if (bathSubBack) {
 }
 
 // ──────────────────────────────────────────────────────────
-// STEP 2 — PET TYPE / SIZE / AGE
+// STEP 2 — WEIGHT / SIZE + PRICE CALC
 // ──────────────────────────────────────────────────────────
 
-const sizeGroup = document.getElementById('bk-size-group');
-
-document.querySelectorAll('.bk-type-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.bk-type-btn').forEach(b => b.classList.remove('selected'));
-    btn.classList.add('selected');
-    state.petType = btn.dataset.type;
-    // Show size selector only for dog or cat
-    sizeGroup.style.display = (state.petType === 'dog' || state.petType === 'cat') ? '' : 'none';
-    if (state.petType !== 'dog' && state.petType !== 'cat') state.petSize = 'n/a';
-    validateStep(2);
-  });
-});
+const priceDisplay = document.getElementById('bk-price-display');
+const priceAmount  = document.getElementById('bk-price-amount');
 
 document.querySelectorAll('.bk-size-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.bk-size-btn').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
     state.petSize = btn.dataset.size;
-  });
-});
 
-document.querySelectorAll('.bk-age-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.bk-age-btn').forEach(b => b.classList.remove('selected'));
-    btn.classList.add('selected');
-    state.petAge = btn.dataset.age;
+    // Calculate price from base × multiplier
+    const mult = parseFloat(btn.dataset.mult) || 1;
+    const base = state.baseServicePrice || state.servicePrice;
+    state.servicePrice = Math.round(base * mult / 1000) * 1000;
+
+    // Show price
+    if (priceDisplay && priceAmount) {
+      priceAmount.textContent = state.servicePrice.toLocaleString('vi-VN') + '₫';
+      priceDisplay.style.display = '';
+    }
+
     validateStep(2);
   });
 });
@@ -558,10 +552,32 @@ function updateSelStrip(n) {
 renderCalendar();
 goTo(1);
 
-// Auto-show sub-panel if URL param is set (e.g. from services.html "Đặt ngay")
+// Read URL params: ?pet=dog|cat and ?service=bath-hygiene
 (function () {
-  const param = new URLSearchParams(window.location.search).get('service');
-  if (param === 'bath-hygiene' && bathSubPanel) {
+  const params  = new URLSearchParams(window.location.search);
+  const petParam = params.get('pet');
+  const svcParam = params.get('service');
+
+  // Auto-set pet type from URL
+  if (petParam === 'dog' || petParam === 'cat') {
+    state.petType = petParam;
+
+    const badge    = document.getElementById('bk-pet-badge');
+    const badgeVal = document.getElementById('bk-pet-badge-val');
+    const badgeIcon = document.getElementById('bk-pet-badge-icon');
+    if (badge && badgeVal) {
+      badgeVal.textContent = petParam === 'dog' ? 'Chó' : 'Mèo';
+      if (badgeIcon) {
+        badgeIcon.innerHTML = petParam === 'dog'
+          ? '<svg viewBox="0 0 36 36" fill="none" width="24" height="24"><path d="M7 14c0-4 3-7 7-7h8c4 0 7 3 7 7v6a7 7 0 0 1-14 0v-2H9a2 2 0 0 1-2-2v-4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="16" r="1" fill="currentColor"/><circle cx="22" cy="16" r="1" fill="currentColor"/></svg>'
+          : '<svg viewBox="0 0 36 36" fill="none" width="24" height="24"><path d="M8 9l3 3h14l3-3V6l-3 3-3-4-2 2-2-2-3 4-3-3V9z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 12v8a7 7 0 0 0 14 0v-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="15" cy="17" r="1" fill="currentColor"/><circle cx="21" cy="17" r="1" fill="currentColor"/></svg>';
+      }
+      badge.style.display = '';
+    }
+  }
+
+  // Auto-show bath sub-panel
+  if (svcParam === 'bath-hygiene' && bathSubPanel) {
     showSubPanel(bathSubPanel);
   }
 }());

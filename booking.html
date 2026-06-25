@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="global.css?v=80">
-  <link rel="stylesheet" href="booking.css?v=16">
+  <link rel="stylesheet" href="booking.css?v=17">
   <meta name="description" content="Schedule a veterinary consultation, grooming session, or wellness visit in minutes. Simple, calming, and personalised to your pet.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Book an Appointment | Petcare Spa">
@@ -229,50 +229,39 @@
 
       <div class="bk-pet-section">
 
-        <div class="bk-field-group">
-          <label class="bk-label" data-i18n="bk.pet.type">Pet type</label>
-          <div class="bk-type-grid">
-            <button class="bk-type-btn" data-type="dog">
-              <svg viewBox="0 0 36 36" fill="none"><path d="M7 14c0-4 3-7 7-7h8c4 0 7 3 7 7v6a7 7 0 0 1-14 0v-2H9a2 2 0 0 1-2-2v-4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="16" r="1" fill="currentColor"/><circle cx="22" cy="16" r="1" fill="currentColor"/></svg>
-              <span data-i18n="bk.pet.dog">Dog</span>
-            </button>
-            <button class="bk-type-btn" data-type="cat">
-              <svg viewBox="0 0 36 36" fill="none"><path d="M8 9l3 3h14l3-3V6l-3 3-3-4-2 2-2-2-3 4-3-3V9z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 12v8a7 7 0 0 0 14 0v-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="15" cy="17" r="1" fill="currentColor"/><circle cx="21" cy="17" r="1" fill="currentColor"/></svg>
-              <span data-i18n="bk.pet.cat">Cat</span>
-            </button>
-            <button class="bk-type-btn" data-type="small">
-              <svg viewBox="0 0 36 36" fill="none"><ellipse cx="18" cy="20" rx="8" ry="6" stroke="currentColor" stroke-width="1.5"/><circle cx="15" cy="18" r="1" fill="currentColor"/><circle cx="21" cy="18" r="1" fill="currentColor"/><path d="M12 14c0-3 2-5 6-5s6 2 6 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              <span data-i18n="bk.pet.small">Small Animal</span>
-            </button>
-            <button class="bk-type-btn" data-type="bird">
-              <svg viewBox="0 0 36 36" fill="none"><path d="M22 10c0-2-2-4-4-4-3 0-6 3-6 7v7a5 5 0 0 0 10 0v-4l4-3-4-3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="14" r="1" fill="currentColor"/></svg>
-              <span data-i18n="bk.pet.bird">Bird</span>
-            </button>
+        <!-- Pet type badge — auto-set from services page tab -->
+        <div class="bk-pet-badge" id="bk-pet-badge" style="display:none">
+          <span class="bk-pet-badge__icon" id="bk-pet-badge-icon"></span>
+          <div>
+            <span class="bk-pet-badge__label">Loại thú cưng</span>
+            <span class="bk-pet-badge__value" id="bk-pet-badge-val"></span>
           </div>
         </div>
 
-        <div class="bk-field-group bk-size-group" id="bk-size-group" style="display:none">
-          <label class="bk-label"><span data-i18n="bk.pet.size">Size</span> <span class="bk-label__note" data-i18n="bk.pet.size_note">(helps us prepare)</span></label>
+        <!-- Weight / size selector -->
+        <div class="bk-field-group">
+          <label class="bk-label">Cân nặng <span class="bk-label__note">(dùng để tính giá)</span></label>
           <div class="bk-size-grid">
-            <button class="bk-size-btn" data-size="small"><span data-i18n="bk.size.small">Small</span><span data-i18n="bk.size.small_note">Under 10 lbs</span></button>
-            <button class="bk-size-btn" data-size="medium"><span data-i18n="bk.size.medium">Medium</span><span data-i18n="bk.size.med_note">10&ndash;40 lbs</span></button>
-            <button class="bk-size-btn" data-size="large"><span data-i18n="bk.size.large">Large</span><span data-i18n="bk.size.large_note">40&ndash;80 lbs</span></button>
-            <button class="bk-size-btn" data-size="xl"><span data-i18n="bk.size.xl">Extra Large</span><span data-i18n="bk.size.xl_note">80+ lbs</span></button>
+            <button class="bk-size-btn" data-size="small"   data-mult="1.0" ><span>Nhỏ</span><span>dưới 5 kg</span></button>
+            <button class="bk-size-btn" data-size="medium"  data-mult="1.35"><span>Vừa</span><span>5 – 15 kg</span></button>
+            <button class="bk-size-btn" data-size="large"   data-mult="1.7" ><span>Lớn</span><span>15 – 35 kg</span></button>
+            <button class="bk-size-btn" data-size="xl"      data-mult="2.1" ><span>Rất lớn</span><span>trên 35 kg</span></button>
           </div>
         </div>
 
-        <div class="bk-field-group">
-          <label class="bk-label" for="bk-pet-name"><span data-i18n="bk.pet.name_label">Pet's name</span> <span class="bk-label__note" data-i18n="bk.pet.name_note">optional</span></label>
-          <input class="bk-input" id="bk-pet-name" type="text" placeholder="e.g. Luna" data-i18n-placeholder="bk.pet.name_ph" autocomplete="off">
+        <!-- Dynamic price display -->
+        <div class="bk-price-display" id="bk-price-display" style="display:none">
+          <div>
+            <span class="bk-price-display__label">Giá ước tính</span>
+            <span class="bk-price-display__note">Giá cuối có thể thay đổi theo tình trạng lông</span>
+          </div>
+          <span class="bk-price-display__amount" id="bk-price-amount">—</span>
         </div>
 
+        <!-- Pet name (optional) -->
         <div class="bk-field-group">
-          <label class="bk-label" data-i18n="bk.pet.age">Age group</label>
-          <div class="bk-age-grid">
-            <button class="bk-age-btn" data-age="puppy"><span data-i18n="bk.age.puppy">Puppy / Kitten</span><span data-i18n="bk.age.puppy_note">Under 1 year</span></button>
-            <button class="bk-age-btn" data-age="adult"><span data-i18n="bk.age.adult">Adult</span><span data-i18n="bk.age.adult_note">1&ndash;7 years</span></button>
-            <button class="bk-age-btn" data-age="senior"><span data-i18n="bk.age.senior">Senior</span><span data-i18n="bk.age.senior_note">7+ years</span></button>
-          </div>
+          <label class="bk-label" for="bk-pet-name">Tên thú cưng <span class="bk-label__note">tùy chọn</span></label>
+          <input class="bk-input" id="bk-pet-name" type="text" placeholder="VD: Mochi, Luna…" autocomplete="off">
         </div>
 
       </div>
@@ -572,7 +561,7 @@
 
 <script src="translations.js?v=23"></script>
 <script src="global.js?v=39"></script>
-<script src="booking.js?v=13"></script>
+<script src="booking.js?v=14"></script>
 </body>
 </html>
 
