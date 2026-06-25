@@ -581,7 +581,7 @@ const SERVICE_CATALOG = {
     const badgeVal  = document.getElementById('bk-pet-badge-val');
     const badgeIcon = document.getElementById('bk-pet-badge-icon');
     if (badge && badgeVal) {
-      badgeVal.textContent = petParam === 'dog' ? 'Chó' : 'Mèo';
+      badgeVal.textContent = petParam === 'dog' ? 'Dog' : 'Cat';
       if (badgeIcon) {
         badgeIcon.innerHTML = petParam === 'dog'
           ? '<svg viewBox="0 0 36 36" fill="none" width="24" height="24"><path d="M7 14c0-4 3-7 7-7h8c4 0 7 3 7 7v6a7 7 0 0 1-14 0v-2H9a2 2 0 0 1-2-2v-4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="16" r="1" fill="currentColor"/><circle cx="22" cy="16" r="1" fill="currentColor"/></svg>'
