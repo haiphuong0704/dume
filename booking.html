@@ -102,17 +102,17 @@
         <p data-i18n="bk.step1.sub">Choose the service that's right for your pet. All services include a complimentary wellbeing check.</p>
       </div>
 
-      <div class="bk-service-grid">
+      <div class="bk-service-grid" id="bk-main-service-grid">
 
-        <div class="bk-service-card" data-service="grooming" data-price="450000" data-duration="60 min" data-name="Grooming & Bath">
+        <div class="bk-service-card bk-service-card--has-sub" data-service="bath-hygiene" data-has-sub="bk-bath-sub" data-price="200000" data-duration="45 min" data-name="Bath &amp; Hygiene">
           <div class="bk-service-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><path d="M14 12.5h-4"/><path d="M4 9h18"/><path d="M10 3v3"/><path d="M14 3v3"/></svg>
           </div>
-          <h3>Grooming & Bath</h3>
-          <p data-i18n="bk.svc.grooming.desc">Full bath, blow-dry, breed cut, nail trim and ear cleaning.</p>
+          <h3>Bath &amp; Hygiene</h3>
+          <p>Tắm kết hợp vệ sinh toàn diện. Chọn gói <strong>Tắm thường</strong> hoặc <strong>Tắm VIP</strong>.</p>
           <div class="bk-service-card__footer">
-            <span class="bk-service-card__price">From 450.000&#8363;</span>
-            <span class="bk-service-card__duration">60 min</span>
+            <span class="bk-service-card__price">From 200.000&#8363;</span>
+            <span class="bk-service-card__duration bk-service-card__sub-hint">2 gói ›</span>
           </div>
         </div>
 
@@ -177,9 +177,49 @@
         </div>
 
       </div>
+
+      <!-- Bath & Hygiene sub-panel -->
+      <div class="bk-sub-panel" id="bk-bath-sub" style="display:none">
+        <div class="bk-sub-panel__nav">
+          <button class="bk-sub-back" id="bk-bath-sub-back" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Quay lại
+          </button>
+          <span class="bk-sub-panel__crumb">Bath &amp; Hygiene</span>
+        </div>
+        <p class="bk-sub-panel__desc">Chọn gói tắm phù hợp với nhu cầu của thú cưng.</p>
+        <div class="bk-service-grid bk-service-grid--2col">
+
+          <div class="bk-service-card" data-service="bath-regular" data-price="200000" data-duration="45 min" data-name="Tắm thường">
+            <div class="bk-service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 7.7 7 5.3c-.29 2.4-1.58 3.68-2.29 4.76C3.57 11 3 12.1 3 13.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>
+            </div>
+            <h3>Tắm thường</h3>
+            <p>Tắm toàn thân, sấy khô, cắt móng, làm sạch tai và vệ sinh cơ bản. Phù hợp cho chăm sóc định kỳ.</p>
+            <div class="bk-service-card__footer">
+              <span class="bk-service-card__price">From 200.000&#8363;</span>
+              <span class="bk-service-card__duration">45 min</span>
+            </div>
+          </div>
+
+          <div class="bk-service-card" data-service="bath-vip" data-price="350000" data-duration="75 min" data-name="Tắm VIP">
+            <div class="bk-service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Tắm VIP</h3>
+            <p>Tắm thường + mát-xa thư giãn, dưỡng lông chuyên sâu, nước hoa thú cưng và khăn ấm. Trải nghiệm đẳng cấp.</p>
+            <div class="bk-service-card__footer">
+              <span class="bk-service-card__price">From 350.000&#8363;</span>
+              <span class="bk-service-card__duration">75 min</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
 
-    <!-- ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ STEP 2: YOUR PET ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ -->
+    <!--ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ STEP 2: YOUR PET ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ -->
     <div class="bk-panel" id="bk-step-2">
       <div class="bk-panel__header">
         <span class="eyebrow" data-i18n="bk.step2.eyebrow">Step 2 of 5</span>
@@ -415,11 +455,105 @@
         </div>
       </div>
     </div>
+    <!--
+    <figure class="bk-price-card">
+      <img src="assets/images/pricing/1.png" alt="Bảng giá tắm chó" loading="lazy" draggable="false">
+    </figure>-->
 
   </div>
 </main>
 
 <!-- ÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚Â FOOTER NAV ÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚Â -->
+<!-- ── PRICE REFERENCE ── -->
+<!--<section class="bk-price-ref" id="bk-price-ref">
+  <div class="bk-container">
+
+    <div class="bk-price-ref__hd">
+      <span class="eyebrow" data-i18n="bk.pr.eyebrow">Price Reference</span>
+      <h2 class="bk-price-ref__h2" data-i18n="bk.pr.h2">Estimated Service Pricing</h2>
+      <p class="bk-price-ref__desc" data-i18n="bk.pr.desc">Browse our current pricing guide for common grooming and spa services. Final pricing may vary based on breed, coat condition, size, temperament, and service requirements.</p>
+    </div>
+
+    <div class="bk-price-gallery" id="bk-price-gallery">
+      <button class="bk-price-arrow bk-price-arrow--prev" id="bk-price-prev" aria-label="Previous price sheet">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="bk-price-gallery__track" id="bk-price-track">
+        <figure class="bk-price-card">
+          <img src="assets/images/pricing/1.png" alt="Bảng giá tắm chó" loading="lazy" draggable="false">
+        </figure>
+        <figure class="bk-price-card">
+          <img src="assets/images/pricing/2.png" alt="Bảng giá spa mèo" loading="lazy" draggable="false">
+        </figure>
+        <figure class="bk-price-card">
+          <img src="assets/images/pricing/3.png" alt="Quy trình gói grooming" loading="lazy" draggable="false">
+        </figure>
+        <figure class="bk-price-card">
+          <img src="assets/images/pricing/4.png" alt="Bảng giá tiêm phòng" loading="lazy" draggable="false">
+        </figure>
+        <figure class="bk-price-card">
+          <img src="assets/images/pricing/5.png" alt="Hướng dẫn tiêm phòng tại nhà" loading="lazy" draggable="false">
+        </figure>
+        <figure class="bk-price-card">
+          <img src="assets/images/pricing/6.png" alt="Bảng giá trị ve bọ chét" loading="lazy" draggable="false">
+        </figure>
+      </div>
+      <button class="bk-price-arrow bk-price-arrow--next" id="bk-price-next" aria-label="Next price sheet">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <div class="bk-price-dots" id="bk-price-dots" aria-hidden="true">
+      <button class="bk-price-dot bk-price-dot--active" data-idx="0" aria-label="Slide 1"></button>
+      <button class="bk-price-dot" data-idx="1" aria-label="Slide 2"></button>
+      <button class="bk-price-dot" data-idx="2" aria-label="Slide 3"></button>
+      <button class="bk-price-dot" data-idx="3" aria-label="Slide 4"></button>
+      <button class="bk-price-dot" data-idx="4" aria-label="Slide 5"></button>
+      <button class="bk-price-dot" data-idx="5" aria-label="Slide 6"></button>
+    </div>
+
+    <p class="bk-price-ref__note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span data-i18n="bk.pr.note">Prices shown are for reference only. Actual pricing may vary depending on pet size, coat condition, behavior, and service requirements.</span>
+    </p>
+
+  </div>
+</section>-->
+<script>
+(function () {
+  var track = document.getElementById('bk-price-track');
+  var dots  = document.querySelectorAll('#bk-price-dots .bk-price-dot');
+  var prev  = document.getElementById('bk-price-prev');
+  var next  = document.getElementById('bk-price-next');
+  var cur   = 0;
+
+  function goTo(idx) {
+    cur = Math.max(0, Math.min(idx, dots.length - 1));
+    var card = track.children[cur];
+    if (card) track.scrollTo({ left: card.offsetLeft, behavior: 'smooth' });
+    dots.forEach(function (d, i) { d.classList.toggle('bk-price-dot--active', i === cur); });
+  }
+
+  prev.addEventListener('click', function () { goTo(cur - 1); });
+  next.addEventListener('click', function () { goTo(cur + 1); });
+  dots.forEach(function (d, i) { d.addEventListener('click', function () { goTo(i); }); });
+
+  var t;
+  track.addEventListener('scroll', function () {
+    clearTimeout(t);
+    t = setTimeout(function () {
+      var closest = 0, minD = Infinity;
+      Array.prototype.forEach.call(track.children, function (c, i) {
+        var d = Math.abs(c.offsetLeft - track.scrollLeft);
+        if (d < minD) { minD = d; closest = i; }
+      });
+      cur = closest;
+      dots.forEach(function (d, i) { d.classList.toggle('bk-price-dot--active', i === cur); });
+    }, 80);
+  });
+}());
+</script>
+
 <footer class="bk-footer-nav" id="bk-footer-nav">
   <div class="bk-container">
     <div class="bk-footer-nav__inner">

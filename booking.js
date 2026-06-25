@@ -87,6 +87,7 @@ function goTo(n) {
   }
 
   // Step-specific setup
+  if (n === 1) hideSubPanels();
   if (n === 5) renderSummary();
   if (n > state.totalSteps) renderSuccess();
 
@@ -137,17 +138,55 @@ backBtn.addEventListener('click', () => goTo(state.step - 1));
 // STEP 1 — SERVICE SELECTION
 // ──────────────────────────────────────────────────────────
 
+const mainServiceGrid = document.getElementById('bk-main-service-grid');
+const bathSubPanel    = document.getElementById('bk-bath-sub');
+
+function showSubPanel(subPanel) {
+  if (mainServiceGrid) mainServiceGrid.style.display = 'none';
+  if (subPanel) subPanel.style.display = '';
+}
+
+function hideSubPanels() {
+  if (mainServiceGrid) mainServiceGrid.style.display = '';
+  if (bathSubPanel)    bathSubPanel.style.display = 'none';
+}
+
 document.querySelectorAll('.bk-service-card').forEach(card => {
   card.addEventListener('click', () => {
+    const subPanelId = card.dataset.hasSub;
+    if (subPanelId) {
+      showSubPanel(document.getElementById(subPanelId));
+      return;
+    }
     document.querySelectorAll('.bk-service-card').forEach(c => c.classList.remove('selected'));
     card.classList.add('selected');
-    state.service      = card.dataset.service;
-    state.serviceName  = card.dataset.name;
-    state.servicePrice = parseFloat(card.dataset.price);
+    state.service         = card.dataset.service;
+    state.serviceName     = card.dataset.name;
+    state.servicePrice    = parseFloat(card.dataset.price);
     state.serviceDuration = card.dataset.duration;
+
+    // If picked from a sub-panel, also mark the parent has-sub card
+    const parentSub = card.closest('.bk-sub-panel');
+    if (parentSub) {
+      const parentCard = document.querySelector(`[data-has-sub="${parentSub.id}"]`);
+      if (parentCard) parentCard.classList.add('selected');
+    }
+
     validateStep(1);
   });
 });
+
+const bathSubBack = document.getElementById('bk-bath-sub-back');
+if (bathSubBack) {
+  bathSubBack.addEventListener('click', () => {
+    hideSubPanels();
+    if (state.service === 'bath-regular' || state.service === 'bath-vip') {
+      state.service = null; state.serviceName = ''; state.servicePrice = 0; state.serviceDuration = '';
+      document.querySelectorAll('.bk-service-card').forEach(c => c.classList.remove('selected'));
+      validateStep(1);
+    }
+  });
+}
 
 // ──────────────────────────────────────────────────────────
 // STEP 2 — PET TYPE / SIZE / AGE

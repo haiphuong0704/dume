@@ -161,99 +161,144 @@
   <div class="container">
 
     <div class="section-header fade-up">
-      <span class="eyebrow" data-i18n="svc_page.grid.eyebrow">What we offer</span>
-      <h2 data-i18n="svc_page.grid.headline">Everything your pet needs</h2>
-      <p data-i18n="svc_page.grid.sub">Six specialized services delivered by certified specialists in a calm, modern environment.</p>
+      <span class="eyebrow" data-i18n="svc_page.grid.eyebrow">Chúng tôi cung cấp gì</span>
+      <h2 data-i18n="svc_page.grid.headline">Tất cả những gì thú cưng cần</h2>
+      <p data-i18n="svc_page.grid.sub">Sáu dịch vụ chuyên biệt được thực hiện bởi các chuyên gia có chứng chỉ trong môi trường bình yên, hiện đại.</p>
+    </div>
+
+    <div class="svc-pet-tabs fade-up">
+      <button class="svc-pet-tab svc-pet-tab--active" data-tab="dog" onclick="svcTabSwitch(this,'dog')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 2.261"/><path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 2.261"/><path d="M8 14v.5"/><path d="M16 14v.5"/><path d="M11.25 16.25h1.5L12 17z"/><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444c0-1.061-.162-2.2-.493-3.309m-9.243-6.082A8.801 8.801 0 0 1 12 5c.78 0 1.5.108 2.161.306"/></svg>
+        Chó
+      </button>
+      <button class="svc-pet-tab" data-tab="cat" onclick="svcTabSwitch(this,'cat')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58-.42 7-.42 7 .57 1.07 1 2.24 1 3.44C21 17.9 16.97 21 12 21s-9-3-9-7.56c0-1.25.5-2.4 1-3.44 0 0-1.89-6.42-.5-7 1.39-.58 4.68.26 6.5 2.26A9.06 9.06 0 0 1 12 5z"/><path d="M8 14v.5"/><path d="M16 14v.5"/><path d="M11.25 16.25h1.5L12 17z"/></svg>
+        Mèo
+      </button>
     </div>
 
     <div class="svc-grid">
 
-      <div class="svc-card fade-up">
+      <!-- ── DOG SERVICES ── -->
+
+      <div class="svc-card fade-up" data-pet="dog">
         <div class="svc-card__img">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=1000&auto=format&fit=crop" alt="Veterinary care">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1000&auto=format&fit=crop" alt="Bath & Dry">
         </div>
         <div class="svc-card__body">
-          <span class="svc-card__tag" data-i18n="svc_page.c1.tag">Veterinary</span>
-          <h3 data-i18n="svc_page.c1.name">Veterinary Care</h3>
-          <p data-i18n="svc_page.c1.desc">Complete health examinations and personalized medical care delivered by certified veterinarians.</p>
+          <span class="svc-card__tag">Tắm lông</span>
+          <h3>Bath &amp; Dry</h3>
+          <p>Tắm toàn thân và sấy khô chuyên nghiệp với sản phẩm hữu cơ cao cấp. Phù hợp cho các bé cần làm sạch nhanh, giữ lông mềm mượt tự nhiên.</p>
           <div class="svc-card__footer">
-            <span class="svc-card__price" data-i18n="svc_page.c1.price">From 650.000&#8363;</span>
-            <a href="/booking" class="svc-card__cta" data-i18n="svc_page.c1.cta">Book now</a>
+            <span class="svc-card__price">Từ 150.000&#8363;</span>
+            <a href="/booking" class="svc-card__cta">Đặt ngay</a>
           </div>
         </div>
       </div>
 
-      <div class="svc-card fade-up d1">
+      <div class="svc-card fade-up d1" data-pet="dog">
         <div class="svc-card__img">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=1000&auto=format&fit=crop" alt="Grooming and spa">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=1000&auto=format&fit=crop" alt="Bath & Hygiene">
         </div>
         <div class="svc-card__body">
-          <span class="svc-card__tag" data-i18n="svc_page.c2.tag">Grooming</span>
-          <h3 data-i18n="svc_page.c2.name">Grooming & Spa</h3>
-          <p data-i18n="svc_page.c2.desc">Premium grooming sessions using organic products and modern wellness techniques.</p>
+          <span class="svc-card__tag">Tắm & Vệ sinh</span>
+          <h3>Bath &amp; Hygiene</h3>
+          <p>Tắm kết hợp vệ sinh toàn diện: cắt móng, làm sạch tai, vệ sinh tuyến hậu môn và chải lông kỹ lưỡng sau khi sấy.</p>
           <div class="svc-card__footer">
-            <span class="svc-card__price" data-i18n="svc_page.c2.price">From 450.000&#8363;</span>
-            <a href="/booking" class="svc-card__cta" data-i18n="svc_page.c2.cta">Book now</a>
+            <span class="svc-card__price">Từ 200.000&#8363;</span>
+            <a href="/booking" class="svc-card__cta">Đặt ngay</a>
           </div>
         </div>
       </div>
 
-      <div class="svc-card fade-up d2">
+      <div class="svc-card fade-up d2" data-pet="dog">
         <div class="svc-card__img">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1000&auto=format&fit=crop" alt="Pet hotel boarding">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=1000&auto=format&fit=crop" alt="Trim & Hygiene">
         </div>
         <div class="svc-card__body">
-          <span class="svc-card__tag" data-i18n="svc_page.c3.tag">Boarding</span>
-          <h3 data-i18n="svc_page.c3.name">Pet Hotel</h3>
-          <p data-i18n="svc_page.c3.desc">Comfortable luxury stays with personalized attention and around-the-clock monitored care.</p>
+          <span class="svc-card__tag">Tỉa lông</span>
+          <h3>Trim &amp; Hygiene</h3>
+          <p>Tỉa gọn lông các vùng nhạy cảm — mắt, tai, chân và vùng vệ sinh — kết hợp chăm sóc vệ sinh cơ bản không tắm.</p>
           <div class="svc-card__footer">
-            <span class="svc-card__price" data-i18n="svc_page.c3.price">From 800.000&#8363;</span>
-            <a href="/booking" class="svc-card__cta" data-i18n="svc_page.c3.cta">Book now</a>
+            <span class="svc-card__price">Từ 180.000&#8363;</span>
+            <a href="/booking" class="svc-card__cta">Đặt ngay</a>
           </div>
         </div>
       </div>
 
-      <div class="svc-card fade-up">
+      <div class="svc-card fade-up" data-pet="dog">
         <div class="svc-card__img">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?q=80&w=1000&auto=format&fit=crop" alt="Vaccination">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?q=80&w=1000&auto=format&fit=crop" alt="Full Grooming">
         </div>
         <div class="svc-card__body">
-          <span class="svc-card__tag" data-i18n="svc_page.c4.tag">Preventive</span>
-          <h3 data-i18n="svc_page.c4.name">Vaccination</h3>
-          <p data-i18n="svc_page.c4.desc">Tailored vaccination schedules based on your pet's age, lifestyle and current health status.</p>
+          <span class="svc-card__tag">Grooming</span>
+          <h3>Full Grooming <span style="font-size:0.8em;opacity:.7">(Bath &amp; Trim)</span></h3>
+          <p>Gói chăm sóc toàn diện: tắm, sấy khô, tỉa lông, cắt móng, làm sạch tai và vệ sinh đầy đủ trong một buổi duy nhất.</p>
           <div class="svc-card__footer">
-            <span class="svc-card__price" data-i18n="svc_page.c4.price">From 350.000&#8363;</span>
-            <a href="/booking" class="svc-card__cta" data-i18n="svc_page.c4.cta">Book now</a>
+            <span class="svc-card__price">Từ 320.000&#8363;</span>
+            <a href="/booking" class="svc-card__cta">Đặt ngay</a>
           </div>
         </div>
       </div>
 
-      <div class="svc-card fade-up d1">
+      <div class="svc-card fade-up d1" data-pet="dog">
         <div class="svc-card__img">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1000&auto=format&fit=crop" alt="Wellness plans">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1000&auto=format&fit=crop&facepad=3" alt="Full Grooming + Haircut">
         </div>
         <div class="svc-card__body">
-          <span class="svc-card__tag" data-i18n="svc_page.c5.tag">Wellness</span>
-          <h3 data-i18n="svc_page.c5.name">Wellness Plans</h3>
-          <p data-i18n="svc_page.c5.desc">Preventive programs focused on long-term health, nutrition balance and activity guidance.</p>
+          <span class="svc-card__tag">Cao cấp</span>
+          <h3>Full Grooming + Haircut</h3>
+          <p>Dịch vụ spa đỉnh cao — tắm, vệ sinh toàn diện, tỉa lông và cắt tạo kiểu theo yêu cầu bởi groomer chuyên nghiệp.</p>
           <div class="svc-card__footer">
-            <span class="svc-card__price" data-i18n="svc_page.c5.price">From 550.000&#8363;</span>
-            <a href="/booking" class="svc-card__cta" data-i18n="svc_page.c5.cta">Book now</a>
+            <span class="svc-card__price">Từ 420.000&#8363;</span>
+            <a href="/booking" class="svc-card__cta">Đặt ngay</a>
           </div>
         </div>
       </div>
 
-      <div class="svc-card fade-up d2">
+      <!-- ── CAT SERVICES ── -->
+
+      <div class="svc-card fade-up" data-pet="cat">
         <div class="svc-card__img">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?q=80&w=1000&auto=format&fit=crop" alt="Nutrition guidance">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=1000&auto=format&fit=crop" alt="Bath & Dry - Mèo">
         </div>
         <div class="svc-card__body">
-          <span class="svc-card__tag" data-i18n="svc_page.c6.tag">Nutrition</span>
-          <h3 data-i18n="svc_page.c6.name">Nutrition Guidance</h3>
-          <p data-i18n="svc_page.c6.desc">Personalized dietary plans developed by certified nutritionists for optimal pet health.</p>
+          <span class="svc-card__tag">Tắm lông</span>
+          <h3>Bath &amp; Dry</h3>
+          <p>Tắm nhẹ nhàng và sấy khô dành riêng cho mèo với sản phẩm không gây kích ứng, giúp lông bóng mượt và giảm rụng lông.</p>
           <div class="svc-card__footer">
-            <span class="svc-card__price" data-i18n="svc_page.c6.price">From 400.000&#8363;</span>
-            <a href="/booking" class="svc-card__cta" data-i18n="svc_page.c6.cta">Book now</a>
+            <span class="svc-card__price">Từ 140.000&#8363;</span>
+            <a href="/booking" class="svc-card__cta">Đặt ngay</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-card fade-up d1" data-pet="cat">
+        <div class="svc-card__img">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?q=80&w=1000&auto=format&fit=crop" alt="Bath & Hygiene - Mèo">
+        </div>
+        <div class="svc-card__body">
+          <span class="svc-card__tag">Tắm & Vệ sinh</span>
+          <h3>Bath &amp; Hygiene</h3>
+          <p>Tắm kết hợp vệ sinh đầy đủ cho mèo: cắt móng, làm sạch tai, chải lông và kiểm tra da lông sau khi sấy khô.</p>
+          <div class="svc-card__footer">
+            <span class="svc-card__price">Từ 190.000&#8363;</span>
+            <a href="/booking" class="svc-card__cta">Đặt ngay</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-card fade-up d2" data-pet="cat">
+        <div class="svc-card__img">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1571566882372-1598d88abd90?q=80&w=1000&auto=format&fit=crop" alt="Full Grooming - Mèo">
+        </div>
+        <div class="svc-card__body">
+          <span class="svc-card__tag">Grooming</span>
+          <h3>Full Grooming</h3>
+          <p>Gói chăm sóc hoàn chỉnh cho mèo — tắm, sấy khô, tỉa lông, cắt móng và vệ sinh tai trong một buổi chuyên nghiệp.</p>
+          <div class="svc-card__footer">
+            <span class="svc-card__price">Từ 290.000&#8363;</span>
+            <a href="/booking" class="svc-card__cta">Đặt ngay</a>
           </div>
         </div>
       </div>
@@ -264,12 +309,28 @@
 </section>
 
 <!-- ÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚ÂÃƒÂ¢—Ã‚Â WHY CHOOSE US -->
+<script>
+function svcTabSwitch(btn, pet) {
+  document.querySelectorAll('.svc-pet-tab').forEach(function(b) {
+    b.classList.remove('svc-pet-tab--active');
+  });
+  btn.classList.add('svc-pet-tab--active');
+  document.querySelectorAll('.svc-card[data-pet]').forEach(function(card) {
+    var pets = card.getAttribute('data-pet');
+    card.style.display = pets === pet ? '' : 'none';
+  });
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var dogTab = document.querySelector('.svc-pet-tab[data-tab="dog"]');
+  if (dogTab) svcTabSwitch(dogTab, 'dog');
+});
+</script>
 <section class="svc-why section">
   <div class="container">
 
     <div class="section-header fade-up">
-      <span class="eyebrow" data-i18n="svc_page.why.eyebrow">Why choose us</span>
-      <h2 data-i18n="svc_page.why.headline">Designed around comfort and trust</h2>
+      <span class="eyebrow" data-i18n="svc_page.why.eyebrow">Tại sao chọn chúng tôi</span>
+      <h2 data-i18n="svc_page.why.headline">Thiết kế xoay quanh sự thoải mái và tin tưởng</h2>
     </div>
 
     <div class="svc-why__grid">
@@ -280,8 +341,8 @@
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           </svg>
         </div>
-        <h3 data-i18n="svc_page.w1.title">Certified Specialists</h3>
-        <p data-i18n="svc_page.w1.text">Every team member holds recognized certifications and is dedicated to modern petcare standards.</p>
+        <h3 data-i18n="svc_page.w1.title">Chuyên gia có chứng chỉ</h3>
+        <p data-i18n="svc_page.w1.text">Mỗi thành viên trong nhóm đều có chứng chỉ được công nhận và tận tâm với tiêu chuẩn chăm sóc thú cưng hiện đại.</p>
       </div>
 
       <div class="svc-why__card fade-up d1">
@@ -291,8 +352,8 @@
             <polyline points="12 6 12 12 16 14"/>
           </svg>
         </div>
-        <h3 data-i18n="svc_page.w2.title">24 / 7 Support</h3>
-        <p data-i18n="svc_page.w2.text">Round-the-clock care and support so your pet is always in safe, attentive hands.</p>
+        <h3 data-i18n="svc_page.w2.title">Hỗ trợ 24 / 7</h3>
+        <p data-i18n="svc_page.w2.text">Chăm sóc và hỗ trợ suốt ngày đêm để thú cưng của bạn luôn trong bàn tay an toàn, chu đáo.</p>
       </div>
 
       <div class="svc-why__card fade-up d2">
@@ -301,8 +362,8 @@
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
           </svg>
         </div>
-        <h3 data-i18n="svc_page.w3.title">Calm Environment</h3>
-        <p data-i18n="svc_page.w3.text">Thoughtfully designed spaces that reduce stress and create a peaceful experience for every pet.</p>
+        <h3 data-i18n="svc_page.w3.title">Môi trường bình yên</h3>
+        <p data-i18n="svc_page.w3.text">Không gian được thiết kế chu đáo nhằm giảm căng thẳng và tạo trải nghiệm yên bình cho mỗi thú cưng.</p>
       </div>
 
       <div class="svc-why__card fade-up d3">
@@ -311,8 +372,8 @@
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
         </div>
-        <h3 data-i18n="svc_page.w4.title">Premium Products</h3>
-        <p data-i18n="svc_page.w4.text">Only carefully selected, veterinarian-approved wellness and grooming products are used.</p>
+        <h3 data-i18n="svc_page.w4.title">Sản phẩm cao cấp</h3>
+        <p data-i18n="svc_page.w4.text">Chỉ sử dụng các sản phẩm chăm sóc sức khỏe và tắm lông được chọn lọc kỹ lưỡng, được bác sĩ thú y chứng nhận.</p>
       </div>
 
     </div>
@@ -326,11 +387,11 @@
   <div class="container">
 
     <div class="svc-plans__header fade-up">
-      <span class="eyebrow">Membership</span>
+      <span class="eyebrow">Thành viên</span>
       <h2 id="svc-plans-heading">
-        Care that grows<br>with your <em>pet.</em>
+        Chăm sóc lớn lên<br>cùng thú cưng của <em>bạn.</em>
       </h2>
-      <p class="svc-plans__sub">Every plan includes priority scheduling, a dedicated care team, and free Spa Bites delivery. No long-term contracts — just great care.</p>
+      <p class="svc-plans__sub">Mọi gói đều bao gồm đặt lịch ưu tiên, đội ngũ chăm sóc riêng và giao hàng Spa Bites miễn phí. Không có hợp đồng dài hạn — chỉ là chăm sóc tuyệt vời.</p>
     </div>
 
     <div class="svc-plans__grid">
@@ -338,81 +399,81 @@
       <!-- Essential -->
       <div class="svc-plan fade-up">
         <div class="svc-plan__inner">
-          <span class="svc-plan__name">Essential</span>
-          <p class="svc-plan__tagline">Solid preventive care for healthy adult pets.</p>
+          <span class="svc-plan__name">Cơ bản</span>
+          <p class="svc-plan__tagline">Chăm sóc phòng ngừa vững chắc cho thú cưng trưởng thành khỏe mạnh.</p>
           <div class="svc-plan__price">
             <strong class="svc-plan__amount">1.390.000&#8363;</strong>
-            <span class="svc-plan__period">/ month</span>
+            <span class="svc-plan__period">/ tháng</span>
           </div>
           <ul class="svc-plan__list">
-            <li>Annual comprehensive health exam</li>
-            <li>2 vet consultations / year</li>
-            <li>Core vaccination review</li>
-            <li>Dental health screening</li>
-            <li>10% grooming discount</li>
-            <li>Free Spa Bites delivery</li>
-            <li>Email support</li>
+            <li>Kiểm tra sức khỏe toàn diện hàng năm</li>
+            <li>2 lần tư vấn bác sĩ thú y / năm</li>
+            <li>Đánh giá tiêm phòng cơ bản</li>
+            <li>Kiểm tra sức khỏe răng miệng</li>
+            <li>Giảm 10% dịch vụ tắm lông</li>
+            <li>Giao hàng Spa Bites miễn phí</li>
+            <li>Hỗ trợ qua email</li>
           </ul>
-          <a href="membership.html?plan=essential" class="btn btn-outline svc-plan__btn">Get started</a>
-          <p class="svc-plan__note">No contract &middot; Cancel anytime</p>
+          <a href="membership.html?plan=essential" class="btn btn-outline svc-plan__btn">Bắt đầu ngay</a>
+          <p class="svc-plan__note">Không hợp đồng &middot; Hủy bất cứ lúc nào</p>
         </div>
       </div>
 
       <!-- Premium — featured -->
       <div class="svc-plan svc-plan--featured fade-up d1">
         <div class="svc-plan__inner">
-          <span class="svc-plan__badge">Most Popular</span>
-          <span class="svc-plan__name">Premium</span>
-          <p class="svc-plan__tagline">Comprehensive care for pets at every life stage.</p>
+          <span class="svc-plan__badge">Phổ biến nhất</span>
+          <span class="svc-plan__name">Cao cấp</span>
+          <p class="svc-plan__tagline">Chăm sóc toàn diện cho thú cưng ở mọi giai đoạn sống.</p>
           <div class="svc-plan__price">
             <strong class="svc-plan__amount">2.190.000&#8363;</strong>
-            <span class="svc-plan__period">/ month</span>
+            <span class="svc-plan__period">/ tháng</span>
           </div>
           <ul class="svc-plan__list">
-            <li>Quarterly health reviews</li>
-            <li>6 vet consultations / year</li>
-            <li>Full vaccination schedule</li>
-            <li>Nutrition consultation</li>
-            <li>Dental cleaning (1&times; / year)</li>
-            <li>20% grooming discount</li>
-            <li>Free Spa Bites delivery</li>
-            <li>Priority booking</li>
-            <li>24/7 phone support</li>
+            <li>Kiểm tra sức khỏe hàng quý</li>
+            <li>6 lần tư vấn bác sĩ thú y / năm</li>
+            <li>Lịch tiêm phòng đầy đủ</li>
+            <li>Tư vấn dinh dưỡng</li>
+            <li>Làm sạch răng (1 lần / năm)</li>
+            <li>Giảm 20% dịch vụ tắm lông</li>
+            <li>Giao hàng Spa Bites miễn phí</li>
+            <li>Đặt lịch ưu tiên</li>
+            <li>Hỗ trợ điện thoại 24/7</li>
           </ul>
-          <a href="membership.html?plan=premium" class="btn btn-primary svc-plan__btn">Get started</a>
-          <p class="svc-plan__note">No contract &middot; Cancel anytime</p>
+          <a href="membership.html?plan=premium" class="btn btn-primary svc-plan__btn">Bắt đầu ngay</a>
+          <p class="svc-plan__note">Không hợp đồng &middot; Hủy bất cứ lúc nào</p>
         </div>
       </div>
 
       <!-- Elite -->
       <div class="svc-plan fade-up d2">
         <div class="svc-plan__inner">
-          <span class="svc-plan__name">Elite</span>
-          <p class="svc-plan__tagline">Concierge-level care with zero compromises.</p>
+          <span class="svc-plan__name">Tinh hoa</span>
+          <p class="svc-plan__tagline">Chăm sóc cấp concierge, không thỏa hiệp.</p>
           <div class="svc-plan__price">
             <strong class="svc-plan__amount">3.290.000&#8363;</strong>
-            <span class="svc-plan__period">/ month</span>
+            <span class="svc-plan__period">/ tháng</span>
           </div>
           <ul class="svc-plan__list">
-            <li>Monthly wellness check-ins</li>
-            <li>Unlimited vet consultations</li>
-            <li>Full vaccination + parasite plan</li>
-            <li>Personalized nutrition plan</li>
-            <li>Unlimited dental cleanings</li>
-            <li>Free grooming sessions</li>
-            <li>Free Spa Bites + meal planning</li>
-            <li>Dedicated wellness specialist</li>
-            <li>Same-day appointments</li>
-            <li>Concierge 24/7 support</li>
+            <li>Kiểm tra sức khỏe hàng tháng</li>
+            <li>Tư vấn bác sĩ thú y không giới hạn</li>
+            <li>Tiêm phòng đầy đủ + kế hoạch ký sinh trùng</li>
+            <li>Kế hoạch dinh dưỡng cá nhân hóa</li>
+            <li>Làm sạch răng không giới hạn</li>
+            <li>Buổi tắm lông miễn phí</li>
+            <li>Spa Bites miễn phí + lập kế hoạch bữa ăn</li>
+            <li>Chuyên gia sức khỏe riêng</li>
+            <li>Đặt lịch trong ngày</li>
+            <li>Hỗ trợ concierge 24/7</li>
           </ul>
-          <a href="membership.html?plan=elite" class="btn btn-outline svc-plan__btn">Go Elite</a>
-          <p class="svc-plan__note">No contract &middot; Cancel anytime</p>
+          <a href="membership.html?plan=elite" class="btn btn-outline svc-plan__btn">Chọn gói Tinh hoa</a>
+          <p class="svc-plan__note">Không hợp đồng &middot; Hủy bất cứ lúc nào</p>
         </div>
       </div>
 
     </div>
 
-    <p class="svc-plans__footnote fade-up">All plans billed monthly &middot; Annual billing available at 15% off &middot; Cancel anytime with no penalty</p>
+    <p class="svc-plans__footnote fade-up">Tất cả gói thanh toán hàng tháng &middot; Thanh toán hàng năm được giảm 15% &middot; Hủy bất cứ lúc nào không phạt</p>
 
   </div>
 </section>
@@ -422,9 +483,9 @@
 <section class="section bg-surface">
   <div class="container">
     <div class="cta-box fade-up">
-      <h2>Give your pet the care <em>they deserve.</em></h2>
-      <p>Book an appointment today and experience premium pet wellness firsthand.</p>
-      <a href="/booking" class="btn btn-primary btn-lg">Book appointment</a>
+      <h2>Cho thú cưng của bạn sự chăm sóc <em>xứng đáng với chúng.</em></h2>
+      <p>Đặt lịch hẹn ngay hôm nay và trải nghiệm dịch vụ chăm sóc thú cưng cao cấp trực tiếp.</p>
+      <a href="/booking" class="btn btn-primary btn-lg">Đặt lịch hẹn</a>
     </div>
   </div>
 </section>

@@ -645,6 +645,12 @@
       'bk.success.home':  'Back to home',
       'bk.success.svcs':  'View all services',
 
+      /* ── PRICE REFERENCE */
+      'bk.pr.eyebrow': 'Price Reference',
+      'bk.pr.h2':      'Estimated Service Pricing',
+      'bk.pr.desc':    'Browse our current pricing guide for common grooming and spa services. Final pricing may vary based on breed, coat condition, size, temperament, and service requirements.',
+      'bk.pr.note':    'Prices shown are for reference only. Actual pricing may vary depending on pet size, coat condition, behavior, and service requirements.',
+
       /* ── LOGIN PAGE */
       'lgn.h1':          'Welcome <em>back.</em>',
       'lgn.sub':         'Sign in to manage your bookings, rewards, and wellness history.',
@@ -1476,6 +1482,12 @@
       'bk.success.look':  'Chúng tôi rất mong gặp bạn và thú cưng.',
       'bk.success.home':  'Về trang chủ',
       'bk.success.svcs':  'Xem tất cả dịch vụ',
+
+      /* ── PRICE REFERENCE */
+      'bk.pr.eyebrow': 'Tham khảo giá',
+      'bk.pr.h2':      'Bảng giá dịch vụ ước tính',
+      'bk.pr.desc':    'Xem bảng giá hiện tại cho các dịch vụ chăm sóc và spa thú cưng phổ biến. Giá thực tế có thể thay đổi tùy theo giống, tình trạng lông, kích thước, tính cách và yêu cầu dịch vụ.',
+      'bk.pr.note':    'Giá hiển thị chỉ mang tính tham khảo. Giá thực tế có thể thay đổi tùy theo kích thước, tình trạng lông, hành vi của thú cưng và yêu cầu dịch vụ.',
 
       /* ── LOGIN PAGE */
       'lgn.h1':          'Chào mừng <em>trở lại.</em>',
