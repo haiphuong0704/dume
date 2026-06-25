@@ -1133,3 +1133,52 @@
   .svc-price-row__btn { padding: 5px 12px; font-size: 0.75rem; }
   .svc-pricing { padding: 56px 0 52px; }
 }
+
+/* ── PRICING TABLE ANIMATIONS ── */
+@keyframes priceRowIn {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes priceCardGlow {
+  from { box-shadow: 0 4px 24px rgba(0,0,0,.06); }
+  50%  { box-shadow: 0 4px 32px rgba(227,71,202,.12); }
+  to   { box-shadow: 0 4px 24px rgba(0,0,0,.06); }
+}
+
+.price-table--animate .svc-price-row {
+  animation: priceRowIn 0.38s var(--ease, cubic-bezier(0.22,1,0.36,1)) both;
+}
+
+.price-table--animate .svc-price-row:nth-child(1)  { animation-delay:  0ms; }
+.price-table--animate .svc-price-row:nth-child(2)  { animation-delay: 35ms; }
+.price-table--animate .svc-price-row:nth-child(3)  { animation-delay: 65ms; }
+.price-table--animate .svc-price-row:nth-child(4)  { animation-delay: 95ms; }
+.price-table--animate .svc-price-row:nth-child(5)  { animation-delay:120ms; }
+.price-table--animate .svc-price-row:nth-child(6)  { animation-delay:145ms; }
+.price-table--animate .svc-price-row:nth-child(7)  { animation-delay:165ms; }
+.price-table--animate .svc-price-row:nth-child(8)  { animation-delay:182ms; }
+.price-table--animate .svc-price-row:nth-child(9)  { animation-delay:196ms; }
+
+.svc-price-card:has(.price-table--animate) {
+  animation: priceCardGlow 0.7s var(--ease) forwards;
+}
+
+/* Price shimmer on row hover */
+.svc-price-row:not(.svc-price-row--head):not(.svc-price-row--sub):hover .svc-price-row__price {
+  color: #a0206a;
+  transition: color 0.15s;
+}
+
+/* Smoother Book button */
+.svc-price-row__btn {
+  transition: background 0.18s, transform 0.16s, box-shadow 0.16s;
+}
+.svc-price-row__btn:hover {
+  box-shadow: 0 4px 12px rgba(227,71,202,.35);
+  transform: translateY(-2px);
+}
+.svc-price-row__btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
