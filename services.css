@@ -137,46 +137,117 @@
 /* ── PET TABS ── */
 .svc-pet-tabs {
   display: flex;
-  gap: 10px;
   justify-content: center;
-  margin: 28px 0 8px;
+  margin: 36px 0 52px;
+}
+
+.svc-pet-tabs__track {
+  display: inline-flex;
+  background: #fff;
+  border-radius: var(--r-pill);
+  padding: 6px;
+  gap: 6px;
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.10),
+    0 2px 6px rgba(0,0,0,0.06);
 }
 
 .svc-pet-tab {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 28px;
-  border-radius: 999px;
-  border: 2px solid var(--border, #e5e7eb);
-  background: #fff;
+  gap: 14px;
+  padding: 10px 24px 10px 10px;
+  border-radius: var(--r-pill);
+  border: none;
+  background: transparent;
   font-family: inherit;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-muted, #6b7280);
+  color: var(--text-muted);
   cursor: pointer;
-  transition: border-color .2s, color .2s, background .2s, box-shadow .2s;
+  transition:
+    background 0.28s var(--ease),
+    color      0.28s var(--ease),
+    box-shadow 0.28s var(--ease);
+  user-select: none;
 }
 
-.svc-pet-tab svg {
-  width: 20px;
-  height: 20px;
+.svc-pet-tab__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.28s var(--ease), transform 0.28s var(--ease);
 }
 
-.svc-pet-tab:hover {
-  border-color: var(--pink, #C42D7F);
-  color: var(--pink, #C42D7F);
+.svc-pet-tab__label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
 }
 
+.svc-pet-tab__label strong {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  display: block;
+}
+
+.svc-pet-tab__label small {
+  font-size: 0.69rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  line-height: 1;
+  display: block;
+}
+
+/* Hover — inactive */
+.svc-pet-tab:not(.svc-pet-tab--active):hover {
+  background: var(--pink-pale);
+  color: var(--pink);
+}
+
+.svc-pet-tab:not(.svc-pet-tab--active):hover .svc-pet-tab__icon {
+  background: var(--pink-muted);
+  transform: scale(1.06);
+}
+
+/* Active state */
 .svc-pet-tab--active {
-  border-color: var(--pink, #C42D7F);
-  background: var(--pink, #C42D7F);
+  background: var(--pink);
   color: #fff;
-  box-shadow: 0 4px 16px rgba(196,45,127,.25);
+  box-shadow: 0 6px 20px var(--pink-glow);
 }
 
-.svc-pet-tab--active:hover {
-  color: #fff;
+.svc-pet-tab--active .svc-pet-tab__icon {
+  background: rgba(255, 255, 255, 0.22);
+  transform: scale(1.04);
+}
+
+.svc-pet-tab--active .svc-pet-tab__label small {
+  opacity: 0.75;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .svc-pet-tab {
+    padding: 8px 18px 8px 8px;
+    gap: 10px;
+  }
+  .svc-pet-tab__icon {
+    width: 40px;
+    height: 40px;
+  }
+  .svc-pet-tab__label strong {
+    font-size: 0.9375rem;
+  }
 }
 
 /* ── SERVICES GRID ── */
