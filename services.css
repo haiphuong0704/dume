@@ -929,3 +929,207 @@
     width: 100%;
   }
 }
+/* ── PRICING TABLE ── */
+.svc-pricing {
+  background: var(--bg);
+  padding: 80px 0 72px;
+}
+
+.svc-price-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 28px;
+}
+
+.svc-price-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 20px;
+  border-radius: var(--r-pill);
+  border: 1.5px solid var(--border, #c5d9d4);
+  background: var(--surface, #D9E8E4);
+  color: var(--text-secondary, #4a6560);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s var(--ease);
+}
+
+.svc-price-tab--active {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: #fff;
+}
+
+.svc-price-tab:not(.svc-price-tab--active):hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+.svc-price-card {
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid var(--border, #c5d9d4);
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,.06);
+}
+
+.svc-price-table {
+  width: 100%;
+}
+
+.svc-price-row {
+  display: grid;
+  grid-template-columns: 200px 1fr 90px 120px 80px;
+  align-items: center;
+  padding: 14px 24px;
+  border-bottom: 1px solid #f0f5f4;
+  gap: 12px;
+  transition: background 0.14s;
+}
+
+.svc-price-row:last-of-type {
+  border-bottom: none;
+}
+
+.svc-price-row:not(.svc-price-row--head):not(.svc-price-row--sub):hover {
+  background: #fdf5fc;
+}
+
+.svc-price-row--head {
+  background: var(--surface, #D9E8E4);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--text-secondary, #4a6560);
+  padding: 10px 24px;
+}
+
+.svc-price-row--sub {
+  background: #fcfcfc;
+  padding-left: 36px;
+}
+
+.svc-price-row--sub .svc-price-row__name span:first-child {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #4a6560);
+}
+
+.svc-price-row__name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.svc-price-row__name strong {
+  font-size: 0.95rem;
+  color: var(--text, #1a2e2a);
+}
+
+.svc-price-row__tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: var(--surface, #D9E8E4);
+  color: var(--text-secondary, #4a6560);
+  width: fit-content;
+}
+
+.svc-price-row__tag--vip {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.svc-price-row__tag--premium {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.svc-price-row__tag--medical {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.svc-price-row__desc {
+  font-size: 0.83rem;
+  color: var(--text-secondary, #4a6560);
+  line-height: 1.4;
+}
+
+.svc-price-row__dur {
+  font-size: 0.82rem;
+  color: var(--text-secondary, #4a6560);
+  white-space: nowrap;
+}
+
+.svc-price-row__price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--pink);
+  white-space: nowrap;
+}
+
+.svc-price-row__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 16px;
+  border-radius: var(--r-pill);
+  background: var(--pink);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.16s, transform 0.14s;
+  width: fit-content;
+}
+
+.svc-price-row__btn:hover {
+  background: var(--pink-dark, #a0206a);
+  transform: translateY(-1px);
+}
+
+.svc-price-note {
+  padding: 14px 24px;
+  font-size: 0.78rem;
+  color: var(--text-secondary, #4a6560);
+  border-top: 1px solid #f0f5f4;
+  background: #fafcfb;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .svc-price-row {
+    grid-template-columns: 180px 1fr 80px 110px 70px;
+    padding: 12px 18px;
+    gap: 8px;
+  }
+  .hide-sm { display: none; }
+  .svc-price-row {
+    grid-template-columns: 1fr 80px 110px 70px;
+  }
+  .svc-price-row--head {
+    grid-template-columns: 1fr 80px 110px 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .svc-price-row {
+    grid-template-columns: 1fr auto auto;
+    padding: 12px 16px;
+    gap: 6px;
+  }
+  .svc-price-row--head {
+    grid-template-columns: 1fr auto auto;
+  }
+  .svc-price-row__dur { display: none; }
+  .svc-price-row--head span:nth-child(3) { display: none; }
+  .svc-price-row__btn { padding: 5px 12px; font-size: 0.75rem; }
+  .svc-pricing { padding: 56px 0 52px; }
+}
