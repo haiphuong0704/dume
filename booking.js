@@ -557,3 +557,11 @@ function updateSelStrip(n) {
 // ── INIT ──
 renderCalendar();
 goTo(1);
+
+// Auto-show sub-panel if URL param is set (e.g. from services.html "Đặt ngay")
+(function () {
+  const param = new URLSearchParams(window.location.search).get('service');
+  if (param === 'bath-hygiene' && bathSubPanel) {
+    showSubPanel(bathSubPanel);
+  }
+}());
