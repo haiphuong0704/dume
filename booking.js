@@ -173,6 +173,12 @@ document.querySelectorAll('.bk-service-card').forEach(card => {
       if (parentCard) parentCard.classList.add('selected');
     }
 
+    // Auto-advance to step 2 when coming from services page
+    if (state.fromServices && parentSub) {
+      goTo(2);
+      return;
+    }
+
     validateStep(1);
   });
 });
@@ -552,9 +558,18 @@ function updateSelStrip(n) {
 renderCalendar();
 goTo(1);
 
-// Read URL params: ?pet=dog|cat and ?service=bath-hygiene
+// ── Service catalog for auto-skip of Step 1 when coming from services page ──
+const SERVICE_CATALOG = {
+  'bath-dry':              { name: 'Bath & Dry',            dogPrice: 150000, catPrice: 140000, duration: '45 min' },
+  'trim-hygiene':          { name: 'Trim & Hygiene',        dogPrice: 180000, catPrice: 180000, duration: '50 min' },
+  'full-grooming':         { name: 'Full Grooming',         dogPrice: 320000, catPrice: 290000, duration: '90 min' },
+  'full-grooming-haircut': { name: 'Full Grooming + Haircut', dogPrice: 420000, catPrice: 420000, duration: '120 min' },
+  'vaccination':           { name: 'Vaccination',           dogPrice: 180000, catPrice: 160000, duration: '30 min' },
+};
+
+// Read URL params: ?pet=dog|cat  &service=xxx
 (function () {
-  const params  = new URLSearchParams(window.location.search);
+  const params   = new URLSearchParams(window.location.search);
   const petParam = params.get('pet');
   const svcParam = params.get('service');
 
@@ -562,8 +577,8 @@ goTo(1);
   if (petParam === 'dog' || petParam === 'cat') {
     state.petType = petParam;
 
-    const badge    = document.getElementById('bk-pet-badge');
-    const badgeVal = document.getElementById('bk-pet-badge-val');
+    const badge     = document.getElementById('bk-pet-badge');
+    const badgeVal  = document.getElementById('bk-pet-badge-val');
     const badgeIcon = document.getElementById('bk-pet-badge-icon');
     if (badge && badgeVal) {
       badgeVal.textContent = petParam === 'dog' ? 'Chó' : 'Mèo';
@@ -576,7 +591,24 @@ goTo(1);
     }
   }
 
-  // Auto-show bath sub-panel
+  if (!svcParam) return;
+
+  state.fromServices = true;
+
+  // Fixed-price services → auto-set service state and jump straight to Step 2
+  if (SERVICE_CATALOG[svcParam]) {
+    const cat   = SERVICE_CATALOG[svcParam];
+    const price = (state.petType === 'cat') ? cat.catPrice : cat.dogPrice;
+    state.service          = svcParam;
+    state.serviceName      = cat.name;
+    state.servicePrice     = price;
+    state.baseServicePrice = price;
+    state.serviceDuration  = cat.duration;
+    goTo(2);
+    return;
+  }
+
+  // Bath & Hygiene → show sub-panel; sub-option click will auto-advance (see card click handler)
   if (svcParam === 'bath-hygiene' && bathSubPanel) {
     showSubPanel(bathSubPanel);
   }
