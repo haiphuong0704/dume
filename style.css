@@ -410,9 +410,9 @@ button, input, textarea, select {
 
 /* Primary */
 .btn-primary {
-  background-color: var(--color-pink-primary);
-  color: #6C422B;
-  border-color: var(--color-pink-primary);
+    background-color: #d9e8e4;
+    border-color: #008e82;
+    color: #402e1e;
 }
 .btn-primary:visited,
 .btn-primary:active,
@@ -421,8 +421,8 @@ button, input, textarea, select {
 }
 .btn-primary:hover {
   color: #FFFFFF;
-  background-color: var(--color-pink-deep);
-  border-color: var(--color-pink-deep);
+  background-color: #008e82;
+  border-color: #008e82;
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(227, 71, 202, 0.45);
 }
@@ -824,12 +824,7 @@ button, input, textarea, select {
 ========================================================= */
 
 .faq-section {
-  background:
-    linear-gradient(
-      180deg,
-      #E8F0EE 0%,
-      #EDF4F2 100%
-    );
+    background: #fff2f8;
 }
 
 .faq-layout {
@@ -909,14 +904,9 @@ button, input, textarea, select {
 
 .faq-contact-card {
   margin-top: 40px;
-
   padding: 28px;
-
   border-radius: 28px;
-
-  background: var(--color-text-primary);
-
-  color: white;
+  color: #402e1e;
 }
 
 .faq-contact-card p {
@@ -924,7 +914,7 @@ button, input, textarea, select {
 
   font-size: .95rem;
 
-  color: rgba(255,255,255,.7);
+  color: #402e1e;
 }
 
 /* RIGHT */
@@ -2176,13 +2166,13 @@ aspect-ratio: 4 / 3;
       gap: var(--space-3);
     }
     .philosophy__pillar {
-      display: flex;
-      align-items: flex-start;
-      gap: var(--space-4);
-      padding: var(--space-4);
-      background: var(--color-surface);
-      border-radius: var(--radius-md);
-    }
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    background: transparent;
+    border-radius: var(--radius-md);
+}
     .philosophy__pillar-icon {
       width: 36px; height: 36px;
       border-radius: var(--radius-sm);
@@ -2430,19 +2420,19 @@ aspect-ratio: 4 / 3;
       margin-bottom: var(--space-5);
     }
     .cta-band__headline {
-      font-family: var(--font-display);
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: var(--weight-medium);
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-      color: #fff8fa;
-      margin-bottom: var(--space-5);
-      text-shadow: 0 2px 28px rgba(108, 66, 43, 0.15);
-    }
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: var(--weight-medium);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: #402e1e;
+    margin-bottom: var(--space-5);
+    text-shadow: 0 2px 28px rgba(108, 66, 43, 0.15);
+}
     /* Italic accent — luminous rose-cream with gentle lift */
     .cta-band__headline em {
       font-style: italic;
-      color: #EDAAE3;
+      color: #008e82;
       opacity: 1;
     }
     .cta-band__sub {
