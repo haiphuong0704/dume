@@ -110,9 +110,39 @@
       border-color: #006b62;
     }
 
-    /* Surface sections keep mint-tinted bg for contrast */
-    .bg-surface     { background-color: #d9e8e4; }
-    .bg-surface-alt { background-color: #e5f0ed; }
+    /* ── Hero buttons: both teal ── */
+    .hero .btn-primary {
+      background-color: #008e82;
+      border-color: #008e82;
+      color: #fff;
+    }
+    .hero .btn-primary:visited,
+    .hero .btn-primary:active,
+    .hero .btn-primary:focus { color: #fff; }
+    .hero .btn-primary:hover {
+      background-color: #006b62;
+      border-color: #006b62;
+      color: #fff;
+      box-shadow: 0 8px 28px rgba(0, 142, 130, 0.35);
+    }
+
+    .hero .btn-outline {
+      background-color: #d9e8e4;
+      border-color: #008e82;
+      color: #402e1e;
+      box-shadow: none;
+    }
+    .hero .btn-outline:hover {
+      background-color: #c2d9d3;
+      border-color: #006b62;
+      color: #402e1e;
+      box-shadow: 0 6px 22px rgba(0, 142, 130, 0.2);
+    }
+
+    /* ── Hero background + bg-surface → blush white ── */
+    .hero,
+    .bg-surface     { background-color: #fff2f8; }
+    .bg-surface-alt { background-color: #fff2f8; }
     .bg-pink-soft   { background-color: #fff2f8; }
 
     /* Headings inherit the dark-brown text token */
