@@ -26,216 +26,262 @@
 
   <!-- ── INDEX-ONLY COLOR OVERRIDES ── -->
   <style>
-    /* Re-map design tokens for the landing page palette */
+    /*
+     * LANDING PAGE PALETTE
+     * Philosophy: white/cream canvas → pink is an ACCENT, not a canvas
+     *
+     * Brown   #402e1e  → text, dark sections (trust bar, footer, featured card)
+     * Pink    #f0a8c7  → buttons, stars, borders on interactive elements
+     * Teal    #008e82  → eyebrows, step numbers, icon accents
+     * Rose    #d481a5  → secondary button text, avatar initials, tags
+     * Blush   #fff2f8  → used ONLY for CTA band + card hover fill (not backgrounds)
+     * Canvas  #ffffff  → most section backgrounds
+     * Cream   #faf8f5  → alternating section tint
+     */
+
+    /* ── Design token remapping ── */
     :root {
-      /* Primary pink → softer blush */
-      --color-pink-primary:  #f0a8c7;
-      --color-pink-deep:     #c97fa0;    /* hover / pressed */
-      --color-pink-soft:     #fff2f8;    /* section soft-bg */
-      --color-pink-muted:    #f5c8d8;
-      --color-pink-border:   #f0a8c7;
-      --brand-pink:          #f0a8c7;
-
-      /* Text → rich dark-brown (Secondary Color) */
-      --color-text-primary:   #402e1e;
-      --color-text-secondary: #5c4030;
-      --color-text-muted:     #8a6555;
-
-      /* Focus ring — match new pink */
-      --shadow-focus: 0 0 0 3px rgba(240, 168, 199, 0.38);
+      --text:       #402e1e;
+      --text-body:  #5a3d2b;
+      --text-muted: #7a5440;
+      --pink:       #f0a8c7;
+      --pink-dark:  #d481a5;
+      --pink-pale:  #fff2f8;
+      --mint:       #008e82;
+      --mint-dark:  #006b62;
+      --surface:    #faf8f5;
+      --bg:         #ffffff;
+      --shadow-focus: 0 0 0 3px rgba(240,168,199,0.35);
     }
 
-    /* Page background */
-    body { background-color: #fff2f8; }
+    /* ── Global font: Playfair Display ── */
+    body, body *:not(svg):not(path):not(circle):not(polyline):not(line):not(rect):not(polygon) {
+      font-family: 'Playfair Display', Georgia, serif !important;
+    }
 
-    /* All text elements that use color: var(--color-pink-primary) → teal */
+    /* ── Canvas ── */
+    html  { background: #fff2f8; }
+    body  { background: #ffffff; color: #402e1e; }
+    h1,h2,h3,h4,h5,h6 { color: #402e1e; }
+    p, li, span, td, th, label, small, strong, b, blockquote,
+    figcaption, a:not(.btn) { color: #402e1e; }
+
+    /* ── Section backgrounds ── */
+    /* Blush: Hero, Services (bg-surface), FAQ, CTA band */
+    .hero               { background: #fff2f8; }
+    .bg-surface         { background: #fff2f8; }   /* Services section */
+    .bg-surface-alt     { background: #faf8f5; }
+    .bg-pink-soft       { background: #fff2f8; }
+    .bg-white           { background: #ffffff; }
+
+    /* ── NAVBAR: white, clean border ── */
+    .navbar, .navbar.scrolled {
+      background: #ffffff !important;
+      border-bottom: 1px solid rgba(64,46,30,0.1) !important;
+      box-shadow: 0 1px 0 rgba(64,46,30,0.06), 0 4px 20px rgba(64,46,30,0.05) !important;
+    }
+    .navbar__logo              { color: #402e1e !important; }
+    .navbar__logo span         { color: #d481a5 !important; }
+    .navbar__nav a             { color: #402e1e !important; }
+    .navbar__nav a:hover,
+    .navbar__nav a.is-active   { color: #008e82 !important; }
+    .navbar__nav a.is-active::after { background: #008e82 !important; }
+
+    /* ── TEAL accents: eyebrows, em words, step numbers ── */
     .eyebrow,
-    .text-pink,
     .hero__headline em,
     .services-header h2 em,
     .philosophy__headline em,
     .hpm-headline em,
     .promo-popup__headline em,
-    .t-agg-stars,
-    .t-stars,
     .how-step__num span,
-    .p-card__rating,
-    .svc-link,
-    .svc-card:hover .svc-link,
     .sf-brand-name span,
     .promo-popup__skip:hover,
-    .promo-popup__disable:hover,
-    .btt { color: #008e82 !important; }
+    .promo-popup__disable:hover { color: #008e82 !important; }
 
+    .btt { color: #008e82 !important; }
     .btt:hover { background: #008e82 !important; border-color: #008e82 !important; color: #fff !important; }
 
-    /* ── Primary button ── */
+    /* ── BUTTONS ── */
+    /* Primary: blush pink bg, brown text → hover darker pink, white text, glow */
     .btn-primary {
-      background-color: #f0a8c7;
-      border-color: #f0a8c7;
-      color: #402e1e;
+      background-color: #f0a8c7 !important;
+      border-color: #f0a8c7 !important;
+      color: #402e1e !important;
+      box-shadow: none !important;
     }
-    .btn-primary:visited,
-    .btn-primary:active,
-    .btn-primary:focus { color: #402e1e; }
     .btn-primary:hover {
-      background-color: #c97fa0;
-      border-color: #c97fa0;
-      color: #fff;
-      box-shadow: 0 8px 28px rgba(240, 168, 199, 0.42);
+      background-color: #d481a5 !important;
+      border-color: #d481a5 !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 24px 8px rgba(212,129,165,0.45) !important;
+      transform: translateY(-1px);
     }
 
-    /* ── Outline button → blush bg + blush border ── */
+    /* Secondary / dark: brown bg, pink text → hover brown + pink glow */
+    .btn-secondary, .btn-dark {
+      background-color: #402e1e !important;
+      border-color: #402e1e !important;
+      color: #f0a8c7 !important;
+      box-shadow: none !important;
+    }
+    .btn-secondary:hover, .btn-dark:hover {
+      background-color: #402e1e !important;
+      border-color: #402e1e !important;
+      color: #f0a8c7 !important;
+      box-shadow: 0 0 24px 8px rgba(240,168,199,0.4) !important;
+      transform: translateY(-1px);
+    }
+
+    /* Outline: pink border, transparent bg, brown text → hover blush bg, deeper pink border + glow */
     .btn-outline {
-      background-color: #fff2f8;
-      color: #402e1e;
-      border-color: #f0a8c7;
-      box-shadow: 0 1px 4px rgba(240, 168, 199, 0.1);
+      background-color: transparent !important;
+      border-color: #f0a8c7 !important;
+      color: #402e1e !important;
+      box-shadow: none !important;
     }
     .btn-outline:hover {
-      background-color: #f5c8d8;
-      border-color: #c97fa0;
-      color: #402e1e;
-      box-shadow: 0 6px 22px rgba(240, 168, 199, 0.28);
+      background-color: #fff2f8 !important;
+      border-color: #d481a5 !important;
+      color: #d481a5 !important;
+      box-shadow: 0 0 24px 8px rgba(212,129,165,0.35) !important;
+      transform: translateY(-1px);
     }
 
-    /* ── Secondary/Mint button stays teal ── */
-    .btn-secondary {
-      background-color: #008e82;
-      border-color: #008e82;
-      color: #fff;
-    }
-    .btn-secondary:hover {
-      background-color: #006b62;
-      border-color: #006b62;
-    }
+    /* ── TRUST BAR: brown bg, pink text ── */
+    .trust-bar { background: #402e1e !important; }
+    .trust-bar::before { background: linear-gradient(to right, #402e1e, transparent) !important; }
+    .trust-bar::after  { background: linear-gradient(to left,  #402e1e, transparent) !important; }
+    .trust-bar__item        { color: rgba(255,255,255,0.75) !important; }
+    .trust-bar__item strong { color: #ffffff !important; }
+    .trust-bar__item svg    { stroke: #f0a8c7 !important; }
+    .trust-bar__sep         { background: rgba(255,255,255,0.15) !important; }
 
-    /* ── Hero buttons: both teal ── */
-    .hero .btn-primary {
-      background-color: #008e82;
-      border-color: #008e82;
-      color: #fff;
-    }
-    .hero .btn-primary:visited,
-    .hero .btn-primary:active,
-    .hero .btn-primary:focus { color: #fff; }
-    .hero .btn-primary:hover {
-      background-color: #006b62;
-      border-color: #006b62;
-      color: #fff;
-      box-shadow: 0 8px 28px rgba(0, 142, 130, 0.35);
-    }
-
-    .hero .btn-outline {
-      background-color: #d9e8e4;
-      border-color: #008e82;
-      color: #402e1e;
-      box-shadow: none;
-    }
-    .hero .btn-outline:hover {
-      background-color: #c2d9d3;
-      border-color: #006b62;
-      color: #402e1e;
-      box-shadow: 0 6px 22px rgba(0, 142, 130, 0.2);
-    }
-
-    /* ── Hero background + bg-surface → blush white ── */
-    .hero,
-    .bg-surface     { background-color: #fff2f8; }
-    .bg-surface-alt { background-color: #fff2f8; }
-    .bg-pink-soft   { background-color: #fff2f8; }
-
-    /* Headings inherit the dark-brown text token */
-    h1, h2, h3, h4, h5, h6 { color: #402e1e; }
-
-    /* ── Trust-bar → blush pink ── */
-    .trust-bar {
-      background: linear-gradient(90deg, #f7c2d9 0%, #f0a8c7 50%, #e89dbe 100%);
-      border-top-color: rgba(201, 127, 160, 0.35);
-      border-bottom-color: rgba(201, 127, 160, 0.35);
-    }
-    .trust-bar::before {
-      background: linear-gradient(to right, #f7c2d9, rgba(247, 194, 217, 0)) !important;
-    }
-    .trust-bar::after {
-      background: linear-gradient(to left, #e89dbe, rgba(232, 157, 190, 0)) !important;
-    }
-    .trust-bar__item {
-      color: #402e1e;
-    }
-    .trust-bar__item strong {
-      color: #2a1a0e;
-    }
-    .trust-bar__item svg {
-      stroke: #402e1e;
-      opacity: 0.8;
-    }
-    .trust-bar__sep {
-      background: rgba(64, 46, 30, 0.25);
-    }
-
-    /* ── Global btn-outline on this page → mint bg + teal border ── */
-    .btn-outline {
-      background-color: #d9e8e4;
-      color: #402e1e;
-      border-color: #008e82;
-      box-shadow: 0 1px 4px rgba(0, 142, 130, 0.08);
-    }
-    .btn-outline:hover {
-      background-color: #c2d9d3;
-      border-color: #006b62;
-      color: #402e1e;
-      box-shadow: 0 6px 22px rgba(0, 142, 130, 0.2);
-    }
-
-    /* ── CTA band ── */
-    .cta-band {
-      background: #fff2f8;
-      background-color: #fff2f8;
-      border-top: none;
-      color: #402e1e;
-    }
-    .cta-band__eyebrow {
-      color: #008e82;
-    }
-    .cta-band .btn-dark {
-      background: #008e82;
-      color: #fff;
-      border-color: rgba(255, 252, 254, 0.96);
-      box-shadow: 0 4px 20px rgba(0, 142, 130, 0.28);
-    }
-    .cta-band .btn-dark:hover {
-      background: #006b62;
-      border-color: #006b62;
-    }
-    .cta-band .btn-outline {
-      background: #d9e8e4;
-      color: #402e1e;
-      border-color: #008e82;
-      box-shadow: none;
-    }
-    .cta-band .btn-outline:hover {
-      background: #c2d9d3;
-      border-color: #006b62;
-      box-shadow: 0 6px 22px rgba(0, 142, 130, 0.2);
-    }
-
-    /* ── Service cards ── */
-    .svc-card {
-      background: #fff2f8;
-    }
+    /* ── SERVICE CARDS: white at rest, brown on hover ── */
+    .svc-card { background: #ffffff; border-color: rgba(64,46,30,0.1); }
     .svc-card:hover {
-      background: #f0a8c7;
+      background: #402e1e;
       transform: translateY(-5px);
-      box-shadow: 0 16px 40px rgba(108, 66, 43, 0.08);
+      box-shadow: 0 20px 48px rgba(64,46,30,0.18);
+    }
+    .svc-card:hover h3, .svc-card:hover h4,
+    .svc-card:hover p, .svc-card:hover span,
+    .svc-card:hover .svc-name, .svc-card:hover .svc-desc,
+    .svc-card:hover .svc-card__title, .svc-card:hover .svc-card__desc,
+    .svc-card:hover .svc-card__tags, .svc-card:hover .svc-badge { color: #fff !important; }
+
+    .svc-footer { color: #402e1e; }
+    .svc-link   { color: #402e1e !important; }
+    .svc-arrow svg { stroke: #402e1e; }
+    .svc-card:hover .svc-link      { color: #f0a8c7 !important; }
+    .svc-card:hover .svc-arrow svg { stroke: #f0a8c7; }
+
+    /* ── SPA BITES (HPM): cream bg ── */
+    .hpm-section  { background: #faf8f5 !important; }
+    .hpm-headline em { color: #d481a5 !important; }
+    .hpm-accent      { color: #008e82 !important; }
+    .hpm-feat-title  { color: #402e1e !important; }
+    .hpm-feat-desc   { color: #5a3d2b !important; }
+    .hpm-badge       { background: #ffffff !important; border-color: rgba(64,46,30,0.12) !important; }
+    .hpm-badge-title { color: #402e1e !important; }
+    .hpm-badge-sub   { color: #5a3d2b !important; }
+    .hpm-annotation  { color: #d481a5 !important; }
+    .hpm-delivery-note { color: #5a3d2b !important; }
+
+    /* ── PHILOSOPHY: white section ── */
+    .philosophy__pull {
+      background: #faf8f5 !important;
+      border-color: rgba(64,46,30,0.1) !important;
+    }
+    .philosophy__pull-quote  { color: #402e1e !important; font-style: italic; }
+    .philosophy__pull-source { color: #7a5440 !important; }
+    .philosophy__body        { color: #5a3d2b !important; }
+    .philosophy__pillar-title { color: #402e1e !important; }
+    .philosophy__pillar-text  { color: #5a3d2b !important; }
+    .philosophy__pillar-icon {
+      background: rgba(0,142,130,0.08) !important;
+      color: #008e82 !important;
+      border: 1.5px solid rgba(0,142,130,0.3) !important;
     }
 
-    /* ── Philosophy pillar icon — mint bg + teal border ── */
-    .philosophy__pillar-icon {
-      background: #d9e8e4;
-      color: #008e82;
-      border: 1.5px solid #008e82;
+    /* ── HOW IT WORKS: connector line → subtle brown ── */
+    .how-steps::before { background: linear-gradient(90deg, transparent, rgba(64,46,30,0.2) 20%, rgba(64,46,30,0.2) 80%, transparent) !important; }
+    .how-step__num span { color: #008e82 !important; }
+    .how-step__title    { color: #402e1e !important; }
+    .how-step__desc     { color: #5a3d2b !important; }
+    .how-step__tag {
+      background: rgba(0,142,130,0.08) !important;
+      color: #008e82 !important;
+      border-color: rgba(0,142,130,0.2) !important;
     }
+
+    /* ── PRODUCT CARDS: white ── */
+    .p-card { background: #ffffff !important; border-color: rgba(64,46,30,0.1) !important; }
+    .p-card:hover { border-color: rgba(64,46,30,0.2) !important; box-shadow: 0 16px 36px rgba(64,46,30,0.08) !important; }
+    .p-card__tag  { background: #faf8f5 !important; color: #7a5440 !important; border-color: rgba(64,46,30,0.12) !important; }
+    .p-card__name { color: #402e1e !important; }
+    .p-card__rating { color: #d481a5 !important; }
+    .p-card__rating span { color: #7a5440 !important; opacity: 1; }
+    .p-card__add { background: #402e1e !important; border-color: #402e1e !important; color: #fff !important; }
+    .p-card__add:hover { background: #f0a8c7 !important; border-color: #f0a8c7 !important; color: #402e1e !important; }
+
+    /* ── TESTIMONIALS: cream bg, clean cards ── */
+    .testimonials-section { background: #faf8f5 !important; }
+    .t-card { background: #ffffff !important; border-color: rgba(64,46,30,0.1) !important; }
+    .t-card:hover { border-color: rgba(64,46,30,0.2) !important; }
+    .t-card--featured { background: #402e1e !important; border-color: transparent !important; }
+    .t-stars { color: #d481a5 !important; }
+    .t-card--featured .t-stars { color: #f0a8c7 !important; }
+    .t-quote  { color: #402e1e !important; }
+    .t-card--featured .t-quote { color: rgba(255,255,255,0.88) !important; }
+    .t-avatar { background: #faf8f5 !important; color: #7a5440 !important; }
+    .t-card--featured .t-avatar { background: rgba(255,255,255,0.12) !important; color: rgba(255,255,255,0.8) !important; }
+    .t-name { color: #402e1e !important; }
+    .t-card--featured .t-name { color: #fff !important; }
+    .t-role { color: #7a5440 !important; opacity: 1; }
+    .t-card--featured .t-role { color: rgba(255,255,255,0.5) !important; }
+    .t-agg-stars  { color: #d481a5 !important; }
+    .t-agg-count, .t-agg-press { color: #5a3d2b !important; }
+    .t-agg-press strong { color: #402e1e !important; }
+
+    /* ── FAQ: blush bg ── */
+    .faq-section { background: #fff2f8 !important; }
+    .faq-support { background: #faf8f5 !important; border-color: rgba(64,46,30,0.1) !important; color: #5a3d2b !important; }
+    .faq-support__dot { background: #008e82 !important; }
+    .faq-title { color: #402e1e !important; }
+    .faq-text  { color: #5a3d2b !important; }
+    .faq-contact-card { background: #402e1e !important; }
+    .faq-contact-card p { color: rgba(255,255,255,0.65) !important; }
+    .faq-item { background: #ffffff !important; border-color: rgba(64,46,30,0.08) !important; }
+    .faq-item:hover { border-color: rgba(64,46,30,0.18) !important; box-shadow: 0 8px 24px rgba(64,46,30,0.06) !important; }
+    .faq-question span:first-child { color: #402e1e !important; }
+    .faq-icon { background: rgba(0,142,130,0.1) !important; color: #008e82 !important; }
+    .faq-item.active .faq-icon { background: #008e82 !important; color: #fff !important; }
+    .faq-answer p { color: #5a3d2b !important; }
+
+    /* ── CTA BAND: blush pink — the ONE section with pink bg ── */
+    .cta-band { background: #fff2f8 !important; border-top: 1px solid rgba(240,168,199,0.3) !important; }
+    .cta-band__eyebrow    { color: #008e82 !important; }
+    .cta-band__headline   { color: #402e1e !important; }
+    .cta-band__headline em { color: #402e1e !important; }
+    .cta-band__sub        { color: #5a3d2b !important; }
+
+    /* ── FOOTER ── */
+    .site-footer { background: linear-gradient(180deg, #402e1e 0%, #2a1a0e 100%) !important; }
+    .sf-brand-name      { color: #fff !important; }
+    .sf-brand-name span { color: #f0a8c7 !important; }
+    .sf-brand-tagline   { color: rgba(255,255,255,0.55) !important; }
+    .sf-nl-label        { color: rgba(255,255,255,0.55) !important; letter-spacing: 0.1em; }
+    .sf-col-title       { color: rgba(255,255,255,0.9) !important; }
+    .sf-links a         { color: rgba(255,255,255,0.55) !important; }
+    .sf-links a:hover   { color: #f0a8c7 !important; }
+    .sf-contact-item    { color: rgba(255,255,255,0.55) !important; }
+    .sf-contact-item svg { stroke: rgba(255,255,255,0.4) !important; }
+    .sf-socials a       { color: rgba(255,255,255,0.5) !important; }
+    .sf-socials a:hover { color: #f0a8c7 !important; }
+    .sf-copy            { color: rgba(255,255,255,0.38) !important; }
+    .sf-legal a         { color: rgba(255,255,255,0.38) !important; }
+    .sf-legal a:hover   { color: #f0a8c7 !important; }
   </style>
 </head>
 
@@ -352,7 +398,7 @@
             </p>
 
             <div class="hero__actions fade-up delay-3">
-              <a href="/booking" class="btn btn-primary btn-lg" data-i18n="home.hero.btn1">Book consultation</a>
+              <a href="/booking" class="btn btn-secondary btn-sm" data-i18n="home.hero.btn1">Book consultation</a>
               <a href="/luxe-services" class="btn btn-outline btn-lg" data-i18n="home.hero.btn2">Explore services</a>
             </div>
 
