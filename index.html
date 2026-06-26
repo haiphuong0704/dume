@@ -48,9 +48,26 @@
     /* Page background */
     body { background-color: #fff2f8; }
 
-    /* Eyebrow labels & .text-pink → teal accent */
+    /* All text elements that use color: var(--color-pink-primary) → teal */
     .eyebrow,
-    .text-pink { color: #008e82 !important; }
+    .text-pink,
+    .hero__headline em,
+    .services-header h2 em,
+    .philosophy__headline em,
+    .hpm-headline em,
+    .promo-popup__headline em,
+    .t-agg-stars,
+    .t-stars,
+    .how-step__num span,
+    .p-card__rating,
+    .svc-link,
+    .svc-card:hover .svc-link,
+    .sf-brand-name span,
+    .promo-popup__skip:hover,
+    .promo-popup__disable:hover,
+    .btt { color: #008e82 !important; }
+
+    .btt:hover { background: #008e82 !important; border-color: #008e82 !important; color: #fff !important; }
 
     /* ── Primary button ── */
     .btn-primary {
@@ -100,6 +117,32 @@
 
     /* Headings inherit the dark-brown text token */
     h1, h2, h3, h4, h5, h6 { color: #402e1e; }
+
+    /* ── Trust-bar → blush pink ── */
+    .trust-bar {
+      background: linear-gradient(90deg, #f7c2d9 0%, #f0a8c7 50%, #e89dbe 100%);
+      border-top-color: rgba(201, 127, 160, 0.35);
+      border-bottom-color: rgba(201, 127, 160, 0.35);
+    }
+    .trust-bar::before {
+      background: linear-gradient(to right, #f7c2d9, rgba(247, 194, 217, 0)) !important;
+    }
+    .trust-bar::after {
+      background: linear-gradient(to left, #e89dbe, rgba(232, 157, 190, 0)) !important;
+    }
+    .trust-bar__item {
+      color: #402e1e;
+    }
+    .trust-bar__item strong {
+      color: #2a1a0e;
+    }
+    .trust-bar__item svg {
+      stroke: #402e1e;
+      opacity: 0.8;
+    }
+    .trust-bar__sep {
+      background: rgba(64, 46, 30, 0.25);
+    }
   </style>
 </head>
 
